@@ -1,0 +1,1137 @@
+{
+    "content": [
+      {
+        "title": "Volume 1",
+        "subtitle": "",
+        "version": "v.1.00",
+        "date": "1995",
+        "image": "images/y11.png",
+        "description": "",
+        "tags": ["volume", "iso", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/youdontknowjack10",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Volume 1",
+        "subtitle": "",
+        "version": "v.1.01",
+        "date": "1995",
+        "image": "images/CCI20190420_0002.jpg",
+        "description": "",
+        "tags": ["volume", "iso", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/YDKJ101D",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Question Pack",
+        "subtitle": "",
+        "version": "",
+        "date": "1996",
+        "image": "images/YDKJ_QP-1.png",
+        "description": "",
+        "tags": ["volume", "iso", "DLC", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/ydkj-qp",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Question Pack",
+        "subtitle": "Lite (230q.)",
+        "date": "3/5/1996",
+        "image": "images/qplite.png",
+        "description": "Only adds 230 questions instead of 400",
+        "tags": ["volume", "iso", "DLC", "demo", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/230-ydkjqp",
+          "imgur": "https://imgur.com/a/VtlBITw",
+          "other": ""
+        }
+      },
+      {
+        "title": "Volume 1",
+        "subtitle": "Beta 2",
+        "date": "1995",
+        "image": "images/s-l1600.png",
+        "description": "",
+        "tags": ["volume", "demo", "other", "90s"],
+        "download": {
+          "ebay": "https://www.ebay.ca/itm/305013175180?mkcid=16&mkevt=1&mkrid=711-127632-2357-0&ssspo=cbq0dbmeszq&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Volume 1",
+        "subtitle": "Censored",
+        "date": "1996",
+        "image": "images/350.png",
+        "description": "",
+        "tags": ["volume", "other", "iso", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/JACKCNSR",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Volume 1",
+        "subtitle": "XL",
+        "version": "v.1.5",
+        "date": "1996",
+        "image": "images/volume1_xl.png",
+        "description": "",
+        "tags": ["volume", "iso", "DLC", "steam", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/youdontknowjackxl10",
+          "own": "",
+          "other": "",
+          "steam": ""
+        }
+      },
+      {
+        "title": "Volume 2",
+        "subtitle": "",
+        "version": "v1.1",
+        "date": "1996",
+        "image": "images/volume2.png",
+        "description": "",
+        "tags": ["volume", "iso", "steam", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/youdontknowjackvol2v11",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Volume 3",
+        "subtitle": "",
+        "version": "",
+        "date": "1997",
+        "image": "images/volume3.png",
+        "description": "",
+        "tags": ["volume", "iso", "steam", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/youdontknowjackvol3",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Volume 4: The Ride",
+        "subtitle": "Special Collector's Edition",
+        "version": "",
+        "date": "1998",
+        "image": "images/volume4.png",
+        "description": "",
+        "tags": ["volume", "iso", "steam", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/youdontknowjackvol4sce",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Volume 6: Lost Gold",
+        "subtitle": "",
+        "version": "",
+        "date": "2003",
+        "image": "images/cdvol6.png",
+        "description": "",
+        "tags": ["volume", "iso", "steam", "00s"],
+        "download": {
+          "archive": "https://archive.org/details/you-dont-know-jack-6-the-lost-gold",
+          "own": "",
+          "other": "https://www.4shared.com/get/zIcGA87l/ydkj6.html"
+        }
+      },
+      {
+        "title": "Volume 6: Lost Gold",
+        "subtitle": "Manual",
+        "version": "",
+        "date": "2003",
+        "image": "images/YDKJ6Manual_0000.jpg",
+        "description": "",
+        "tags": ["volume", "book", "00s"],
+        "download": {
+          "archive": "https://archive.org/details/ydkj-6-manual/",
+          "own": "https://drive.google.com/file/d/19dBjYwGLaWwJwe8LwyBLkC2KwSXot4kw/view?usp=drive_link",
+          "other": ""
+        }
+      },
+      {
+        "title": "Sports",
+        "subtitle": "",
+        "version": "",
+        "date": "1996",
+        "image": "images/sports.jpg",
+        "description": "",
+        "tags": ["subject", "iso", "steam", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/You_Dont_Know_Jack_Sports_Berkeley_Sports_Berkeley_Systems_Jellyvision_1996",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Movies",
+        "subtitle": "",
+        "version": "",
+        "date": "1997",
+        "image": "images/movies.png",
+        "description": "",
+        "tags": ["subject", "iso", "steam", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/youdontknowjackmovies",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Television",
+        "subtitle": "",
+        "version": "",
+        "date": "1997",
+        "image": "images/television.png",
+        "description": "",
+        "tags": ["subject", "iso", "steam", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/youdontknowjacktelevision",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Headrush",
+        "subtitle": "",
+        "version": "1998",
+        "date": "",
+        "image": "images/Head-rush-windows-other.jpg",
+        "description": "",
+        "tags": ["subject", "iso", "steam", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/ydkj-headrush",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "5th Dementia",
+        "subtitle": "",
+        "version": "",
+        "date": "2000",
+        "image": "images/01_front.jpg",
+        "description": "",
+        "tags": ["online", "offline", "iso", "00s"],
+        "download": {
+          "archive": "https://archive.org/details/You_Dont_Know_Jack_5th_Dementia_Sierra_2000",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "5th Dementia",
+        "subtitle": "Manual",
+        "version": "",
+        "date": "2000",
+        "image": "images/01_m1.jpg",
+        "description": "",
+        "tags": ["online", "offline", "book", "00s"],
+        "download": {
+          "sierrachest": "https://sierrachest.com/gfx/games/YDKJ_5th_Dementia/box/01_manual.pdf",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Offline",
+        "subtitle": "",
+        "version": "",
+        "date": "1997",
+        "image": "images/offline.png",
+        "description": "",
+        "tags": ["offline", "iso", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/youdontknowjackoffline",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Louder Faster Funnier",
+        "subtitle": "",
+        "version": "",
+        "date": "2000",
+        "image": "images/louderfasterfunnier.png",
+        "description": "",
+        "tags": ["offline", "iso", "00s"],
+        "download": {
+          "archive": "https://archive.org/details/youdontknowjacklouderfasterfunnier",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "Playstation",
+        "subtitle": "",
+        "version": "",
+        "date": "1999",
+        "image": "images/playstation.png",
+        "description": "",
+        "tags": ["playstation", "iso", "90s"],
+        "download": {
+          "vimm": "https://vimm.net/vault/6083",
+          "own": "https://drive.google.com/file/d/1HGZW7I-PF61oSwh4PVoYkoYIkpA9Flap/view?usp=drive_link",
+          "other": ""
+        }
+      },
+      {
+        "title": "Mock 2",
+        "subtitle": "",
+        "version": "",
+        "date": "2000",
+        "image": "images/mock2.png",
+        "description": "",
+        "tags": ["playstation", "iso", "00s"],
+        "download": {
+            "vimm": "https://vimm.net/vault/6082",
+            "own": "https://drive.google.com/file/d/1qbMnqKtE6s7xMO_fhniDnoMJ-no9iYLW/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "about MonsterFest",
+        "subtitle": "(Lost Media)",
+        "version": "",
+        "date": "2001",
+        "image": "images/ydkjaboutmonsterfest.png",
+        "description": "",
+        "tags": ["event", "lostmedia", "00s", "flash"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1l0UYK1dckZjuUs75UWE2HaDl499Bvp9T/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "VMA Edition",
+        "subtitle": "(Lost Media)",
+        "version": "",
+        "date": "",
+        "image": "images/ydkjvmaedition.png",
+        "description": "",
+        "tags": ["event", "lostmedia", "00s", "flash"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1PenPI6uifZtQb5U6zIABuue3idaEARnE/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Color",
+        "subtitle": "(Lost Media)",
+        "version": "",
+        "date": "",
+        "image": "images/youdontknowcolor.png",
+        "description": "",
+        "tags": ["lostmedia", "00s", "flash"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1DcpQdQbiua4vc4XpbnJNru7IOWeIno4e/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Flash Web 2007-2008",
+        "subtitle": "",
+        "version": "",
+        "date": "2007-2008",
+        "image": "images/flashweb2007.png",
+        "description": "",
+        "tags": ["00s", "flash"],
+        "download": {
+            "archive": "https://archive.org/details/YDJK-web-episodes-2007",
+            "own": "",
+            "other": ""
+        }
+      },
+      {
+        "title": "iOS",
+        "subtitle": "1.0.4",
+        "version": "",
+        "date": "2011",
+        "image": "images/ios104.png",
+        "description": "",
+        "tags": ["10s", "mobile", "evolution"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1WEYrV8VUMfCN63wyuvcLdaYchOpwGCgU/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Lite (iOS)",
+        "subtitle": "",
+        "version": "",
+        "date": "2011",
+        "image": "images/liteios.png",
+        "description": "",
+        "tags": ["10s", "mobile", "evolution"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1Xb2ba-8SleRXNvzoo5Y-4Xt89zkfDp5V/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Facebook (iOS)",
+        "subtitle": "1.2.1",
+        "version": "",
+        "date": "2012-2015",
+        "image": "images/754.png",
+        "description": "",
+        "tags": ["10s", "mobile", "evolution"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1tDCbLc4WZX7deKQx8TTC5Z1iCn-piC7v/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Facebook (Android)",
+        "subtitle": "",
+        "version": "",
+        "date": "2012-2015",
+        "image": "images/ic_launcher.png",
+        "description": "",
+        "tags": ["10s", "evolution", "mobile"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1a1ExzIA-YOIvTModCHcx2OoH_WmkiByh/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "OUYA",
+        "subtitle": "",
+        "version": "1.01",
+        "date": "2013",
+        "image": "images/ouya_icon.png",
+        "description": "",
+        "tags": ["10s", "evolution"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1bqOE9nr0jvmBj0Z93uJtGsd3oqMulZa7/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "JackPad",
+        "subtitle": "",
+        "version": "1.01",
+        "date": "2013",
+        "image": "images/icon_1024x1024.png",
+        "description": "",
+        "tags": ["00s", "mobile", "controller"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1bqOE9nr0jvmBj0Z93uJtGsd3oqMulZa7/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Volume 1 Demo",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "iso", "demo", "90s"],
+        "download": {
+            "archive": "https://archive.org/details/swizzle_demu_Ydkj",
+            "own": "https://drive.google.com/file/d/19-4kVPm81vMZOQKCFBfQxbD-mF2xGHBe/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Volume 2 & Sports Demo",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "subject", "iso", "demo", "90s"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/17srFNLv6r3L0zgZcULXyAxvxP4udb68C/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Volume 3 Demo",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "iso", "demo", "90s"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1D7g3nvDw6QtQQFykbQIhwScF7jN0OcIT/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Volume 6: Lost Gold Demo",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "iso", "demo", "00s"],
+        "download": {
+            "jellyvision": "http://web.archive.org/web/20071009142939/http://www.jellyvision.com/showroom/ydkj/pages/YDKJ6Demo.zip",
+            "own": "https://drive.google.com/file/d/1IZjmlcUBZlD52km3SYbGFhXnJYUTUfRw/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Movies Demo",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["subject", "iso", "demo", "90s"],
+        "download": {
+            "archive": "https://archive.org/details/JACKDemo",
+            "own": "https://drive.google.com/file/d/1sj_ds9cO2Ck8TkGxwWPeKFhIYHfeSu2k/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Television Demo",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["subject", "iso", "demo", "90s"],
+        "download": {
+            "archive": "https://archive.org/details/JACKTV_demo_zip",
+            "own": "https://drive.google.com/file/d/13eFQRr12IYBsUT69NA9CCuVLEnYh0J4b/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Headrush Demo",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["subject", "iso", "demo", "90s"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1pWsPPCJeCmbrnHiZypzZEzTB0C_MN4Hj/view?usp=drive_link",
+            "other": "https://download.cnet.com/HeadRush-demo/3000-2111_4-10023199.html"
+        }
+      },
+      {
+        "title": "Louder Faster Funnier Demo",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["offline", "iso", "demo", "90s"],
+        "download": {
+            "archive": "https://archive.org/details/3d-ultra-pinball-thrillride-2004-sierra-cd",
+            "own": "https://drive.google.com/file/d/1qjbqfq4PYFuvg6HT1oTZJv8utCYzz4F2/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Offline Demo",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["offline", "iso", "demo", "90s"],
+        "download": {
+            "sierrachest": "http://www.sierrachest.com/index.php?a=games&id=655&title=you-dont-know-jack-offline&fld=demos",
+            "own": "https://drive.google.com/file/d/1fP9sSVQEiogKyUp61jt7x_i-wP_v7vbU/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Playstation Demo",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/playstationdemo.png",
+        "description": "",
+        "tags": ["volume", "playstation", "iso", "demo","90s"],
+        "download": {
+            "vimm": "https://vimm.net/vault/55791",
+            "own": "",
+            "other": "https://wowroms.com/en/isos/playstation/official-u.s.-playstation-magazine-demo-disc-23/32248.html"
+        }
+      },
+      {
+        "title": "Volume 2/Volume 1",
+        "subtitle": "German Steam Patch",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "patch", "international", "deutsche", "steam", "90s"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "compiwareforum": "https://www.compiware-forum.de/downloads/file/706-you-don-t-know-jack-vol-2-german-patch/"
+        }
+      },
+      {
+        "title": "Volume 3/Volume 2",
+        "subtitle": "German Steam Patch",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "patch", "international", "deutsche", "steam", "90s"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "compiwareforum": "https://www.compiware-forum.de/downloads/file/707-you-don-t-know-jack-vol-3-german-patch/"
+        }
+      },
+      {
+        "title": "Volume 4: The Ride/3: Abwärts",
+        "subtitle": "German Steam Patch",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "patch", "international", "deutsche", "steam", "90s"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "compiwareforum": "https://www.compiware-forum.de/downloads/file/708-you-don-t-know-jack-vol-4-the-ride-german-patch/"
+        }
+      },
+      {
+        "title": "Volume 6: Lost Gold/4",
+        "subtitle": "German Steam Patch",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "patch", "international", "deutsche", "steam", "00s"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "compiwareforum": "https://www.compiware-forum.de/downloads/file/747-you-don-t-know-jack-vol-6-the-lost-gold-german-patch/"
+        }
+      },
+      {
+        "title": "Volume 1 Demo",
+        "subtitle": "German",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "patch", "demo", "international", "deutsche", "iso", "90s"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1qus8wKqtjgMTf4EQQ5Kxke-GymiDXF3p/view?usp=drive_link",
+            "jackde": "https://web.archive.org/web/20020809121154/http://www.jack.de:80/downloads/demos/YDKJ1_demo1.exe"
+        }
+      },
+      {
+        "title": "YDKJ 2 German",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/51M1D2EWRHL.jpg",
+        "description": "",
+        "tags": ["volume", "patch", "international", "deutsche", "iso", "90s"],
+        "download": {
+            "archive": "https://archive.org/details/cover_bigboxydkj2-german",
+            "own": "https://drive.google.com/file/d/102mKApMpZgXsW2BYuXX0rnPJGl9CkPLl/view?usp=drive_link",
+            "macintoshgarden": "https://macintoshgarden.org/games/you-dont-know-jack-2-german"
+        }
+      },
+      {
+        "title": "YDKJ 2 Demo German",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "patch", "demo", "international", "deutsche", "iso", "90s"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1eZUUOj5_TiPpgIVe3DLyKSyiWP24Ghb6/view?usp=drive_link",
+            "jackde": "https://web.archive.org/web/*/http://www.jack.de:80/downloads/demos/YDKJ2_demo1.exe"
+        }
+      },
+      {
+        "title": "YDKJ 3: Abwärts",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/169635--you-dont-know-jack-3-abwaerts.png",
+        "description": "",
+        "tags": ["volume", "patch", "international", "deutsche", "iso", "90s"],
+        "download": {
+            "archive": "",
+            "macintoshgarden": "https://macintoshgarden.org/games/you-dont-know-jack-3-german",
+            "own": "https://drive.google.com/file/d/19WmsGYuIbmH_GI_60HhuTnAjzUkSSy9Z/view?usp=drive_link"
+        }
+      },
+      {
+        "title": "YDKJ 4 trailer on ydkj.de (swf file)",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "Trailer of YDKJ 4 from ydkj.de website.",
+        "tags": ["volume", "international", "deutsche", "other"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1KlM0T03teWq1TOwJObATwWswJzs6Lp6R/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "YDKJ 4",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/518C392WNDL._AC_UF1000,1000_QL80_.jpg",
+        "description": "",
+        "tags": ["volume", "international", "deutsche", "iso", "volume", "90s"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/14V2bIfhvHWEf8kqXbZ22WJHghg5aISkc/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "YDKJ 4 v1.0 Proper Working No CD Fixed exe",
+        "subtitle": "German",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "international", "deutsche", "90s", "fix"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1DDpr2HypL_K33iD_oF3SFyJMgBHP0Rr0/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Playstation German",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/playstationgerman.png",
+        "description": "",
+        "tags": ["playstation", "international", "deutsche", "90s"],
+        "download": {
+            "vimm": "https://vimm.net/vault/53475",
+            "own": "",
+            "other": ""
+        }
+      },
+      {
+        "title": "YDKJ Screensaver",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/ydkjscreensaver.png",
+        "description": "",
+        "tags": ["other", "international", "deutsche", "00s"],
+        "download": {
+            "archive": "",
+            "own": "https://github.com/dedz212/YDKJscreensaver/releases/tag/Release",
+            "other": ""
+        }
+      },
+      {
+        "title": "France",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/fr.png",
+        "description": "",
+        "tags": ["volume", "iso", "international", "francais", "90s"],
+        "download": {
+            "setup": "https://www.abandonware-france.org/telechargement/61572/",
+            "cdrom": "https://www.abandonware-france.org/telechargement/25616/",
+            "other": ""
+        }
+      },
+      {
+        "title": "France Demo",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "iso", "demo", "international", "francais", "90s"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "other": "https://www.abandonware-france.org/telechargement/25618/"
+        }
+      },
+      {
+        "title": "UK",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "iso", "international", "uk", "90s"],
+        "download": {
+            "archive": "https://archive.org/details/ydkj-uk",
+            "macintoshrepository": "https://www.macintoshrepository.org/5247-you-don-t-know-jack-uk-",
+            "other": ""
+        }
+      },
+      {
+        "title": "UK Demo",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "iso", "demo", "international", "uk", "90s"],
+        "download": {
+            "archive": "https://archive.org/details/pcwfeb-98",
+            "own": "",
+            "other": ""
+        }
+      },
+      {
+        "title": "Japan",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/BIGBOX1.jpg",
+        "description": "",
+        "tags": ["volume", "iso", "international", "nihongo", "00s"],
+        "download": {
+            "archive": "https://archive.org/details/YDKJJapan",
+            "own": "https://drive.google.com/file/d/10Renhbuxg8qRi3ikkLLOuflWK9KX_Nlu/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "YDKJ Psych Test",
+        "subtitle": "",
+        "version": "5th Dementia promotional flash game",
+        "date": "",
+        "image": "images/maxresdefault.jpg",
+        "description": "",
+        "tags": ["flash", "demo", "00s", "evolution"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1Jud_V8V2pjxL07jp7rpEQbXE9ks9Oxpg/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "5dstart.zip",
+        "subtitle": "",
+        "version": "2003",
+        "date": "",
+        "image": "",
+        "description": "These fixes will get the 5th Dementia game running, but the audio will be glitching a bit, and the entire window will be off-center, so if you want the full experience, you'll still need a VM.",
+        "tags": ["fix", "00s", "offline", "online"],
+        "download": {
+            "jellyvision": "http://web.archive.org/web/20071009183759/http://www.jellyvision.com/showroom/ydkj/pages/support/5dstart.zip",
+            "own": "https://drive.google.com/file/d/1aTDfxYYuYqQRp-sD2ToM3BGmpZ_jkX2X/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "plugdll.zip",
+        "subtitle": "",
+        "version": "",
+        "date": "2004",
+        "image": "",
+        "description": "These fixes will get the 5th Dementia game running, but the audio will be glitching a bit, and the entire window will be off-center, so if you want the full experience, you'll still need a VM.",
+        "tags": ["fix", "00s", "offline", "online"],
+        "download": {
+            "jellyvision": "http://web.archive.org/web/20071009183748/http://www.jellyvision.com/showroom/ydkj/pages/plugdll.zip",
+            "own": "",
+            "other": ""
+        }
+      },
+      {
+        "title": "Volume 6 Display patch",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["fix", "00s", "volume"],
+        "download": {
+            "jellyvision": "http://web.archive.org/web/20071009183822/http://www.jellyvision.com/showroom/ydkj/pages/support/ydkj6_display_patch.zip",
+            "own": "https://drive.google.com/file/d/1cD4m9C_oqe8nsI922vRvoeKvSJ8Mh7wC/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "Volume 6 on Windows 10 Fix-Patch",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["fix", "00s", "volume"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1IJo84nequ6OSMfRupyKFO4nEQYmv7-hT/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "? (test.mov)",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/testmov.png",
+        "description": "",
+        "tags": ["other", "90s"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1gjjZfv2PusaCjvhBvrrHxOW50F_elNzz/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "YDKJ2011",
+        "subtitle": "PC",
+        "version": "",
+        "date": "",
+        "image": "images/Ydkj2011dvdcdpc.webp",
+        "description": "",
+        "tags": ["evolution", "10s", "iso", "cross-platform"],
+        "download": {
+            "archive": "https://archive.org/details/YDKJ2011PC",
+            "own": "",
+            "other": ""
+        }
+      },
+      {
+        "title": "YDKJ2011",
+        "subtitle": "Wii",
+        "version": "",
+        "date": "",
+        "image": "images/Ydkj2011wii.webp",
+        "description": "",
+        "tags": ["evolution", "10s", "iso", "cross-platform"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "vimm": "https://vimm.net/vault/18338"
+        }
+      },
+      {
+        "title": "YDKJ2011",
+        "subtitle": "DS",
+        "version": "",
+        "date": "",
+        "image": "images/Ydkj2011nds.webp",
+        "description": "",
+        "tags": ["evolution", "10s", "iso", "cross-platform"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "vimm": "https://vimm.net/vault/20094"
+        }
+      },
+      {
+        "title": "YDKJ2011",
+        "subtitle": "PS3",
+        "version": "1.0",
+        "image": "images/Ydkj2011ps3.webp",
+        "description": "",
+        "tags": ["evolution", "playstation", "10s", "iso", "cross-platform"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "vimm": "https://vimm.net/vault/25732",
+            "other": "https://drive.google.com/drive/u/0/folders/1AGCVDRgFk8aMnyEx_PUfxByba-ZBsf1A"
+        }
+      },
+      {
+        "title": "YDKJ2011",
+        "subtitle": "PS3",
+        "version": "1.03",
+        "image": "images/Ydkj2011ps3.webp",
+        "description": "",
+        "tags": ["evolution", "10s", "playstation", "iso", "patch", "cross-platform"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "other": "http://b0.ww.np.dl.playstation.net/tppkg/np/BLUS30569/BLUS30569_T3/8035b33f4503cf12/UP1005-BLUS30569_00-YDKJTROPHYPATCH3-A0103-V0100-PE.pkg"
+        }
+      },
+      {
+        "title": "YDKJ2011",
+        "subtitle": "PS3 Demo",
+        "version": "",
+        "image": "",
+        "description": "",
+        "tags": ["evolution", "10s", "playstation", "demo", "iso", "cross-platform"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "vimm": "https://vimm.net/vault/25732",
+            "other": "https://drive.google.com/drive/u/0/folders/1AGCVDRgFk8aMnyEx_PUfxByba-ZBsf1A"
+        }
+      },
+      {
+        "title": "YDKJ2011",
+        "subtitle": "Xbox 360",
+        "version": "",
+        "date": "",
+        "image": "images/Ydkj2011xbox360.webp",
+        "description": "",
+        "tags": ["evolution", "10s", "iso", "cross-platform"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "nopaystation": "https://nopaystation.com/view/PS3/NPUB90550/YDKJDEMOQUESTION/1?version=1"
+        }
+      },
+      {
+        "title": "YDKJ2011",
+        "subtitle": "Xbox 360 Demo",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["evolution", "10s", "other", "demo", "cross-platform"],
+        "download": {
+          "archive": "https://archive.org/details/youdontknowjack2011xbox360demo",
+          "video": "https://archive.org/details/GameSpot-6286300",
+          "other": ""
+        }
+      },
+      {
+        "title": "YDKJ2011",
+        "subtitle": "Xbox 360 Jack PACKS DLC",
+        "version": "",
+        "date": "",
+        "image": "images/ouya_icon.png",
+        "description": "",
+        "tags": ["evolution", "10s", "iso", "DLC", "cross-platform"],
+        "download": {
+            "archive": "https://archive.org/download/XBOX_360_DLC_6/You_Don__x27_t_Know_Jack.rar",
+            "own": "",
+            "other": ""
+        }
+      },
+      {
+        "title": "YDKJ2011",
+        "subtitle": "PS3 Jack PACKS DLC",
+        "version": "",
+        "date": "",
+        "image": "images/L6adbd8.png",
+        "description": "",
+        "tags": ["evolution", "10s", "playstation", "iso", "patch", "DLC", "cross-platform"],
+        "download": {
+            "dlc1": "https://nopaystation.com/view/PS3/BLUS30569/YDKJQUESTIONPK01/0?version=1",
+            "dlc2": "https://nopaystation.com/view/PS3/BLUS30569/YDKJQUESTIONPK02/0?version=1",
+            "dlc3": "https://nopaystation.com/view/PS3/BLUS30569/YDKJQUESTIONPK03/0?version=1",
+            "dlc4": "https://nopaystation.com/view/PS3/BLUS30569/YDKJQUESTIONPK04/0?version=1"
+        }
+      },
+      {
+        "title": "HackTV ExtraBuild",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/webtvlogo.png",
+        "description": "",
+        "tags": ["other", "90s", "online", "raw"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1mUDDFKprWN5bp4iBakoj-uJxKYu20h0M/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "HackTV DERBY",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/webtvlogo.png",
+        "description": "",
+        "tags": ["other", "90s", "online", "raw"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1EFJETnukhdPRkLrvT4qzdpcZsexsvpBd/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "The Book",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/51B4XRR6FBL._AC_UF350,350_QL50_.jpg",
+        "description": "",
+        "tags": ["other","book", "90s"],
+        "download": {
+            "amazon": "https://www.amazon.com/You-Dont-Know-Jack-Pb/dp/0762403748",
+            "archive": "https://archive.org/details/youdontknowjackb0000unse",
+            "other": ""
+        }
+      },
+      {
+        "title": "The TV Book",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/51BPADT45ML._AC_UF1000,1000_QL80_.jpg",
+        "description": "",
+        "tags": ["other","book", "90s"],
+        "download": {
+            "amazon": "https://www.amazon.com/You-Dont-Know-Jack-Tv/dp/0762403756",
+            "archive": "",
+            "other": ""
+        }
+      },
+      {
+        "title": "Tabletop Version (Tiger Electronics)",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "images/Tabletop.png",
+        "description": "",
+        "tags": ["other", "90s"],
+        "download": {
+            "fandom": "https://jackboxgames.fandom.com/wiki/You_Don%27t_Know_Jack_(Tabletop_Version)",
+            "archive": "",
+            "other": ""
+        }
+      }
+    ]
+  }
+  

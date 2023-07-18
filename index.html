@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Games</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="navbar">
+        <div lass="tdlrt">
+            <p class="tag active-tag" onclick="showAll()">show all</p>
+            <p class="tag" onclick="filterByTag('90s')">90s</p>
+            <p class="tag" onclick="filterByTag('00s')">00s</p>
+            <p class="tag" onclick="filterByTag('10s')">10s</p>
+            <p class="tag" onclick="filterByTag('volume')">volume</p>
+            <p class="tag" onclick="filterByTag('subject')">subject</p>
+            <p class="tag" onclick="filterByTag('iso')">iso</p>
+            <p class="tag" onclick="filterByTag('DLC')">DLC</p>
+            <p class="tag" onclick="filterByTag('steam')">steam</p>
+            <p class="tag" onclick="filterByTag('online')">online</p>
+            <p class="tag" onclick="filterByTag('offline')">offline</p>
+            <p class="tag" onclick="filterByTag('playstation')">playstation</p>
+            <p class="tag" onclick="filterByTag('event')">event</p>
+            <p class="tag" onclick="filterByTag('lostmedia')">lost media</p>
+            <p class="tag" onclick="filterByTag('flash')">flash</p>
+            <p class="tag" onclick="filterByTag('evolution')">evolution</p>
+            <p class="tag" onclick="filterByTag('mobile')">mobile</p>
+            <p class="tag" onclick="filterByTag('demo')">demo</p>
+            <p class="tag" onclick="filterByTag('international')">international</p>
+            <p class="tag" onclick="filterByTag('patch')">patch</p>
+            <p class="tag" onclick="filterByTag('deutsche')">deutsche</p>
+            <p class="tag" onclick="filterByTag('book')">book</p>
+            <p class="tag" onclick="filterByTag('fix')">fix</p>
+            <p class="tag" onclick="filterByTag('other')">other</p>
+        </div>
+    </div>
+    <div class="tdlrc">
+        <p class="s1">YOU DON'T KNOW</p>
+        <p class="s2">ARCHIVE</p>
+        <p class="s3"id="totalTitles">Total: </p>
+    </div>
+    <div class="container" id="quizContainer"></div>
+    <div class="footer">
+        <div lass="tdlrf">
+            <p class="tag"><a href="https://discord.com/invite/RbDJ9P5R">discord</a></p>
+            <p id="sv"></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
