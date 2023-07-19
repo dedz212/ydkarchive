@@ -1,7 +1,7 @@
 {
     "content": [
       {
-        "title": "Volume 1",
+        "title": "You Don't Know Jack Volume 1",
         "subtitle": "",
         "version": "v.1.00",
         "date": "1995",
@@ -15,7 +15,7 @@
         }
       },
       {
-        "title": "Volume 1",
+        "title": "You Don't Know Jack Volume 1",
         "subtitle": "",
         "version": "v.1.01",
         "date": "1995",
@@ -56,7 +56,7 @@
         }
       },
       {
-        "title": "Volume 1",
+        "title": "You Don't Know Jack Volume 1",
         "subtitle": "Beta 2",
         "date": "1995",
         "image": "images/s-l1600.png",
@@ -69,7 +69,7 @@
         }
       },
       {
-        "title": "Volume 1",
+        "title": "You Don't Know Jack Volume 1",
         "subtitle": "Censored",
         "date": "1996",
         "image": "images/350.png",
@@ -82,7 +82,7 @@
         }
       },
       {
-        "title": "Volume 1",
+        "title": "You Don't Know Jack Volume 1",
         "subtitle": "XL",
         "version": "v.1.5",
         "date": "1996",
@@ -97,7 +97,7 @@
         }
       },
       {
-        "title": "Volume 2",
+        "title": "You Don't Know Jack Volume 2",
         "subtitle": "",
         "version": "v1.1",
         "date": "1996",
@@ -111,7 +111,7 @@
         }
       },
       {
-        "title": "Volume 3",
+        "title": "You Don't Know Jack Volume 3",
         "subtitle": "",
         "version": "",
         "date": "1997",
@@ -125,7 +125,7 @@
         }
       },
       {
-        "title": "Volume 4: The Ride",
+        "title": "You Don't Know Jack Volume 4: The Ride",
         "subtitle": "Special Collector's Edition",
         "version": "",
         "date": "1998",
@@ -139,7 +139,7 @@
         }
       },
       {
-        "title": "Volume 6: Lost Gold",
+        "title": "You Don't Know Jack Volume 6: Lost Gold",
         "subtitle": "",
         "version": "",
         "date": "2003",
@@ -153,21 +153,7 @@
         }
       },
       {
-        "title": "Volume 6: Lost Gold",
-        "subtitle": "Manual",
-        "version": "",
-        "date": "2003",
-        "image": "images/YDKJ6Manual_0000.jpg",
-        "description": "",
-        "tags": ["volume", "book", "00s"],
-        "download": {
-          "archive": "https://archive.org/details/ydkj-6-manual/",
-          "own": "https://drive.google.com/file/d/19dBjYwGLaWwJwe8LwyBLkC2KwSXot4kw/view?usp=drive_link",
-          "other": ""
-        }
-      },
-      {
-        "title": "Sports",
+        "title": "You Don't Know Jack Sports",
         "subtitle": "",
         "version": "",
         "date": "1996",
@@ -181,7 +167,7 @@
         }
       },
       {
-        "title": "Movies",
+        "title": "You Don't Know Jack Movies",
         "subtitle": "",
         "version": "",
         "date": "1997",
@@ -195,7 +181,7 @@
         }
       },
       {
-        "title": "Television",
+        "title": "You Don't Know Jack Television",
         "subtitle": "",
         "version": "",
         "date": "1997",
@@ -223,7 +209,7 @@
         }
       },
       {
-        "title": "5th Dementia",
+        "title": "You Don't Know Jack 5th Dementia",
         "subtitle": "",
         "version": "",
         "date": "2000",
@@ -237,21 +223,7 @@
         }
       },
       {
-        "title": "5th Dementia",
-        "subtitle": "Manual",
-        "version": "",
-        "date": "2000",
-        "image": "images/01_m1.jpg",
-        "description": "",
-        "tags": ["online", "offline", "book", "00s"],
-        "download": {
-          "sierrachest": "https://sierrachest.com/gfx/games/YDKJ_5th_Dementia/box/01_manual.pdf",
-          "own": "",
-          "other": ""
-        }
-      },
-      {
-        "title": "Offline",
+        "title": "You Don't Know Jack Offline",
         "subtitle": "",
         "version": "",
         "date": "1997",
@@ -265,7 +237,35 @@
         }
       },
       {
-        "title": "Louder Faster Funnier",
+        "title": "You Don't Know Jack: The NetShow",
+        "subtitle": "",
+        "version": "",
+        "date": "1996-2000",
+        "image": "images/offline.png",
+        "description": "",
+        "tags": ["online", "90s", "00s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": "https://bezerk.secondzone.co.uk/jol.html"
+        }
+      },
+      {
+        "title": "You Don't Know Jack Sports: The NetShow",
+        "subtitle": "",
+        "version": "",
+        "date": "1997-2000",
+        "image": "images/offline.png",
+        "description": "",
+        "tags": ["online", "90s", "00s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": "https://bezerk.secondzone.co.uk/sol.html"
+        }
+      },
+      {
+        "title": "You Don't Know Jack Louder Faster Funnier",
         "subtitle": "",
         "version": "",
         "date": "2000",
@@ -279,7 +279,8 @@
         }
       },
       {
-        "title": "Playstation",
+        "title": "You Don't Know Jack",
+        "platform": "Playstation",
         "subtitle": "",
         "version": "",
         "date": "1999",
@@ -293,7 +294,7 @@
         }
       },
       {
-        "title": "Mock 2",
+        "title": "You Don't Know Jack Mock 2",
         "subtitle": "",
         "version": "",
         "date": "2000",
@@ -307,8 +308,8 @@
         }
       },
       {
-        "title": "about MonsterFest",
-        "subtitle": "(Lost Media)",
+        "title": "You Don't Know Jack about MonsterFest",
+        "tagd": ["Lost Media"],
         "version": "",
         "date": "2001",
         "image": "images/ydkjaboutmonsterfest.png",
@@ -321,8 +322,8 @@
         }
       },
       {
-        "title": "VMA Edition",
-        "subtitle": "(Lost Media)",
+        "title": "You Don't Know Jack VMA Edition",
+        "tagd": ["Lost Media"],
         "version": "",
         "date": "",
         "image": "images/ydkjvmaedition.png",
@@ -336,7 +337,7 @@
       },
       {
         "title": "You Don't Know Color",
-        "subtitle": "(Lost Media)",
+        "tagd": ["Lost Media"],
         "version": "",
         "date": "",
         "image": "images/youdontknowcolor.png",
@@ -349,8 +350,8 @@
         }
       },
       {
-        "title": "Flash Web 2007-2008",
-        "subtitle": "",
+        "title": "You Don't Know Jack",
+        "subtitle": "Flash Web 2007-2008",
         "version": "",
         "date": "2007-2008",
         "image": "images/flashweb2007.png",
@@ -363,9 +364,9 @@
         }
       },
       {
-        "title": "iOS",
-        "subtitle": "1.0.4",
-        "version": "",
+        "title": "You Don't Know Jack",
+        "platform": "iOS",
+        "version": "1.0.4",
         "date": "2011",
         "image": "images/ios104.png",
         "description": "",
@@ -377,8 +378,9 @@
         }
       },
       {
-        "title": "Lite (iOS)",
-        "subtitle": "",
+        "title": "You Don't Know Jack",
+        "subtitle": "Lite",
+        "platform": "iOS",
         "version": "",
         "date": "2011",
         "image": "images/liteios.png",
@@ -391,9 +393,25 @@
         }
       },
       {
-        "title": "Facebook (iOS)",
-        "subtitle": "1.2.1",
-        "version": "",
+        "title": "You Don't Know Jack",
+        "subtitle": "Facebook",
+        "platform": "Facebook",
+        "tagd": ["Lost Media"],
+        "date": "",
+        "image": "images/facebookios.png",
+        "description": "",
+        "tags": ["evolution", "lostmedia", "10s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack",
+        "subtitle": "Facebook",
+        "platform": "iOS",
+        "version": "1.2.1",
         "date": "2012-2015",
         "image": "images/754.png",
         "description": "",
@@ -405,8 +423,9 @@
         }
       },
       {
-        "title": "Facebook (Android)",
-        "subtitle": "",
+        "title": "You Don't Know Jack",
+        "subtitle": "Facebook",
+        "platform": "Android",
         "version": "",
         "date": "2012-2015",
         "image": "images/ic_launcher.png",
@@ -419,8 +438,8 @@
         }
       },
       {
-        "title": "OUYA",
-        "subtitle": "",
+        "title": "You Don't Know Jack",
+        "subtitle": "OUYA",
         "version": "1.01",
         "date": "2013",
         "image": "images/ouya_icon.png",
@@ -447,8 +466,23 @@
         }
       },
       {
-        "title": "Volume 1 Demo",
+        "title": "You Don't Know Jack Party",
         "subtitle": "",
+        "platform": " iOS, Apple TV",
+        "tagd": ["Lost Media"],
+        "date": "",
+        "image": "images/ydkjparty.png",
+        "description": "",
+        "tags": ["evolution", "lostmedia", "10s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack Volume 1",
+        "subtitle": "Demo",
         "version": "",
         "date": "",
         "image": "",
@@ -461,8 +495,8 @@
         }
       },
       {
-        "title": "Volume 2 & Sports Demo",
-        "subtitle": "",
+        "title": "You Don't Know Jack Volume 2 & Sports",
+        "subtitle": "Demo",
         "version": "",
         "date": "",
         "image": "",
@@ -475,8 +509,8 @@
         }
       },
       {
-        "title": "Volume 3 Demo",
-        "subtitle": "",
+        "title": "You Don't Know Jack Volume 3",
+        "subtitle": "Demo",
         "version": "",
         "date": "",
         "image": "",
@@ -489,8 +523,8 @@
         }
       },
       {
-        "title": "Volume 6: Lost Gold Demo",
-        "subtitle": "",
+        "title": "You Don't Know Jack Volume 6: Lost Gold",
+        "subtitle": "Demo",
         "version": "",
         "date": "",
         "image": "",
@@ -503,8 +537,8 @@
         }
       },
       {
-        "title": "Movies Demo",
-        "subtitle": "",
+        "title": "You Don't Know Jack Movies ",
+        "subtitle": "Demo",
         "version": "",
         "date": "",
         "image": "",
@@ -517,8 +551,8 @@
         }
       },
       {
-        "title": "Television Demo",
-        "subtitle": "",
+        "title": "You Don't Know Jack Television ",
+        "subtitle": "Demo",
         "version": "",
         "date": "",
         "image": "",
@@ -531,8 +565,8 @@
         }
       },
       {
-        "title": "Headrush Demo",
-        "subtitle": "",
+        "title": "Headrush ",
+        "subtitle": "Demo",
         "version": "",
         "date": "",
         "image": "",
@@ -545,8 +579,8 @@
         }
       },
       {
-        "title": "Louder Faster Funnier Demo",
-        "subtitle": "",
+        "title": "You Don't Know Jack Louder Faster Funnier ",
+        "subtitle": "Demo",
         "version": "",
         "date": "",
         "image": "",
@@ -559,8 +593,8 @@
         }
       },
       {
-        "title": "Offline Demo",
-        "subtitle": "",
+        "title": "You Don't Know Jack Offline ",
+        "subtitle": "Demo",
         "version": "",
         "date": "",
         "image": "",
@@ -573,8 +607,9 @@
         }
       },
       {
-        "title": "Playstation Demo",
-        "subtitle": "",
+        "title": "You Don't Know Jack",
+        "platform": "Playstation",
+        "subtitle": "Demo",
         "version": "",
         "date": "",
         "image": "images/playstationdemo.png",
@@ -587,13 +622,13 @@
         }
       },
       {
-        "title": "Volume 2/Volume 1",
-        "subtitle": "German Steam Patch",
+        "title": "You Don't Know Jack",
+        "tagd": ["German Steam Patch"],
         "version": "",
         "date": "",
         "image": "",
-        "description": "",
-        "tags": ["volume", "patch", "international", "deutsche", "steam", "90s"],
+        "description": "For 'You Don't Know Jack Volume 2'",
+        "tags": ["volume", "patch", "international", "deutsch", "steam", "90s"],
         "download": {
             "archive": "",
             "own": "",
@@ -601,13 +636,13 @@
         }
       },
       {
-        "title": "Volume 3/Volume 2",
-        "subtitle": "German Steam Patch",
+        "title": "You Don't Know Jack Volume 2",
+        "tagd": ["German Steam Patch"],
         "version": "",
         "date": "",
         "image": "",
-        "description": "",
-        "tags": ["volume", "patch", "international", "deutsche", "steam", "90s"],
+        "description": "For 'You Don't Know Jack Volume 3'",
+        "tags": ["volume", "patch", "international", "deutsch", "steam", "90s"],
         "download": {
             "archive": "",
             "own": "",
@@ -615,13 +650,13 @@
         }
       },
       {
-        "title": "Volume 4: The Ride/3: Abwärts",
-        "subtitle": "German Steam Patch",
+        "title": "You Don't Know Jack 3: Abwärts",
+        "tagd": ["German Steam Patch"],
         "version": "",
         "date": "",
         "image": "",
-        "description": "",
-        "tags": ["volume", "patch", "international", "deutsche", "steam", "90s"],
+        "description": "For 'You Don't Know Jack Volume 4: The Ride'",
+        "tags": ["volume", "patch", "international", "deutsch", "steam", "90s"],
         "download": {
             "archive": "",
             "own": "",
@@ -629,13 +664,13 @@
         }
       },
       {
-        "title": "Volume 6: Lost Gold/4",
-        "subtitle": "German Steam Patch",
+        "title": "You Don't Know Jack 4",
+        "tagd": ["German Steam Patch"],
         "version": "",
         "date": "",
         "image": "",
-        "description": "",
-        "tags": ["volume", "patch", "international", "deutsche", "steam", "00s"],
+        "description": "For 'You Don't Know Jack Volume 6: The Lost Gold'",
+        "tags": ["volume", "patch", "international", "deutsch", "steam", "00s"],
         "download": {
             "archive": "",
             "own": "",
@@ -643,13 +678,14 @@
         }
       },
       {
-        "title": "Volume 1 Demo",
-        "subtitle": "German",
+        "title": "You Don't Know Jack Volume 1",
+        "subtitle": "Demo",
+        "tagd": ["Deutsch"],
         "version": "",
         "date": "",
         "image": "",
         "description": "",
-        "tags": ["volume", "patch", "demo", "international", "deutsche", "iso", "90s"],
+        "tags": ["volume", "patch", "demo", "international", "deutsch", "iso", "90s"],
         "download": {
             "archive": "",
             "own": "https://drive.google.com/file/d/1qus8wKqtjgMTf4EQQ5Kxke-GymiDXF3p/view?usp=drive_link",
@@ -657,13 +693,13 @@
         }
       },
       {
-        "title": "YDKJ 2 German",
-        "subtitle": "",
+        "title": "You Don't Know Jack 2 ",
+        "tagd": ["Deutsch"],
         "version": "",
         "date": "",
         "image": "images/51M1D2EWRHL.jpg",
         "description": "",
-        "tags": ["volume", "patch", "international", "deutsche", "iso", "90s"],
+        "tags": ["volume", "patch", "international", "deutsch", "iso", "90s"],
         "download": {
             "archive": "https://archive.org/details/cover_bigboxydkj2-german",
             "own": "https://drive.google.com/file/d/102mKApMpZgXsW2BYuXX0rnPJGl9CkPLl/view?usp=drive_link",
@@ -671,27 +707,13 @@
         }
       },
       {
-        "title": "YDKJ 2 Demo German",
-        "subtitle": "",
-        "version": "",
-        "date": "",
-        "image": "",
-        "description": "",
-        "tags": ["volume", "patch", "demo", "international", "deutsche", "iso", "90s"],
-        "download": {
-            "archive": "",
-            "own": "https://drive.google.com/file/d/1eZUUOj5_TiPpgIVe3DLyKSyiWP24Ghb6/view?usp=drive_link",
-            "jackde": "https://web.archive.org/web/*/http://www.jack.de:80/downloads/demos/YDKJ2_demo1.exe"
-        }
-      },
-      {
-        "title": "YDKJ 3: Abwärts",
-        "subtitle": "",
+        "title": "You Don't Know Jack 3: Abwärts",
+        "tagd": ["Deutsch"],
         "version": "",
         "date": "",
         "image": "images/169635--you-dont-know-jack-3-abwaerts.png",
         "description": "",
-        "tags": ["volume", "patch", "international", "deutsche", "iso", "90s"],
+        "tags": ["volume", "patch", "international", "deutsch", "iso", "90s"],
         "download": {
             "archive": "",
             "macintoshgarden": "https://macintoshgarden.org/games/you-dont-know-jack-3-german",
@@ -699,13 +721,14 @@
         }
       },
       {
-        "title": "YDKJ 4 trailer on ydkj.de (swf file)",
-        "subtitle": "",
+        "title": "You Don't Know Jack 4",
+        "subtitle": "Trailer",
+        "tagd": ["Deutsch"],
         "version": "",
         "date": "",
         "image": "",
         "description": "Trailer of YDKJ 4 from ydkj.de website.",
-        "tags": ["volume", "international", "deutsche", "other"],
+        "tags": ["volume", "international", "deutsch", "other"],
         "download": {
             "archive": "",
             "own": "https://drive.google.com/file/d/1KlM0T03teWq1TOwJObATwWswJzs6Lp6R/view?usp=drive_link",
@@ -713,13 +736,13 @@
         }
       },
       {
-        "title": "YDKJ 4",
-        "subtitle": "",
+        "title": "You Don't Know Jack 4",
+        "tagd": ["Deutsch"],
         "version": "",
         "date": "",
         "image": "images/518C392WNDL._AC_UF1000,1000_QL80_.jpg",
         "description": "",
-        "tags": ["volume", "international", "deutsche", "iso", "volume", "90s"],
+        "tags": ["volume", "online", "international", "deutsch", "iso", "volume", "90s"],
         "download": {
             "archive": "",
             "own": "https://drive.google.com/file/d/14V2bIfhvHWEf8kqXbZ22WJHghg5aISkc/view?usp=drive_link",
@@ -727,13 +750,14 @@
         }
       },
       {
-        "title": "YDKJ 4 v1.0 Proper Working No CD Fixed exe",
-        "subtitle": "German",
-        "version": "",
+        "title": "You Don't Know Jack 4",
+        "subtitle": " Proper Working No CD Fixed (.exe)",
+        "tagd": ["Deutsch"],
+        "version": "v1.0",
         "date": "",
         "image": "",
         "description": "",
-        "tags": ["volume", "international", "deutsche", "90s", "fix"],
+        "tags": ["volume", "international", "deutsch", "90s", "fix"],
         "download": {
             "archive": "",
             "own": "https://drive.google.com/file/d/1DDpr2HypL_K33iD_oF3SFyJMgBHP0Rr0/view?usp=drive_link",
@@ -741,13 +765,14 @@
         }
       },
       {
-        "title": "Playstation German",
-        "subtitle": "",
+        "title": "You Don't Know Jack",
+        "platform": "Playstation",
+        "tagd": ["Deutsch"],
         "version": "",
         "date": "",
         "image": "images/playstationgerman.png",
         "description": "",
-        "tags": ["playstation", "international", "deutsche", "90s"],
+        "tags": ["playstation", "international", "deutsch", "90s"],
         "download": {
             "vimm": "https://vimm.net/vault/53475",
             "own": "",
@@ -755,13 +780,14 @@
         }
       },
       {
-        "title": "YDKJ Screensaver",
-        "subtitle": "",
+        "title": "You Don't Know Jack",
+        "subtitle": "Screensaver",
+        "tagd": ["Deutsch"],
         "version": "",
         "date": "",
         "image": "images/ydkjscreensaver.png",
         "description": "",
-        "tags": ["other", "international", "deutsche", "00s"],
+        "tags": ["other", "international", "deutsch", "00s"],
         "download": {
             "archive": "",
             "own": "https://github.com/dedz212/YDKJscreensaver/releases/tag/Release",
@@ -769,8 +795,23 @@
         }
       },
       {
-        "title": "France",
-        "subtitle": "",
+        "title": "You Don't Know Jack 2",
+        "subtitle": "Demo",
+        "tagd": ["Deutsch"],
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "patch", "demo", "international", "deutsch", "iso", "90s"],
+        "download": {
+            "archive": "",
+            "own": "https://drive.google.com/file/d/1eZUUOj5_TiPpgIVe3DLyKSyiWP24Ghb6/view?usp=drive_link",
+            "jackde": "https://web.archive.org/web/*/http://www.jack.de:80/downloads/demos/YDKJ2_demo1.exe"
+        }
+      },
+      {
+        "title": "You Don't Know Jack",
+        "tagd": ["Français"],
         "version": "",
         "date": "",
         "image": "images/fr.png",
@@ -783,8 +824,9 @@
         }
       },
       {
-        "title": "France Demo",
-        "subtitle": "",
+        "title": "You Don't Know Jack",
+        "tagd": ["Français"],
+        "subtitle": "Demo",
         "version": "",
         "date": "",
         "image": "",
@@ -797,7 +839,8 @@
         }
       },
       {
-        "title": "UK",
+        "title": "You Don't Know Jack",
+        "tagd": ["UK"],
         "subtitle": "",
         "version": "",
         "date": "",
@@ -811,8 +854,9 @@
         }
       },
       {
-        "title": "UK Demo",
-        "subtitle": "",
+        "title": "You Don't Know Jack",
+        "tagd": ["UK"],
+        "subtitle": "Demo",
         "version": "",
         "date": "",
         "image": "",
@@ -825,8 +869,8 @@
         }
       },
       {
-        "title": "Japan",
-        "subtitle": "",
+        "title": "You Don't Know Jack Presented by 浜田雅功",
+        "tagd": ["日本語"],
         "version": "",
         "date": "",
         "image": "images/BIGBOX1.jpg",
@@ -839,8 +883,8 @@
         }
       },
       {
-        "title": "YDKJ Psych Test",
-        "subtitle": "",
+        "title": "You Don't Know Jack",
+        "subtitle": "Psych Test",
         "version": "5th Dementia promotional flash game",
         "date": "",
         "image": "images/maxresdefault.jpg",
@@ -881,8 +925,8 @@
         }
       },
       {
-        "title": "Volume 6 Display patch",
-        "subtitle": "",
+        "title": "You Don't Know Jack Volume 6: The Lost Gold",
+        "subtitle": "Display patch",
         "version": "",
         "date": "",
         "image": "",
@@ -895,8 +939,8 @@
         }
       },
       {
-        "title": "Volume 6 on Windows 10 Fix-Patch",
-        "subtitle": "",
+        "title": "You Don't Know Jack Volume 6: The Lost Gold",
+        "subtitle": "Windows 10 Fix-Patch",
         "version": "",
         "date": "",
         "image": "",
@@ -923,8 +967,8 @@
         }
       },
       {
-        "title": "YDKJ2011",
-        "subtitle": "PC",
+        "title": "You Don't Know Jack 2011",
+        "platform": "PC",
         "version": "",
         "date": "",
         "image": "images/Ydkj2011dvdcdpc.webp",
@@ -937,8 +981,8 @@
         }
       },
       {
-        "title": "YDKJ2011",
-        "subtitle": "Wii",
+        "title": "You Don't Know Jack 2011",
+        "platform": "Wii",
         "version": "",
         "date": "",
         "image": "images/Ydkj2011wii.webp",
@@ -951,8 +995,8 @@
         }
       },
       {
-        "title": "YDKJ2011",
-        "subtitle": "DS",
+        "title": "You Don't Know Jack 2011",
+        "platform": "DS",
         "version": "",
         "date": "",
         "image": "images/Ydkj2011nds.webp",
@@ -965,8 +1009,8 @@
         }
       },
       {
-        "title": "YDKJ2011",
-        "subtitle": "PS3",
+        "title": "You Don't Know Jack 2011",
+        "platform": "PS3",
         "version": "1.0",
         "image": "images/Ydkj2011ps3.webp",
         "description": "",
@@ -979,8 +1023,8 @@
         }
       },
       {
-        "title": "YDKJ2011",
-        "subtitle": "PS3",
+        "title": "You Don't Know Jack 2011",
+        "platform": "PS3",
         "version": "1.03",
         "image": "images/Ydkj2011ps3.webp",
         "description": "",
@@ -992,8 +1036,9 @@
         }
       },
       {
-        "title": "YDKJ2011",
-        "subtitle": "PS3 Demo",
+        "title": "You Don't Know Jack 2011",
+        "platform": "PS3",
+        "subtitle": "Demo",
         "version": "",
         "image": "",
         "description": "",
@@ -1006,8 +1051,8 @@
         }
       },
       {
-        "title": "YDKJ2011",
-        "subtitle": "Xbox 360",
+        "title": "You Don't Know Jack 2011",
+        "platform": "Xbox 360",
         "version": "",
         "date": "",
         "image": "images/Ydkj2011xbox360.webp",
@@ -1020,22 +1065,25 @@
         }
       },
       {
-        "title": "YDKJ2011",
-        "subtitle": "Xbox 360 Demo",
+        "title": "You Don't Know Jack 2011",
+        "platform": "Xbox 360",
+        "subtitle": "Demo",
+        "tagd": ["Lost Media"],
         "version": "",
         "date": "",
         "image": "",
         "description": "",
-        "tags": ["evolution", "10s", "other", "demo", "cross-platform"],
+        "tags": ["evolution", "10s", "video", "other", "demo", "lostmedia", "cross-platform"],
         "download": {
-          "archive": "https://archive.org/details/youdontknowjack2011xbox360demo",
+          "archive": "",
           "video": "https://archive.org/details/GameSpot-6286300",
           "other": ""
         }
       },
       {
-        "title": "YDKJ2011",
-        "subtitle": "Xbox 360 Jack PACKS DLC",
+        "title": "Jack PACKS",
+        "platform": "Xbox 360",
+        "subtitle": "DLC",
         "version": "",
         "date": "",
         "image": "images/ouya_icon.png",
@@ -1048,8 +1096,9 @@
         }
       },
       {
-        "title": "YDKJ2011",
-        "subtitle": "PS3 Jack PACKS DLC",
+        "title": "Jack PACKS",
+        "platform": "PS3",
+        "subtitle": "DLC",
         "version": "",
         "date": "",
         "image": "images/L6adbd8.png",
@@ -1091,7 +1140,7 @@
         }
       },
       {
-        "title": "The Book",
+        "title": "You Don't Know Jack: The Book",
         "subtitle": "",
         "version": "",
         "date": "",
@@ -1105,7 +1154,7 @@
         }
       },
       {
-        "title": "The TV Book",
+        "title": "You Don't Know Jack: The TV Book",
         "subtitle": "",
         "version": "",
         "date": "",
@@ -1119,8 +1168,8 @@
         }
       },
       {
-        "title": "Tabletop Version (Tiger Electronics)",
-        "subtitle": "",
+        "title": "You Don't Know Jack",
+        "subtitle": "Tabletop Version (Tiger Electronics)",
         "version": "",
         "date": "",
         "image": "images/Tabletop.png",
@@ -1130,6 +1179,369 @@
             "fandom": "https://jackboxgames.fandom.com/wiki/You_Don%27t_Know_Jack_(Tabletop_Version)",
             "archive": "",
             "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack Volume 1",
+        "subtitle": "Manual",
+        "version": "",
+        "date": "",
+        "image": "images/1manual.png",
+        "description": "",
+        "tags": ["volume", "book", "90s"],
+        "download": {
+          "archive": "",
+          "macintoshgarden": "https://macintoshgarden.org/sites/macintoshgarden.org/files/manuals/ydkj_manual.pdf",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack Volume 2",
+        "subtitle": "Manual",
+        "version": "",
+        "date": "",
+        "image": "images/manual2.png",
+        "description": "",
+        "tags": ["volume", "book", "90s"],
+        "download": {
+          "archive": "",
+          "macintoshgarden": "https://macintoshgarden.org/sites/macintoshgarden.org/files/manuals/ydkj2_manual.pdf",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack Volume 3",
+        "subtitle": "Manual",
+        "version": "",
+        "date": "",
+        "image": "images/manual3.png",
+        "description": "",
+        "tags": ["volume", "book", "90s"],
+        "download": {
+          "archive": "",
+          "macintoshgarden": "https://macintoshgarden.org/sites/macintoshgarden.org/files/manuals/ydkj3_manual.pdf",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack Volume 4: The Ride",
+        "subtitle": "Manual",
+        "version": "",
+        "date": "",
+        "image": "images/manual4.png",
+        "description": "",
+        "tags": ["volume", "book", "90s"],
+        "download": {
+          "archive": "",
+          "macintoshgarden": "https://macintoshgarden.org/sites/macintoshgarden.org/files/manuals/ydkj4_manual.pdf",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack Volume 6: Lost Gold",
+        "subtitle": "Manual",
+        "version": "",
+        "date": "2003",
+        "image": "images/YDKJ6Manual_0000.jpg",
+        "description": "",
+        "tags": ["volume", "book", "00s"],
+        "download": {
+          "archive": "https://archive.org/details/ydkj-6-manual/",
+          "own": "https://drive.google.com/file/d/19dBjYwGLaWwJwe8LwyBLkC2KwSXot4kw/view?usp=drive_link",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack Sports",
+        "subtitle": "Manual",
+        "version": "",
+        "date": "",
+        "image": "images/manuals.png",
+        "description": "",
+        "tags": ["subject", "book", "90s"],
+        "download": {
+          "archive": "",
+          "macintoshgarden": "",
+          "other": "https://mega.nz/file/0CxUzKzB#-tAgBbWKHkch_8JddM4GLCq724L9gK0WqQftjT1wr48"
+        }
+      },
+      {
+        "title": "You Don't Know Jack Movies",
+        "subtitle": "Manual",
+        "version": "",
+        "date": "",
+        "image": "images/maunalm.png",
+        "description": "",
+        "tags": ["subject", "book", "90s"],
+        "download": {
+          "archive": "",
+          "macintoshgarden": "https://macintoshgarden.org/sites/macintoshgarden.org/files/manuals/ydkjmovies_manual.pdf",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack Television",
+        "subtitle": "Manual",
+        "version": "",
+        "date": "",
+        "image": "images/manualt.png",
+        "description": "",
+        "tags": ["subject", "book", "90s"],
+        "download": {
+          "archive": "",
+          "macintoshgarden": "https://macintoshgarden.org/sites/macintoshgarden.org/files/manuals/ydkjtv_manual.pdf",
+          "other": ""
+        }
+      },
+      {
+        "title": "Headrush",
+        "subtitle": "Manual",
+        "version": "",
+        "date": "",
+        "image": "images/manualh.png",
+        "description": "",
+        "tags": ["subject", "book", "90s"],
+        "download": {
+          "archive": "",
+          "macintoshgarden": "https://macintoshgarden.org/sites/macintoshgarden.org/files/manuals/head_rush_manual.pdf",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack 5th Dementia",
+        "subtitle": "Manual",
+        "version": "",
+        "date": "2000",
+        "image": "images/01_m1.jpg",
+        "description": "",
+        "tags": ["online", "offline", "book", "00s"],
+        "download": {
+          "sierrachest": "https://sierrachest.com/gfx/games/YDKJ_5th_Dementia/box/01_manual.pdf",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack",
+        "subtitle": "Manual",
+        "tagd": ["Deutsch"],
+        "version": "",
+        "date": "",
+        "image": "images/cd_cover.png",
+        "description": "",
+        "tags": ["volume", "international", "deutsch", "book", "90s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": "https://mega.nz/file/xfZ3EJja#RbjfZzu_L5lmUlkXP58ScSUF_z_NoeF_vqlRAtDcPJc"
+        }
+      },
+      {
+        "title": "You Don't Know Jack Volume 2",
+        "subtitle": "Manual",
+        "tagd": ["Deutsch"],
+        "version": "",
+        "date": "",
+        "image": "images/01_cd_cover.png",
+        "description": "",
+        "tags": ["volume", "international", "deutsch", "book", "90s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": "https://mega.nz/file/ha53WTYA#4vNgFfd2wPGd15OKHxQt51bSrAzAClUA75thqSNXZCk"
+        }
+      },
+      {
+        "title": "You Don't Know Jack 3: Abwärts",
+        "subtitle": "Manual",
+        "tagd": ["German", "Lost Media"],
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["lostmedia", "volume", "international", "deutsch", "book", "90s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack 4",
+        "subtitle": "Manual",
+        "tagd": ["Deutsch"],
+        "version": "",
+        "date": "",
+        "image": "images/inlay_I.png",
+        "description": "",
+        "tags": ["volume", "international", "deutsch", "book", "00s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": "https://mega.nz/file/xTRQVDQa#pgqEWp_ZI7w6Rjf_TJq8pP8GVIC6W_JSeTJcSCA5LOM"
+        }
+      },
+      {
+        "title": "You Don't Know Jack Presented by 浜田雅功",
+        "subtitle": "Users Manual",
+        "tagd": ["日本語"],
+        "version": "",
+        "date": "",
+        "image": "images/ydkjjusersmanual.png",
+        "description": "",
+        "tags": ["volume", "international", "nihongo", "book", "90s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": "https://mega.nz/file/YGxynB4J#GgXCHsTshsnezBeE_rmxjwiGoHzYil2oNS9a_YQoYso"
+        }
+      },
+      {
+        "title": "You Don't Know Jack",
+        "subtitle": "Manual",
+        "tagd": ["Français"],
+        "version": "",
+        "date": "",
+        "image": "images/manualfr.png",
+        "description": "",
+        "tags": ["volume", "international", "francais", "book", "90s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": "https://mega.nz/file/xC5QCT5Q#aWRCKRNLFzzbdbWYwsT8992pq4Ub_fmeZFRX15NgfbQ"
+        }
+      },
+      {
+        "title": "You Don't Know Jack 2011",
+        "platform": "PC",
+        "subtitle": "Manual",
+        "version": "",
+        "date": "",
+        "image": "images/ydkj11.png",
+        "description": "",
+        "tags": ["evolution", "book", "90s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": "https://mega.nz/file/tGpDiQTK#XnhuDEyP4tQpiAz4wCxkCuDS0LF6FpfuJgym34AKasE"
+        }
+      },
+      {
+        "title": "You Don't Know Jack 2011",
+        "platform": "DS",
+        "subtitle": "Manual",
+        "tagd": "",
+        "version": "",
+        "date": "",
+        "image": "images/manualds.png",
+        "description": "",
+        "tags": ["evolution", "book", "90s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": "https://archive.org/details/you-dont-know-jack-nintendo-ds/"
+        }
+      },
+      {
+        "title": "The Jack Principles",
+        "subtitle": "Short Version",
+        "tagd": [".pdf"],
+        "version": "",
+        "date": "1997",
+        "image": "images/tjps97.png",
+        "description": "",
+        "tags": ["book", "other", "90s"],
+        "download": {
+          "archive": "",
+          "own": "https://drive.google.com/file/d/1XBqguk4f7EEVKScNUBTYmLFHxOvZlLcg/view?usp=drive_link",
+          "other": ""
+        }
+      },
+      {
+        "title": "The Jack Principles",
+        "subtitle": "Short Version",
+        "tagd": [".pdf"],
+        "version": "",
+        "date": "2002",
+        "image": "images/tjp00.png",
+        "description": "",
+        "tags": ["book", "other", "00s"],
+        "download": {
+          "archive": "https://archive.org/details/the-jack-principles/mode/2up",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "The Jack Principles",
+        "subtitle": "Long Version",
+        "tagd": [".pdf"],
+        "version": "",
+        "date": "1997",
+        "image": "images/tjpl.png",
+        "description": "",
+        "tags": ["book", "other", "90s"],
+        "download": {
+          "archive": "https://drive.google.com/file/d/1zmpZ-HKfwgPZ3L_2UhwUVQwOllnKzlkv/view?usp=drive_link",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack",
+        "subtitle": "Sonderausgabe",
+        "tagd": ["Lost Media", "Deutsch"],
+        "version": "",
+        "date": "1998",
+        "image": "images/s-l500.jpg",
+        "description": "",
+        "tags": ["deutsch", "lostmedia", "other", "audio", "90s"],
+        "download": {
+          "ebay": "https://www.ebay.at/itm/334825593461",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Hear Jack",
+        "subtitle": "",
+        "version": "",
+        "date": "1998",
+        "image": "images/s-l500 (1).jpg",
+        "description": "",
+        "tags": ["other", "audio", "90s"],
+        "download": {
+          "ebay": "https://www.ebay.com/itm/275306965713",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Hear Jack",
+        "subtitle": "Volume 1",
+        "version": "",
+        "date": "1998",
+        "image": "images/a2557674546_16.jpg",
+        "description": "",
+        "tags": ["other", "audio", "90s"],
+        "download": {
+          "bandcamp": "https://jackboxgames.bandcamp.com/album/you-dont-hear-jack-volume-1",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Hear Jack 2",
+        "subtitle": "",
+        "version": "",
+        "date": "2017",
+        "image": "images/a1690668511_16.jpg",
+        "description": "",
+        "tags": ["other", "audio", "90s"],
+        "download": {
+          "bandcamp": "https://jackboxgames.bandcamp.com/album/you-dont-hear-jack-2",
+          "own": "",
+          "other": ""
         }
       }
     ]

@@ -1,65 +1,87 @@
-let activeTag = document.querySelector('.active-tag');
-
 document.addEventListener('DOMContentLoaded', function () {
     fetch('list.json')
       .then(response => response.json())
       .then(data => {
         document.getElementById('totalTitles').textContent += data.content.length;
         filterByTag(activeTag.textContent);
-        displayQuizItems(data.content);
+        displayQuizItems(data.content, function () {
+          const loader = document.querySelector('.loader');
+          loader.style.display = 'none';
+        });
       })
       .catch(error => console.error('Error fetching JSON:', error));
   });
   
-  function displayQuizItems(content) {
+  function displayQuizItems(content, callback) {
     const container = document.getElementById('quizContainer');
   
-    content.forEach(item => {
-      const quizItem = document.createElement('div');
-      quizItem.classList.add('quiz-item');
-
-      item.tags.forEach(tag => quizItem.classList.add(tag));
+    content.forEach((item, index) => {
+      setTimeout(() => {
+        const quizItem = document.createElement('div');
+        quizItem.classList.add('quiz-item');
   
-      const image = document.createElement('img');
-      image.src = item.image;
-  
-      const itemContent = document.createElement('div');
-      itemContent.classList.add('quiz-item-content');
-  
-      const title = document.createElement('h2');
-      if (item.subtitle) {
-        title.innerHTML = `${item.title} <span class="quiz-item-subtitle">${item.subtitle}</span>`;
-      } else {
-        title.textContent = item.title;
-      }
-      itemContent.appendChild(title);
-    
-      if (item.version) {
-        const version = document.createElement('p');
-        version.innerHTML = `<span class="quiz-item-subtitle">Version:</span> ${item.version}`;
-        itemContent.appendChild(version);
-      }
-
-      if (item.date) {
-        const date = document.createElement('p');
-        date.innerHTML = `<span class="quiz-item-subtitle">Date:</span> ${item.date}`;
-        itemContent.appendChild(date);
-      }
+        item.tags.forEach(tag => quizItem.classList.add(tag));
         
-      if (item.description) {
-        const description = document.createElement('p');
-        description.textContent = item.description;
-        itemContent.appendChild(description)
-      }
+        if (item.image) {
+          const image = document.createElement('img');
+          image.src = item.image;
+          quizItem.appendChild(image);
+        }
+    
+        const itemContent = document.createElement('div');
+        itemContent.classList.add('quiz-item-content');
+    
+        const title = document.createElement('h2');
+        if (item.subtitle) {
+          title.innerHTML = `${item.title} <span class="quiz-item-subtitle">${item.subtitle}</span>`;
+        } else {
+          title.textContent = item.title;
+        }
+        itemContent.appendChild(title);
+      
+        if (item.description) {
+          const description = document.createElement('p');
+          description.textContent = item.description;
+          itemContent.appendChild(description)
+        }
+
+        if (item.platform) {
+          const platform = document.createElement('p');
+          platform.innerHTML = `<span class="quiz-item-subtitle">Platform: ${item.platform}</span>`;
+          itemContent.appendChild(platform);
+        }
+
+        if (item.version) {
+          const version = document.createElement('p');
+          version.innerHTML = `<span class="quiz-item-subtitle">Version:</span> ${item.version}`;
+          itemContent.appendChild(version);
+        }
   
-  
-      const downloadLinks = createDownloadLinks(item.download);
-      itemContent.appendChild(downloadLinks);
-  
-      quizItem.appendChild(image);
-      quizItem.appendChild(itemContent);
-  
-      container.appendChild(quizItem);
+        if (item.date) {
+          const date = document.createElement('p');
+          date.innerHTML = `<span class="quiz-item-subtitle">Date:</span> ${item.date}`;
+          itemContent.appendChild(date);
+        }
+
+        if (item.tagd) {
+          item.tagd.forEach(tag => {
+            const tagd = document.createElement('p');
+            tagd.innerHTML = `<p class="tag4">${tag}</p>`;
+            itemContent.appendChild(tagd);
+          });
+        }
+    
+        const downloadLinks = createDownloadLinks(item.download);
+        itemContent.appendChild(downloadLinks);
+    
+        quizItem.appendChild(itemContent);
+    
+        container.appendChild(quizItem);
+        if (index === content.length - 1) {
+          // Вызываем функцию обратного вызова, когда все тайтлы загружены
+          callback();
+        }
+      }, index * 50);
     });
   }
   
@@ -163,6 +185,16 @@ document.addEventListener('DOMContentLoaded', function () {
         linkContainer.appendChild(dlc4Link);
     }
 
+    if (download.ebay) {
+      const ebayLink = createLink('ebay.com', download.ebay);
+      linkContainer.appendChild(ebayLink);
+    }
+
+    if (download.bandcamp) {
+      const bandcampLink = createLink('bandcamp.com', download.bandcamp);
+      linkContainer.appendChild(bandcampLink);
+    }
+
     return linkContainer;
   }
   
@@ -173,6 +205,8 @@ document.addEventListener('DOMContentLoaded', function () {
     link.target = '_blank';
     return link;
   }
+
+  let activeTag = document.getElementById('showall');
 
   function filterByTag(tag) {
     const items = document.querySelectorAll('.quiz-item');
@@ -191,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   
     tagElements.forEach(element => {
-      if (element.textContent === tag) {
+      if (element.id === tag) {
         element.classList.add('active-tag');
         activeTag = element;
       }
@@ -212,22 +246,138 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   
     tagElements.forEach(element => {
-      if (element.textContent === 'show all') {
+      const showall = "showall"
+      if (element.id === showall) {
         element.classList.add('active-tag');
         activeTag = element;
       }
     });
   }
 
+function isElementPartiallyVisible(el) {
+  var rect = el.getBoundingClientRect();
+  return rect.top < window.innerHeight && rect.bottom >= 0;
+}
+
+function handleScrollAnimation() {
+  var triggerElement = document.querySelector('.tdlrc');
+  var animatedElement = document.querySelector('.ton');
+  if (isElementPartiallyVisible(triggerElement)) {
+    animatedElement.classList.remove('animate');
+  } else {
+    animatedElement.classList.add('animate');
+  }
+}
+
+window.addEventListener('scroll', handleScrollAnimation);
+handleScrollAnimation();
+
+function popup() {
+  let popupBg = document.querySelector('.modal');
+  let popup = document.querySelector('.contentt');
+  let openPopupButtons = document.querySelectorAll('.open-popup');
+  let closePopupButton = document.querySelector('.actions');
+  openPopupButtons.forEach((button)=>{
+      button.addEventListener('click', (e)=>{
+          e.preventDefault();
+          popupBg.classList.add('active');
+          popup.classList.add('active');
+      }
+      )
+  }
+  );
+  /*
+  closePopupButton.addEventListener('click', ()=>{
+      popupBg.classList.remove('active');
+      popup.classList.remove('active');
+      showAll();
+  }
+  );
+  */
+  document.addEventListener('click', (e)=>{
+      if (e.target === popupBg) {
+          popupBg.classList.remove('active');
+          popup.classList.remove('active');
+          showAll();
+      }
+  }
+  );
+}
+
+const tct = document.querySelectorAll("#tct");
+
+tct.forEach(function(tct) {
+	if (tct) {
+		function ladtheme() {
+			const toggleTheme = document.querySelectorAll('.toggle-theme')
+			console.log('.toggle-theme is found!')
+			let el = document.documentElement
+			console.log('tct atrasts!')
+
+			for (var i = 0; i < toggleTheme.length; i++) {
+				toggleTheme[i].addEventListener('click', function() {
+					console.log('nospiedis');
+					if (el.hasAttribute('data-theme')) {
+						el.removeAttribute('data-theme');
+						console.log('The light theme has been turned on!');
+						//x.classList.remove("lang-toggleladoff");
+						//x.classList.add("lang-toggleladon");
+						tct.innerHTML = '🌛';
+						localStorage.removeItem('theme');
+						console.log('Item removed from local storage');
+					} else {
+						el.setAttribute('data-theme', 'dark');
+						console.log('The dark theme has been turned on!');
+						//x.classList.remove("lang-toggleladon");
+						//x.classList.add("lang-toggleladoff");
+						tct.innerHTML = '🌞';
+						localStorage.setItem('theme', 'dark');
+						console.log('Item added in local storage');
+					}
+				})
+			}
+
+			if (localStorage.getItem('theme') !== null) {
+				el.setAttribute('data-theme', 'dark');
+				//x.classList.add("lang-toggleladoff");
+				tct.innerHTML = '🌞';
+			} else {
+				//x.classList.add("lang-toggleladon");
+				tct.innerHTML = '🌛';
+			}
+		}
+		ladtheme()
+		console.log('LAD working!');
+	} else {
+		alert('LAD not working');
+	}
+});
+
+const textElement = document.getElementById('book');
+const texts = ['manual', 'book', 'pdf']; 
+let currentIndex = 0;
+
+function changeText() {
+  textElement.textContent = texts[currentIndex];
+  currentIndex = (currentIndex + 1) % texts.length;
+}
+setInterval(changeText, 12000);
+
+
   document.addEventListener("DOMContentLoaded", function() {
-    const version = "1689676294";
+    const version = "1689768979";
     if(sv){
       function siteversion() {
-          sv.innerHTML = version;
+          sv.textContent = `Version: ${version}`;
       }
       siteversion();
     }
     console.log("Version: " + version);
+    popup();
+    setTimeout(function() {
+      activeTag = document.getElementById('showall');
+      activeTag.classList.add('active-tag');
+  }, 50);
     /*
     const elements = document.querySelectorAll("div");
 
