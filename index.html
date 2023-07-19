@@ -24,8 +24,8 @@
 </head>
 <body>
     <div class="ton">
-        <p class="s11">YOU DON'T KNOW</p>
-        <p class="s21">ARCHIVE</p>
+        <p id="textone" class="s11">YOU DON'T KNOW</p>
+        <p id="texttwo" class="s21">ARCHIVE</p>
     </div>
     <div class="navbar">
         <div class="ton2">
@@ -50,32 +50,36 @@
             <p class="tag" id="international" onclick="filterByTag('international')">international</p>
             <p class="tag" id="patch" onclick="filterByTag('patch')">patch</p>
             <p class="tag" id="deutsch" onclick="filterByTag('deutsch')">deutsch</p>
-            <p class="tag" onclick="filterByTag('book')"><span id="book">book</span></p>
+            <p class="tag" id="book" onclick="filterByTag('book')"><span id="book2">manual</span></p>
             <p class="tag" id="fix" onclick="filterByTag('fix')">fix</p>
+            <p class="tag" id="bundle" onclick="filterByTag('bundle')">bundle</p>
             <p class="tag" id="other" onclick="filterByTag('other')">other</p>
         </div>
     </div>
     <div class="tdlrc">
-        <p class="s1">YOU DON'T KNOW</p>
-        <p class="s2">ARCHIVE</p>
-        <p class="s3"id="totalTitles">Total: </p>
+        <p id="textone" class="s1">YOU DON'T KNOW</p>
+        <p id="texttwo" class="s2">ARCHIVE</p>
+        <p class="s3" id="totalTitles"></p>
     </div>
     <div class="container" id="quizContainer"></div>
     <div class="footer">
-        <p class="tag3 open-popup" onclick="filterByTag('0')">info</p>
+        <p class="tag3 open-popup" id="info" onclick="displayMain()">info</p>
         <div class="loader"></div>
     </div>
     <div id="popup">
         <div id="modal" class="modal">
             <div class="error contentt">
-            <!--<img src="/assets/images/bubs.gif" alt="M Bubs" class="bubz">-->
-            <p class="justyeah">CREDITS</p>
-            <p class="sv">Made: <a class="justyeah" target="_blank" href="https://dejelnieks.lv/#t">Tere-Zander aka Dejelnieks</a></p>
-            <p class="sv" id="sv"></p>
-            <p class="sv">Special thanks: ali kirb (@alikirb)</p>
-            <p class="tag2"><a href="https://discord.com/invite/FsfSdVKcwq">discord</a></p>
-            <p class="tag2"><a id="tct" class="toggle toggle-theme">🌛</a></p>
-            <!--<div class="actions">x</div>-->
+                <!--<img src="/assets/images/bubs.gif" alt="M Bubs" class="bubz">-->
+                <p class="justyeah">CREDITS</p>
+                <p class="sv">Made: <a class="justyeah" target="_blank" href="https://dejelnieks.lv/#t">Tere-Zander aka Dejelnieks</a></p>
+                <p class="sv" id="sv"></p>
+                <p class="sv">Special thanks: ali kirb (@alikirb)</p>
+                <div class="inline">
+                    <p class="tag2"><a href="https://discord.com/invite/FsfSdVKcwq">Discord</a></p>
+                    <p class="tag2"><a id="tct" class="toggle toggle-theme">🌛</a></p>
+                    <p class="tag2"><a id="nandesuka">何ですか</a></p>
+                </div>
+                <!--<div class="actions">x</div>-->
             </div>
         </div>
       </div>

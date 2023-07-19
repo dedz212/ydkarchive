@@ -2,7 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('list.json')
       .then(response => response.json())
       .then(data => {
-        document.getElementById('totalTitles').textContent += data.content.length;
+        if (localStorage.getItem('egg') === 'nihon') {
+          document.getElementById('totalTitles').textContent += `トータル: ${data.content.length}`;
+        } else {
+          document.getElementById('totalTitles').textContent += `Total: ${data.content.length}`;
+        }
         filterByTag(activeTag.textContent);
         displayQuizItems(data.content, function () {
           const loader = document.querySelector('.loader');
@@ -298,7 +302,7 @@ function popup() {
       if (e.target === popupBg) {
           popupBg.classList.remove('active');
           popup.classList.remove('active');
-          showAll();
+          displayMain();
       }
   }
   );
@@ -353,8 +357,12 @@ tct.forEach(function(tct) {
 	}
 });
 
-const textElement = document.getElementById('book');
-const texts = ['manual', 'book', 'pdf']; 
+const textElement = document.getElementById('book2');
+if (localStorage.getItem('egg') === 'nihon') {
+  var texts = ['必携', '本', 'pdf'];
+} else {
+  var texts = ['manual', 'book', 'pdf']; 
+}
 let currentIndex = 0;
 
 function changeText() {
@@ -364,11 +372,73 @@ function changeText() {
 setInterval(changeText, 12000);
 
 
+const textone = document.querySelectorAll('#textone');
+const texttwo = document.querySelectorAll('#texttwo');
+const nandesuka = document.querySelector('#nandesuka')
+function egg() {
+  if (localStorage.getItem('egg') === 'nihon') {
+    localStorage.removeItem('egg');
+  } else {
+    localStorage.setItem('egg', 'nihon');
+  }
+  location.reload()
+}
+
+if (localStorage.getItem('egg') === 'nihon') {
+  for (var i = 0; i < textone.length; i++) {
+    textone[i].textContent = "ユードントノー";
+  }
+  for (var i = 0; i < texttwo.length; i++) {
+    texttwo[i].textContent = "アーカイブ";
+  }
+  document.getElementById('90s').textContent = "1990年代";
+  document.getElementById('00s').textContent = "2000年代";
+  document.getElementById('10s').textContent = "2010年代";
+  document.getElementById('showall').textContent = "すべて表示";
+  document.getElementById('volume').textContent = "ボリューム";
+  document.getElementById('info').textContent = "インフォ";
+  document.getElementById('subject').textContent = "課題";
+  document.getElementById('online').textContent = "オンライン";
+  document.getElementById('offline').textContent = "オフライン";
+  document.getElementById('event').textContent = "イベント";
+  document.getElementById('lostmedia').textContent = "ロストメディア";
+  document.getElementById('evolution').textContent = "化育";
+  document.getElementById('mobile').textContent = "モビール";
+  document.getElementById('demo').textContent = "デモ";
+  document.getElementById('international').textContent = "インター";
+  document.getElementById('patch').textContent = "修正プログラム";
+  document.getElementById('fix').textContent = "フィクス";
+  nandesuka.textContent = "I DON'T KNOW JAPANESE";
+} else {
+  for (var i = 0; i < textone.length; i++) {
+    textone[i].textContent = "YOU DON'T KNOW";
+  }
+  for (var i = 0; i < texttwo.length; i++) {
+    texttwo[i].textContent = "ARCHIVE";
+  }
+}
+nandesuka.addEventListener('click', egg);
+
+function displayMain() {
+  const container = document.querySelector(".container");
+  
+  if (container.style.display !== 'none') {
+    container.style.display = 'none';
+  } else {
+    container.style.display = 'flex';
+    showAll();
+  }
+}
+
   document.addEventListener("DOMContentLoaded", function() {
-    const version = "1689768979";
+    const version = "1689804932";
     if(sv){
       function siteversion() {
+        if (localStorage.getItem('egg') === 'nihon') {
+          sv.textContent = `版: ${version}`;
+        } else {
           sv.textContent = `Version: ${version}`;
+        }
       }
       siteversion();
     }

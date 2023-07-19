@@ -88,7 +88,7 @@
         "date": "1996",
         "image": "images/volume1_xl.png",
         "description": "",
-        "tags": ["volume", "iso", "DLC", "steam", "90s"],
+        "tags": ["volume", "iso", "DLC", "steam", "90s", "bundle"],
         "download": {
           "archive": "https://archive.org/details/youdontknowjackxl10",
           "own": "",
@@ -241,7 +241,7 @@
         "subtitle": "",
         "version": "",
         "date": "1996-2000",
-        "image": "images/offline.png",
+        "image": "images/network.png",
         "description": "",
         "tags": ["online", "90s", "00s"],
         "download": {
@@ -255,7 +255,7 @@
         "subtitle": "",
         "version": "",
         "date": "1997-2000",
-        "image": "images/offline.png",
+        "image": "images/networksports.png",
         "description": "",
         "tags": ["online", "90s", "00s"],
         "download": {
@@ -1182,6 +1182,20 @@
         }
       },
       {
+        "title": "You Don't Know Jack",
+        "subtitle": "TV Expansion Pack ",
+        "version": "",
+        "date": "",
+        "image": "images/pic5915943.png",
+        "description": "",
+        "tags": ["other", "DLC", "90s"],
+        "download": {
+            "fandom": "",
+            "archive": "",
+            "other": "https://boardgamegeek.com/boardgame/328972/you-dont-know-jack-tv-expansion-pack"
+        }
+      },
+      {
         "title": "You Don't Know Jack Volume 1",
         "subtitle": "Manual",
         "version": "",
@@ -1314,7 +1328,7 @@
         "date": "2000",
         "image": "images/01_m1.jpg",
         "description": "",
-        "tags": ["online", "offline", "book", "00s"],
+        "tags": ["online", "book", "00s"],
         "download": {
           "sierrachest": "https://sierrachest.com/gfx/games/YDKJ_5th_Dementia/box/01_manual.pdf",
           "own": "",
@@ -1504,7 +1518,7 @@
       },
       {
         "title": "You Don't Hear Jack",
-        "subtitle": "",
+        "subtitle": "Volume 1",
         "version": "",
         "date": "1998",
         "image": "images/s-l500 (1).jpg",
@@ -1512,22 +1526,8 @@
         "tags": ["other", "audio", "90s"],
         "download": {
           "ebay": "https://www.ebay.com/itm/275306965713",
-          "own": "",
-          "other": ""
-        }
-      },
-      {
-        "title": "You Don't Hear Jack",
-        "subtitle": "Volume 1",
-        "version": "",
-        "date": "1998",
-        "image": "images/a2557674546_16.jpg",
-        "description": "",
-        "tags": ["other", "audio", "90s"],
-        "download": {
           "bandcamp": "https://jackboxgames.bandcamp.com/album/you-dont-hear-jack-volume-1",
-          "own": "",
-          "other": ""
+          "other": "http://web.archive.org/web/20060216021210/http://www.jellyvision.com/go.php?p=/stuff/gamez/ydkj/index.php"
         }
       },
       {
@@ -1540,6 +1540,118 @@
         "tags": ["other", "audio", "90s"],
         "download": {
           "bandcamp": "https://jackboxgames.bandcamp.com/album/you-dont-hear-jack-2",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack XXL",
+        "subtitle": "",
+        "version": "",
+        "date": "1996",
+        "image": "images/xxl.png",
+        "description": "Vol.1 XL + Vol. 2",
+        "tags": ["volume", "bundle", "90s"],
+        "download": {
+          "ebay": "https://www.ebay.com/itm/385532638067?chn=ps&mkevt=1&mkcid=28",
+          "own": "",
+          "other": "http://web.archive.org/web/19970328210817/http://www.toasted.com/lite/products/jack/jkxxl.html"
+        }
+      },
+      {
+        "title": "You Don't Know Jack Huge XXXL",
+        "subtitle": "",
+        "version": "",
+        "date": "1997",
+        "image": "images/hugexxxl.png",
+        "description": "Vol.1 + Vol.2 + Vol.3",
+        "tags": ["volume", "bundle", "90s"],
+        "download": {
+          "ebay": "https://www.ebay.com/itm/255799267899",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack The Irreverent Collection",
+        "subtitle": "",
+        "version": "",
+        "date": "1998",
+        "image": "images/The Irreverent Collection.png",
+        "description": "Vol.1 + Vol.2 + Vol.3 + The Ride",
+        "tags": ["volume", "bundle", "90s"],
+        "download": {
+          "ebay": "https://www.ebay.com/itm/255799267899",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack Jack Pack",
+        "subtitle": "",
+        "version": "",
+        "date": "1999",
+        "image": "images/71WRRAFTK1L.gif",
+        "description": "Sports + TV + Movies",
+        "tags": ["subject", "bundle", "90s"],
+        "download": {
+          "amazon": "https://www.amazon.com/Dont-Know-Jack-Sports-Television-Movies/dp/B00001IVWH",
+          "own": "",
+          "other": "http://web.archive.org/web/20001018113806/http://www.berksys.com/products/jack2/collections/pack/pack.html"
+        }
+      },
+      {
+        "title": "You Don't Know Jack JUMBO",
+        "subtitle": "",
+        "version": "",
+        "date": "1999",
+        "image": "images/s-l300.png",
+        "description": "Vol.1 + Vol.2 + Vol.3 + The Ride + Offline",
+        "tags": ["volume", "subject", "offline", "bundle", "90s"],
+        "download": {
+          "ebay": "https://www.ebay.com/itm/385349685381",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack 2001",
+        "subtitle": "",
+        "version": "",
+        "date": "2001",
+        "image": "images/61W71NCFNFL.png",
+        "description": "Offline + LFF",
+        "tags": ["offline", "bundle", "90s", "00s"],
+        "download": {
+          "amazon": "https://www.amazon.in/You-Dont-Know-Jack-2001/dp/B00004RJXJ",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack Snack Pack",
+        "subtitle": "",
+        "version": "",
+        "date": "2000",
+        "image": "images/01_front (1).jpg",
+        "description": "Vol.1 + TV + Movies + The Ride",
+        "tags": ["subject", "volume", "bundle", "90s", "00s"],
+        "download": {
+          "amazon": "https://www.amazon.in/Dont-Know-Jack-Snack-Pack/dp/B00004Y2LK",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack Quiz Pack",
+        "subtitle": "",
+        "tagd": ["Deutsch"],
+        "date": "",
+        "image": "images/51BBES1324L._AC_UF1000,1000_QL80_.jpg",
+        "description": "Vol.1 + Vol.2",
+        "tags": ["deutsch", "volume", "bundle", "90s", "00s"],
+        "download": {
+          "amazon": "https://www.amazon.in/Dont-Know-Jack-Snack-Pack/dp/B00004Y2LK",
           "own": "",
           "other": ""
         }

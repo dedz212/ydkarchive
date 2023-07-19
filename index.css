@@ -141,14 +141,14 @@ a:visited {
     opacity: 0;
     transition: opacity 0.5s ease;
     position: fixed;
-    top: 7.5vh;
+    top: 8vh;
     color: var(--p10);
     left: -1vh;
 }
 
 .navbar {
     position: fixed;
-    top: 17vh;
+    top: 18.4vh;
     left: 0;
     padding: 1vh;
     display: flex;
@@ -164,7 +164,7 @@ a:visited {
     position: fixed;
     top: 0vh;
     right: 0;
-    padding: 1vh;
+    padding: 0vh;
     display: flex;
     flex-wrap: nowrap;
     align-content: center;
@@ -228,7 +228,7 @@ a:visited {
     color: var(--p5);
     padding: 1vh;
     margin: 1vh;
-    width: 30vh;
+    width: 29vh;
     min-height: 8vh;
     border-radius: 1vh;
 
@@ -318,8 +318,12 @@ a:visited {
 .s21 {
     font-size: 3vh;
 }
+.s22 {
+    font-size: 7vh;
+}
 .s11,
-.s21 {
+.s21,
+.s22 {
     text-align: center;
     font-weight: 800;
     width: 100%;
@@ -335,7 +339,6 @@ a:visited {
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
     /*background: rgba(0,0,0,.85);*/
     z-index: 5;
     opacity: 0;
@@ -349,10 +352,8 @@ a:visited {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
     align-content: center;
-
+    align-items: center;
 }
 
 .modal-transition-leave {
@@ -365,19 +366,17 @@ a:visited {
 
 .contentt {
     position: absolute;
-    width: calc(100%);
+    top: 22vh;
     max-width: 60vh;
-    padding: 2vh;
-    background-color: var(--p4);
+    padding: 1vh;
     border-radius: 0.5vh;
-    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .contentt.active {
     animation: fadeIn 1s ease-in-out;
     animation-fill-mode: both;
     opacity: 1;
-    transform: translate(-50%, -50%);
 }
 
 .contentt .bubz {
@@ -392,32 +391,45 @@ a:visited {
     margin-top: 10px;
 }
 
-.justyeah,
+.contentt .inline {
+    display: flex;
+}
+
+.justyeah {
+    font-size: 6vh;
+    font-weight: 800;
+    color: var(--p10);
+    line-height: 1;
+}
+
 a.justyeah,
 a.justyeah,
 a.justyeah:hover,
 a.justyeah:visited {
     font-size: 3vh;
     font-weight: 800;
-    color: var(--p1);
+    color: var(--p10);
     line-height: 1;
 }
 
 .sv {
     font-size: 2.5vh;
     font-weight: 500;
-    color: var(--p5);
+    color: var(--p9);
 }
 
 .tag2 {
     background-color: var(--p12);
     border-radius: 0.5vh;
     padding: 0.3vh;
-    margin-top: 0.5vh;
+    margin: 0.5vh 1vh 0vh 0vh;
     font-size: 2vh;
     font-weight: 450;
     cursor: pointer;
-    width: min-content;
+    width: max-content;
+
+    display: flex;
+    align-items: center;
 }
 
 .tag4 {
@@ -485,6 +497,9 @@ a.justyeah:visited {
         padding-left: 14vh;
         justify-content: center;
     }
+    .contentt {
+        margin-left: 14vh;
+    }
 }
 @media screen and (max-width: 680px) {
     .s1 {
@@ -502,7 +517,7 @@ a.justyeah:visited {
         left: 25vh;
     }
     .quiz-item {
-        margin: 1vh 0vh 1vh 1vh;
+        margin: 0vh 0vh 1vh 0vh;
     }
 }
 @media screen and (max-width: 590px) {
