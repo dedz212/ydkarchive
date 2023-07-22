@@ -24,41 +24,17 @@
 </head>
 <body>
     <div class="ton">
-        <p id="textone" class="s11">YOU DON'T KNOW</p>
-        <p id="texttwo" class="s21">ARCHIVE</p>
+        <p class="s11">YOU DON'T KNOW</p>
+        <p id="texttwo" class="s21"></p>
     </div>
     <div class="navbar">
-        <div class="ton2">
-            <p class="tag" id="showall" onclick="showAll()">show all</p>
-            <p class="tag" id="90s" onclick="filterByTag('90s')">90s</p>
-            <p class="tag" id="00s" onclick="filterByTag('00s')">00s</p>
-            <p class="tag" id="10s" onclick="filterByTag('10s')">10s</p>
-            <p class="tag" id="volume" onclick="filterByTag('volume')">volume</p>
-            <p class="tag" id="subject" onclick="filterByTag('subject')">subject</p>
-            <p class="tag" id="iso" onclick="filterByTag('iso')">iso</p>
-            <p class="tag" id="DLC" onclick="filterByTag('DLC')">DLC</p>
-            <p class="tag" id="steam" onclick="filterByTag('steam')">steam</p>
-            <p class="tag" id="online" onclick="filterByTag('online')">online</p>
-            <p class="tag" id="offline" onclick="filterByTag('offline')">offline</p>
-            <p class="tag" id="playstation" onclick="filterByTag('playstation')">playstation</p>
-            <p class="tag" id="event" onclick="filterByTag('event')">event</p>
-            <p class="tag" id="lostmedia" onclick="filterByTag('lostmedia')">lost media</p>
-            <p class="tag" id="flash" onclick="filterByTag('flash')">flash</p>
-            <p class="tag" id="evolution" onclick="filterByTag('evolution')">evolution</p>
-            <p class="tag" id="mobile" onclick="filterByTag('mobile')">mobile</p>
-            <p class="tag" id="demo" onclick="filterByTag('demo')">demo</p>
-            <p class="tag" id="international" onclick="filterByTag('international')">international</p>
-            <p class="tag" id="patch" onclick="filterByTag('patch')">patch</p>
-            <p class="tag" id="deutsch" onclick="filterByTag('deutsch')">deutsch</p>
-            <p class="tag" id="book" onclick="filterByTag('book')"><span id="book2">manual</span></p>
-            <p class="tag" id="fix" onclick="filterByTag('fix')">fix</p>
-            <p class="tag" id="bundle" onclick="filterByTag('bundle')">bundle</p>
-            <p class="tag" id="other" onclick="filterByTag('other')">other</p>
-        </div>
+        <div class="ton2b f"></div>
+        <div class="ton2" id="tagsContainer"></div>
+        <div class="ton2b s"></div>
     </div>
     <div class="tdlrc">
-        <p id="textone" class="s1">YOU DON'T KNOW</p>
-        <p id="texttwo" class="s2">ARCHIVE</p>
+        <p class="s1">YOU DON'T KNOW</p>
+        <p id="texttwo" class="s2"></p>
         <p class="s3" id="totalTitles"></p>
     </div>
     <div class="container" id="quizContainer"></div>
@@ -71,13 +47,13 @@
             <div class="error contentt">
                 <!--<img src="/assets/images/bubs.gif" alt="M Bubs" class="bubz">-->
                 <p class="justyeah">CREDITS</p>
-                <p class="sv">Made: <a class="justyeah" target="_blank" href="https://dejelnieks.lv/#t">Tere-Zander aka Dejelnieks</a></p>
+                <p class="sv"><span id="made"></span> <a class="justyeah" target="_blank" href="https://dejelnieks.lv/#t">Tere-Zander aka Dejelnieks</a></p>
                 <p class="sv" id="sv"></p>
-                <p class="sv">Special thanks: ali kirb (@alikirb)</p>
+                <p class="sv"><span id="specialthanks"></span> ali kirb (@alikirb)</p>
                 <div class="inline">
                     <p class="tag2"><a href="https://discord.com/invite/FsfSdVKcwq">Discord</a></p>
                     <p class="tag2"><a id="tct" class="toggle toggle-theme">🌛</a></p>
-                    <p class="tag2"><a id="nandesuka">何ですか</a></p>
+                    <p class="tag2" id="toogleLanguages"></p>
                 </div>
                 <!--<div class="actions">x</div>-->
             </div>

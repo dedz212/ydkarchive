@@ -627,7 +627,7 @@
         "version": "",
         "date": "",
         "image": "",
-        "description": "For 'You Don't Know Jack Volume 2'",
+        "description": "Steam: 'You Don't Know Jack Volume 2'",
         "tags": ["volume", "patch", "international", "deutsch", "steam", "90s"],
         "download": {
             "archive": "",
@@ -641,7 +641,7 @@
         "version": "",
         "date": "",
         "image": "",
-        "description": "For 'You Don't Know Jack Volume 3'",
+        "description": "Steam: 'You Don't Know Jack Volume 3'",
         "tags": ["volume", "patch", "international", "deutsch", "steam", "90s"],
         "download": {
             "archive": "",
@@ -655,7 +655,7 @@
         "version": "",
         "date": "",
         "image": "",
-        "description": "For 'You Don't Know Jack Volume 4: The Ride'",
+        "description": "Steam: 'You Don't Know Jack Volume 4: The Ride'",
         "tags": ["volume", "patch", "international", "deutsch", "steam", "90s"],
         "download": {
             "archive": "",
@@ -669,7 +669,7 @@
         "version": "",
         "date": "",
         "image": "",
-        "description": "For 'You Don't Know Jack Volume 6: The Lost Gold'",
+        "description": "Steam: 'You Don't Know Jack Volume 6: The Lost Gold'",
         "tags": ["volume", "patch", "international", "deutsch", "steam", "00s"],
         "download": {
             "archive": "",
@@ -885,10 +885,10 @@
       {
         "title": "You Don't Know Jack",
         "subtitle": "Psych Test",
-        "version": "5th Dementia promotional flash game",
+        "version": "",
         "date": "",
         "image": "images/maxresdefault.jpg",
-        "description": "",
+        "description": "5th Dementia promotional flash game",
         "tags": ["flash", "demo", "00s", "evolution"],
         "download": {
             "archive": "",

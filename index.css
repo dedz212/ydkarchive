@@ -38,11 +38,10 @@
 
 /*https://palettes.shecodes.io/palettes/319*/
 :root[data-theme='dark']{
-    --head: linear-gradient(180deg, #2c2e3e 0%, #2c2e3e 95%, #2c2e3e 100%);
-    --p4: #f6f6f6;
-    --p10: #f6f6f6;
-    --p5: #2c2e3e;
-    --p1: #2c2e3e;
+    --head: linear-gradient(180deg, #f6f6f6 0%, #f6f6f6 95%, #f6f6f6 100%);
+    --p1: #f6f6f6;
+    --p5: #f6f6f6;
+    --p10: #2c2e3e;
     --p12: #ee2b47;
 }
 
@@ -115,6 +114,33 @@ a:visited {
 .ton.animate {
     opacity: 1;
     /*animation: fade-in 0.3s ease-in 1s forwards;*/
+}
+
+.ton2 {
+    max-width: 100%;
+    height: 79vh;
+    overflow: auto;
+}
+
+.ton2b {
+    display: block;
+    position: fixed;
+    height: 1vh;
+    width: 12.5vh;
+    background-color: var(--p5);
+    border-top: solid 1vh var(--p5);
+    filter: blur(0.3vh);
+    z-index: 6;
+    content: '　';
+}
+
+.ton2b.f {
+    top: 18.5vh;
+    left: 0.5vh;
+}
+.ton2b.s {
+    bottom: 0vh;
+    left: 0.5vh;
 }
 
 @keyframes fade-in {
@@ -249,6 +275,10 @@ a:visited {
       opacity: 0;
       transform: translateY(20px); 
     }
+    20% {
+        opacity: 0;
+        transform: translateY(20px); 
+      }
     100% {
       opacity: 1;
       transform: translateY(0);
@@ -393,6 +423,8 @@ a:visited {
 
 .contentt .inline {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .justyeah {
@@ -443,7 +475,7 @@ a.justyeah:visited {
     width: max-content;
 }
 
-#book {
+#book2 {
     animation: changeText 12s infinite;
     opacity: 0;
 }

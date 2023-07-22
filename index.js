@@ -1,12 +1,167 @@
+const langArr = {
+  en: {
+    lang: 'English',
+    lang2: 'Deutsch',
+    "5dstart.zip": {
+      description: "These fixes will get the 5th Dementia game running, but the audio will be glitching a bit, and the entire window will be off-center, so if you want the full experience, you'll still need a VM."
+    },
+    "plugdll.zip": {
+      description: "These fixes will get the 5th Dementia game running, but the audio will be glitching a bit, and the entire window will be off-center, so if you want the full experience, you'll still need a VM."
+    },
+    info: 'info',
+    showall: 'show all',
+    d90s: '90s',
+    d00s: '00s',
+    d10s: '10s',
+    volume: 'volume',
+    subject: 'subject',
+    iso: 'iso',
+    DLC: 'DLC',
+    steam: 'steam',
+    online: 'online',
+    offline: 'offline',
+    playstation: 'playstation',
+    event: 'event',
+    lostmedia: 'lost media',
+    flash: 'flash',
+    evolution: 'evolution',
+    mobile: 'mobile',
+    demo: 'demo',
+    international: 'international',
+    patch: 'patch',
+    deutsch: 'deutsch',
+    manual: 'manual',
+    book: 'book',
+    pdf: 'pdf',
+    fix: 'fix',
+    bundle: 'bundle',
+    other: 'other',
+    total: 'Total:',
+    archive: 'ARCHIVE',
+    version: 'Version:',
+    date: 'Date:',
+    platform: 'Platform:',
+    "Question Pack": {
+      description: "Only adds 230 questions instead of 400",
+    },
+    made: 'Made:',
+    specialthanks: 'Special thanks:',
+    credits: 'CREDITS:',
+    setup: 'Setup:',
+    "You Don't Know Jack 4": {
+      description: 'Trailer of YDKJ 4 from ydkj.de website.',
+    },
+    for: 'For \'YDKJ Volume 2\'',
+    oops: 'Oops..',
+    tinsp: 'There is no such page',
+    "You Don't Know Jack": {
+      description: '5th Dementia promotional flash game',
+    }
+  },
+  de: {
+    lang: 'Deutsch',
+    lang2: 'English',
+    "5dstart.zip": {
+      description: "Diese Korrekturen werden das 5. Dementia-Spiel zum Laufen bringen, Aber Audio wird ein wenig verbuggt sein, und das fenster wird nicht zentriert sein, also wenn du die realistisch Erfahrung haben möchtest, brauchst du eine Virtual Machine."
+    },
+    "plugdll.zip": {
+      description: "Diese Korrekturen werden das 5. Dementia-Spiel zum Laufen bringen, Aber Audio wird ein wenig verbuggt sein, und das fenster wird nicht zentriert sein, also wenn du die realistisch Erfahrung haben möchtest, brauchst du eine Virtual Machine."
+    },
+    info: 'info',
+    showall: 'zeigle alles',
+    d90s: '90er',
+    d00s: '00er',
+    d10s: '10er',
+    volume: 'volume',
+    subject: 'subjekt',
+    iso: 'iso',
+    DLC: 'DLC',
+    steam: 'steam',
+    online: 'online',
+    offline: 'offline',
+    playstation: 'playstation',
+    event: 'event',
+    lostmedia: 'lost media',
+    flash: 'flash',
+    evolution: 'evolution',
+    mobile: 'handys',
+    demo: 'demo',
+    international: 'international',
+    patch: 'patch',
+    deutsch: 'deutsch',
+    manual: 'anleitung',
+    book: 'buch',
+    pdf: 'pdf',
+    fix: 'reperatur',
+    bundle: 'bündle',
+    other: 'andere',
+    total: 'Insgesamt:',
+    archive: 'ARCHIV',
+    version: 'Version:',
+    date: 'Datum:',
+    platform: 'Platform:',
+    "Question Pack": {
+      description: "Fügt nur 230 fragen hinzu anstatt 400 fragen",
+    },
+    made: 'Gemacht von:',
+    specialthanks: 'Special thanks:',
+    credits: 'CREDITS:',
+    setup: 'Setup:',
+    "You Don't Know Jack 4": {
+      description: 'Trailer für YDKJ 4 von der ydkj.de webseite.',
+    },
+    for: 'Für \'YDKJ Volume 2\'',
+    oops: 'Ups..',
+    tinsp: 'Es gibt nicht so eine Webseite',
+    "You Don't Know Jack": {
+      description: '5. Dementia werbliches flash Spiel',
+    }
+  }
+};
+
+const toogleLanguages = document.querySelector('#toogleLanguages')
+
+  function setLang(lang) {
+    if (!langArr.hasOwnProperty(lang)) return;
+    if (window.hasOwnProperty("localStorage"))
+      window.localStorage.setItem("lang", lang);
+    if (lang == "en") {
+      console.log(langArr[lang]['lang']);
+    }
+    if (lang == "de") {
+      console.log(langArr[lang]['lang']);
+    }
+    const texttwo = document.querySelectorAll('#texttwo');
+    for (var i = 0; i < texttwo.length; i++) {
+      texttwo[i].textContent = `${langArr[lang]['archive']}`;
+    }
+    if (document.querySelector("#texty3")) {
+      document.querySelector("#texty3").textContent = `${langArr[lang]['tinsp']}`;
+    }
+    toogleLanguages.textContent = `${langArr[lang]['lang2']}`;
+    document.querySelector("#made").textContent = `${langArr[lang]['made']}`;
+    document.querySelector("#specialthanks").textContent = `${langArr[lang]['specialthanks']}`;
+  }
+  
+var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang", lang)) || "en";
+setLang(lang);
+
+toogleLanguages.addEventListener('click', () => {
+  if (localStorage.getItem("lang") === "en") {
+    localStorage.setItem("lang", "de");
+  } else {
+    localStorage.setItem("lang", "en");
+  }
+  window.location.reload();
+});
+
+
 document.addEventListener('DOMContentLoaded', function () {
     fetch('list.json')
       .then(response => response.json())
       .then(data => {
-        if (localStorage.getItem('egg') === 'nihon') {
-          document.getElementById('totalTitles').textContent += `トータル: ${data.content.length}`;
-        } else {
-          document.getElementById('totalTitles').textContent += `Total: ${data.content.length}`;
-        }
+        var idTotalTitles = document.getElementById('totalTitles');
+        idTotalTitles.textContent += `${langArr[lang]['total']} ${data.content.length}`;
         filterByTag(activeTag.textContent);
         displayQuizItems(data.content, function () {
           const loader = document.querySelector('.loader');
@@ -45,25 +200,35 @@ document.addEventListener('DOMContentLoaded', function () {
       
         if (item.description) {
           const description = document.createElement('p');
-          description.textContent = item.description;
+          if (item.title === "plugdll.zip" && langArr[lang][item.title]) {
+            description.textContent = langArr[lang][item.title].description;
+          } else if (item.title === "5dstart.zip" && langArr[lang][item.title]) {
+            description.textContent = langArr[lang][item.title].description;
+          } else if (item.title === "You Don't Know Jack 4" && item.subtitle === "Trailer") {
+            description.textContent = langArr[lang]["You Don't Know Jack 4"].description;
+          } else if (item.title === "You Don't Know Jack" && item.subtitle === "Psych Test") {
+            description.textContent = langArr[lang]["You Don't Know Jack"].description;
+          } else {
+            description.textContent = item.description;
+          }
           itemContent.appendChild(description)
         }
 
         if (item.platform) {
           const platform = document.createElement('p');
-          platform.innerHTML = `<span class="quiz-item-subtitle">Platform: ${item.platform}</span>`;
+          platform.innerHTML = `<span class="quiz-item-subtitle">${langArr[lang]['platform']} ${item.platform}</span>`;
           itemContent.appendChild(platform);
         }
 
         if (item.version) {
           const version = document.createElement('p');
-          version.innerHTML = `<span class="quiz-item-subtitle">Version:</span> ${item.version}`;
+          version.innerHTML = `<span class="quiz-item-subtitle">${langArr[lang]['version']}</span> ${item.version}`;
           itemContent.appendChild(version);
         }
   
         if (item.date) {
           const date = document.createElement('p');
-          date.innerHTML = `<span class="quiz-item-subtitle">Date:</span> ${item.date}`;
+          date.innerHTML = `<span class="quiz-item-subtitle">${langArr[lang]['date']}</span> ${item.date}`;
           itemContent.appendChild(date);
         }
 
@@ -82,7 +247,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
         container.appendChild(quizItem);
         if (index === content.length - 1) {
-          // Вызываем функцию обратного вызова, когда все тайтлы загружены
           callback();
         }
       }, index * 50);
@@ -92,116 +256,42 @@ document.addEventListener('DOMContentLoaded', function () {
   function createDownloadLinks(download) {
     const linkContainer = document.createElement('div');
   
-    if (download.archive) {
-      const archiveLink = createLink('archive.org', download.archive);
-      linkContainer.appendChild(archiveLink);
-    }
+    const downloadTypes = [
+      { key: 'archive', text: 'archive.org' },
+      { key: 'own', text: 'ydkjarchive.org' },
+      { key: 'imgur', text: 'imgur.org' },
+      { key: 'sierrachest', text: 'sierrachest.com' },
+      { key: 'vimm', text: 'vimm.net' },
+      { key: 'macintoshgarden', text: 'macintoshgarden.org' },
+      { key: 'jellyvision', text: 'jellyvision.com' },
+      { key: 'compiwareforum', text: 'compiware-forum.de' },
+      { key: 'jackde', text: 'jack.de' },
+      { key: 'setup', text: 'Setup' },
+      { key: 'cdrom', text: 'CD-ROM' },
+      { key: 'macintoshrepository', text: 'macintoshrepository.org' },
+      { key: 'amazon', text: 'amazon.com' },
+      { key: 'fandom', text: 'jackboxgames.fandom.com' },
+      { key: 'ebay', text: 'ebay.com' },
+      { key: 'bandcamp', text: 'bandcamp.com' },
+      { key: 'dlc1', text: '1 DLC' },
+      { key: 'dlc2', text: '2 DLC' },
+      { key: 'dlc3', text: '3 DLC' },
+      { key: 'dlc4', text: '4 DLC' },
+      { key: 'audio', text: 'audio' },
+      { key: 'video', text: 'video' },
+      { key: 'other', text: 'alternative link' },
+    ];
   
-    if (download.own) {
-      const ownLink = createLink('ydkjarchive.org', download.own);
-      linkContainer.appendChild(ownLink);
-    }
-
-    if (download.imgur) {
-        const imgurLink = createLink('imgur.org', download.imgur);
-        linkContainer.appendChild(imgurLink);
-    }
-
-    if (download.sierrachest) {
-        const sierrachestLink = createLink('sierrachest.com', download.sierrachest);
-        linkContainer.appendChild(sierrachestLink);
-    }
-
-    if (download.vimm) {
-        const vimmLink = createLink('vimm.net', download.vimm);
-        linkContainer.appendChild(vimmLink);
-    }
-
-    if (download.jellyvision) {
-        const jellyvisionLink = createLink('jellyvision.com', download.jellyvision);
-        linkContainer.appendChild(jellyvisionLink);
-    }
+    downloadTypes.forEach(type => {
+      if (download[type.key]) {
+        const link = createLink(type.text, download[type.key]);
+        linkContainer.appendChild(link);
+      }
+    });
   
-    if (download.other) {
-      const otherLink = createLink('alternative link', download.other);
-      linkContainer.appendChild(otherLink);
-    }
-
-    if (download.video) {
-        const videoLink = createLink('video', download.video);
-        linkContainer.appendChild(videoLink);
-    }
-
-    if (download.compiwareforum) {
-        const compiwareforumLink = createLink('compiware-forum.de', download.compiwareforum);
-        linkContainer.appendChild(compiwareforumLink);
-    }
-
-    if (download.macintoshgarden) {
-        const macintoshgardenLink = createLink('macintoshgarden.org', download.macintoshgarden);
-        linkContainer.appendChild(macintoshgardenLink);
-    }
-
-    if (download.jackde) {
-        const jackdeLink = createLink('jack.de', download.jackde);
-        linkContainer.appendChild(jackdeLink);
-    }
-
-    if (download.jasetupckde) {
-        const setupLink = createLink('Setup', download.setup);
-        linkContainer.appendChild(setupLink);
-    }
-
-    if (download.cdrom) {
-        const cdromLink = createLink('CD-ROM', download.cdrom);
-        linkContainer.appendChild(cdromLink);
-    }
-
-    if (download.macintoshrepository) {
-        const macintoshrepositoryLink = createLink('macintoshrepository.org', download.macintoshrepository);
-        linkContainer.appendChild(macintoshrepositoryLink);
-    }
-    
-    if (download.amazon) {
-        const amazonLink = createLink('amazon.com', download.amazon);
-        linkContainer.appendChild(amazonLink);
-    }
-
-    if (download.fandom) {
-        const fandomLink = createLink('jackboxgames.fandom.com', download.fandom);
-        linkContainer.appendChild(fandomLink);
-    }
-
-    if (download.dlc1) {
-        const dlc1Link = createLink('1 DLC', download.dlc1);
-        linkContainer.appendChild(dlc1Link);
-    }
-    if (download.dlc3) {
-        const dlc3Link = createLink('3 DLC', download.dlc3);
-        linkContainer.appendChild(dlc3Link);
-    }
-    if (download.dlc2) {
-        const dlc2Link = createLink('2 DLC', download.dlc2);
-        linkContainer.appendChild(dlc2Link);
-    }
-    if (download.dlc4) {
-        const dlc4Link = createLink('4 DLC', download.dlc4);
-        linkContainer.appendChild(dlc4Link);
-    }
-
-    if (download.ebay) {
-      const ebayLink = createLink('ebay.com', download.ebay);
-      linkContainer.appendChild(ebayLink);
-    }
-
-    if (download.bandcamp) {
-      const bandcampLink = createLink('bandcamp.com', download.bandcamp);
-      linkContainer.appendChild(bandcampLink);
-    }
-
     return linkContainer;
   }
-  
+
   function createLink(text, url) {
     const link = document.createElement('a');
     link.textContent = text;
@@ -209,6 +299,60 @@ document.addEventListener('DOMContentLoaded', function () {
     link.target = '_blank';
     return link;
   }
+
+  function createTagElement(tagText, tagId) {
+    const tagElement = document.createElement('p');
+    tagElement.classList.add('tag');
+    tagElement.id = tagId;
+    tagElement.innerHTML = tagText;
+    return tagElement;
+  }
+  
+  const tagsContainer = document.getElementById('tagsContainer');
+  
+  const tagsList = [
+    { text: `${langArr[lang]['showall']}`, id: 'showall' },
+    { text: `${langArr[lang]['d90s']}`, id: '90s' },
+    { text: `${langArr[lang]['d00s']}`, id: '00s' },
+    { text: `${langArr[lang]['d10s']}`, id: '10s' },
+    { text: `${langArr[lang]['volume']}`, id: 'volume' },
+    { text: `${langArr[lang]['subject']}`, id: 'subject' },
+    { text: `${langArr[lang]['iso']}`, id: 'iso' },
+    { text: `${langArr[lang]['DLC']}`, id: 'DLC' },
+    { text: `${langArr[lang]['steam']}`, id: 'steam' },
+    { text: `${langArr[lang]['online']}`, id: 'online' },
+    { text: `${langArr[lang]['offline']}`, id: 'offline' },
+    { text: `${langArr[lang]['playstation']}`, id: 'playstation' },
+    { text: `${langArr[lang]['event']}`, id: 'event' },
+    { text: `${langArr[lang]['lostmedia']}`, id: 'lostmedia' },
+    { text: `${langArr[lang]['flash']}`, id: 'flash' },
+    { text: `${langArr[lang]['evolution']}`, id: 'evolution' },
+    { text: `${langArr[lang]['mobile']}`, id: 'mobile' },
+    { text: `${langArr[lang]['demo']}`, id: 'demo' },
+    { text: `${langArr[lang]['international']}`, id: 'international' },
+    { text: `${langArr[lang]['patch']}`, id: 'patch' },
+    { text: `${langArr[lang]['deutsch']}`, id: 'deutsch' },
+    { text: '<span id="book2">manual</span>', id: 'book' },
+    { text: `${langArr[lang]['fix']}`, id: 'fix' },
+    { text: `${langArr[lang]['bundle']}`, id: 'bundle' },
+    { text: `${langArr[lang]['other']}`, id: 'other' },
+  ];
+  
+  tagsList.forEach(tagData => {
+    const tagElement = createTagElement(tagData.text, tagData.id);
+    tagsContainer.appendChild(tagElement);
+  });
+
+tagsContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains('tag')) {
+        const tag = event.target.id;
+        if (tag === 'showall') {
+            showAll();
+        } else {
+            filterByTag(tag);
+        }
+    }
+});
 
   let activeTag = document.getElementById('showall');
 
@@ -358,66 +502,14 @@ tct.forEach(function(tct) {
 });
 
 const textElement = document.getElementById('book2');
-if (localStorage.getItem('egg') === 'nihon') {
-  var texts = ['必携', '本', 'pdf'];
-} else {
-  var texts = ['manual', 'book', 'pdf']; 
-}
+var book2texts = [`${langArr[lang]['manual']}`, `${langArr[lang]['book']}`, `${langArr[lang]['pdf']}`];
 let currentIndex = 0;
 
 function changeText() {
-  textElement.textContent = texts[currentIndex];
-  currentIndex = (currentIndex + 1) % texts.length;
+  textElement.textContent = book2texts[currentIndex];
+  currentIndex = (currentIndex + 1) % book2texts.length;
 }
 setInterval(changeText, 12000);
-
-
-const textone = document.querySelectorAll('#textone');
-const texttwo = document.querySelectorAll('#texttwo');
-const nandesuka = document.querySelector('#nandesuka')
-function egg() {
-  if (localStorage.getItem('egg') === 'nihon') {
-    localStorage.removeItem('egg');
-  } else {
-    localStorage.setItem('egg', 'nihon');
-  }
-  location.reload()
-}
-
-if (localStorage.getItem('egg') === 'nihon') {
-  for (var i = 0; i < textone.length; i++) {
-    textone[i].textContent = "ユードントノー";
-  }
-  for (var i = 0; i < texttwo.length; i++) {
-    texttwo[i].textContent = "アーカイブ";
-  }
-  document.getElementById('90s').textContent = "1990年代";
-  document.getElementById('00s').textContent = "2000年代";
-  document.getElementById('10s').textContent = "2010年代";
-  document.getElementById('showall').textContent = "すべて表示";
-  document.getElementById('volume').textContent = "ボリューム";
-  document.getElementById('info').textContent = "インフォ";
-  document.getElementById('subject').textContent = "課題";
-  document.getElementById('online').textContent = "オンライン";
-  document.getElementById('offline').textContent = "オフライン";
-  document.getElementById('event').textContent = "イベント";
-  document.getElementById('lostmedia').textContent = "ロストメディア";
-  document.getElementById('evolution').textContent = "化育";
-  document.getElementById('mobile').textContent = "モビール";
-  document.getElementById('demo').textContent = "デモ";
-  document.getElementById('international').textContent = "インター";
-  document.getElementById('patch').textContent = "修正プログラム";
-  document.getElementById('fix').textContent = "フィクス";
-  nandesuka.textContent = "I DON'T KNOW JAPANESE";
-} else {
-  for (var i = 0; i < textone.length; i++) {
-    textone[i].textContent = "YOU DON'T KNOW";
-  }
-  for (var i = 0; i < texttwo.length; i++) {
-    texttwo[i].textContent = "ARCHIVE";
-  }
-}
-nandesuka.addEventListener('click', egg);
 
 function displayMain() {
   const container = document.querySelector(".container");
@@ -431,14 +523,10 @@ function displayMain() {
 }
 
   document.addEventListener("DOMContentLoaded", function() {
-    const version = "1689804932";
+    const version = "1690028739";
     if(sv){
       function siteversion() {
-        if (localStorage.getItem('egg') === 'nihon') {
-          sv.textContent = `版: ${version}`;
-        } else {
-          sv.textContent = `Version: ${version}`;
-        }
+        sv.textContent = `Version: ${version}`;
       }
       siteversion();
     }
@@ -448,18 +536,4 @@ function displayMain() {
       activeTag = document.getElementById('showall');
       activeTag.classList.add('active-tag');
   }, 50);
-    /*
-    const elements = document.querySelectorAll("div");
-
-    function addAnimationClass() {
-        elements.forEach(function(element, index) {
-            const animationDelay = 200 * index;
-            
-            setTimeout(function() {
-                element.classList.add("fade-in-element");
-            }, animationDelay);
-        });
-    }
-
-    addAnimationClass();*/
 });
