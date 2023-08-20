@@ -46,6 +46,7 @@ const langArr = {
     },
     made: 'Made:',
     specialthanks: 'Special thanks:',
+    togerman: 'Translated into german:',
     credits: 'CREDITS:',
     setup: 'Setup:',
     "You Don't Know Jack 4": {
@@ -54,8 +55,11 @@ const langArr = {
     for: 'For \'YDKJ Volume 2\'',
     oops: 'Oops..',
     tinsp: 'There is no such page',
-    "You Don't Know Jack": {
+    "You Don't Know Jack 5": {
       description: '5th Dementia promotional flash game',
+    },
+    "You Don't Know Jack P": {
+      description: 'This will update You Don\'t Know Jack 1 to 1.01. Extract the 101update.zip file and run update.exe. Please view the readme.txt for a compleate list of fixes.',
     }
   },
   de: {
@@ -105,6 +109,7 @@ const langArr = {
     },
     made: 'Gemacht von:',
     specialthanks: 'Special thanks:',
+    togerman: 'Translated into german:',
     credits: 'CREDITS:',
     setup: 'Setup:',
     "You Don't Know Jack 4": {
@@ -113,8 +118,11 @@ const langArr = {
     for: 'Für \'YDKJ Volume 2\'',
     oops: 'Ups..',
     tinsp: 'Es gibt nicht so eine Webseite',
-    "You Don't Know Jack": {
+    "You Don't Know Jack 5": {
       description: '5. Dementia werbliches flash Spiel',
+    },
+    "You Don't Know Jack P": {
+      description: 'Dadurch wird You Don\'t Know Jack 1 auf 1.01 aktualisiert. Entpacken Sie die Datei 101update.zip und führen Sie update.exe aus. Bitte lesen Sie die readme.txt für eine vollständige Liste der Fehlerbehebungen.',
     }
   }
 };
@@ -141,6 +149,7 @@ const toogleLanguages = document.querySelector('#toogleLanguages')
     toogleLanguages.textContent = `${langArr[lang]['lang2']}`;
     document.querySelector("#made").textContent = `${langArr[lang]['made']}`;
     document.querySelector("#specialthanks").textContent = `${langArr[lang]['specialthanks']}`;
+    document.querySelector("#togerman").textContent = `${langArr[lang]['togerman']}`;
   }
   
 var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang", lang)) || "en";
@@ -207,7 +216,9 @@ document.addEventListener('DOMContentLoaded', function () {
           } else if (item.title === "You Don't Know Jack 4" && item.subtitle === "Trailer") {
             description.textContent = langArr[lang]["You Don't Know Jack 4"].description;
           } else if (item.title === "You Don't Know Jack" && item.subtitle === "Psych Test") {
-            description.textContent = langArr[lang]["You Don't Know Jack"].description;
+            description.textContent = langArr[lang]["You Don't Know Jack 5"].description;
+          } else if (item.title === "You Don't Know Jack" && item.subtitle === "Patch") {
+            description.textContent = langArr[lang]["You Don't Know Jack P"].description;
           } else {
             description.textContent = item.description;
           }
@@ -279,6 +290,8 @@ document.addEventListener('DOMContentLoaded', function () {
       { key: 'dlc4', text: '4 DLC' },
       { key: 'audio', text: 'audio' },
       { key: 'video', text: 'video' },
+      { key: 'mac', text: 'mac' },
+      { key: 'pc', text: 'pc' },
       { key: 'other', text: 'alternative link' },
     ];
   
@@ -294,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function createLink(text, url) {
     const link = document.createElement('a');
-    link.textContent = text;
+    link.textContent = `• ${text}`;
     link.href = url;
     link.target = '_blank';
     return link;
@@ -523,10 +536,10 @@ function displayMain() {
 }
 
   document.addEventListener("DOMContentLoaded", function() {
-    const version = "1690028739";
+    const version = "1692525660";
     if(sv){
       function siteversion() {
-        sv.textContent = `Version: ${version}`;
+        sv.innerHTML = `<span id="ver">Version:</span> ${version}`;
       }
       siteversion();
     }

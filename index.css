@@ -26,10 +26,12 @@
     --p3: #86bcff;
     --p4: #374d68;
     --p5: #e3e3e3;
+    --p5s: #e3e3e3;
     --p6: #000000;
     --p7: #222222;
     --p8: #f2f2f2;
     --p9: #455d7a;
+    --p9s: #455d7a;
     --p10: #233142;
     --p11: #5a7aa0;
     --p12: #f95959;
@@ -38,11 +40,12 @@
 
 /*https://palettes.shecodes.io/palettes/319*/
 :root[data-theme='dark']{
-    --head: linear-gradient(180deg, #f6f6f6 0%, #f6f6f6 95%, #f6f6f6 100%);
+    --head: linear-gradient(180deg, #1c2734 0%, #1c2734 95%, #1c273400 100%);
     --p1: #f6f6f6;
-    --p5: #f6f6f6;
-    --p10: #2c2e3e;
-    --p12: #ee2b47;
+    --p5: #1c2734;
+    --p9s: #e3e3e3;
+    --p10: #6b90cc;
+    --p12: #c54646;
 }
 
 body {
@@ -251,7 +254,7 @@ a:visited {
 
 .quiz-item {
     background-color: var(--p4);
-    color: var(--p5);
+    color: var(--p5s);
     padding: 1vh;
     margin: 1vh;
     width: 29vh;
@@ -447,7 +450,11 @@ a.justyeah:visited {
 .sv {
     font-size: 2.5vh;
     font-weight: 500;
-    color: var(--p9);
+    color: var(--p10);
+}
+
+#made, #specialthanks, #togerman, #ver {
+    color: var(--p9s)
 }
 
 .tag2 {

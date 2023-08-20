@@ -65,7 +65,8 @@
         "download": {
           "ebay": "https://www.ebay.ca/itm/305013175180?mkcid=16&mkevt=1&mkrid=711-127632-2357-0&ssspo=cbq0dbmeszq&sssrc=2047675&ssuid=&widget_ver=artemis&media=COPY",
           "own": "",
-          "other": ""
+          "archive": "https://archive.org/details/beta-2_202307",
+          "other": "https://drive.google.com/file/d/16heIMpwc1pjX79H8xQ5e2MVEbIe62Az0/view?usp=drive_link"
         }
       },
       {
@@ -678,14 +679,29 @@
         }
       },
       {
-        "title": "You Don't Know Jack Volume 1",
+        "title": "You Don't Know Jack",
+        "subtitle": "",
+        "tagd": ["Deutsch"],
+        "version": "",
+        "date": "",
+        "image": "images/s-l500.jpg",
+        "description": "",
+        "tags": ["volume", "patch", "international", "deutsch", "iso", "90s"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "other": "https://ogdb.eu/index.php?section=game&gameid=55863"
+        }
+      },
+      {
+        "title": "You Don't Know Jack",
         "subtitle": "Demo",
         "tagd": ["Deutsch"],
         "version": "",
         "date": "",
         "image": "",
         "description": "",
-        "tags": ["volume", "patch", "demo", "international", "deutsch", "iso", "90s"],
+        "tags": ["volume", "demo", "international", "deutsch", "iso", "90s"],
         "download": {
             "archive": "",
             "own": "https://drive.google.com/file/d/1qus8wKqtjgMTf4EQQ5Kxke-GymiDXF3p/view?usp=drive_link",
@@ -699,7 +715,7 @@
         "date": "",
         "image": "images/51M1D2EWRHL.jpg",
         "description": "",
-        "tags": ["volume", "patch", "international", "deutsch", "iso", "90s"],
+        "tags": ["volume", "international", "deutsch", "iso", "90s"],
         "download": {
             "archive": "https://archive.org/details/cover_bigboxydkj2-german",
             "own": "https://drive.google.com/file/d/102mKApMpZgXsW2BYuXX0rnPJGl9CkPLl/view?usp=drive_link",
@@ -713,7 +729,7 @@
         "date": "",
         "image": "images/169635--you-dont-know-jack-3-abwaerts.png",
         "description": "",
-        "tags": ["volume", "patch", "international", "deutsch", "iso", "90s"],
+        "tags": ["volume", "international", "deutsch", "iso", "90s"],
         "download": {
             "archive": "",
             "macintoshgarden": "https://macintoshgarden.org/games/you-dont-know-jack-3-german",
@@ -842,9 +858,9 @@
         "title": "You Don't Know Jack",
         "tagd": ["UK"],
         "subtitle": "",
-        "version": "",
+        "version": "1997",
         "date": "",
-        "image": "",
+        "image": "images/YDKJ UK - Case Front.png",
         "description": "",
         "tags": ["volume", "iso", "international", "uk", "90s"],
         "download": {
@@ -894,6 +910,35 @@
             "archive": "",
             "own": "https://drive.google.com/file/d/1Jud_V8V2pjxL07jp7rpEQbXE9ks9Oxpg/view?usp=drive_link",
             "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack",
+        "subtitle": "Patch",
+        "version": "1.01",
+        "date": "",
+        "image": "",
+        "description": "This will update You Don't Know Jack 1 to 1.01. Extract the 101update.zip file and run update.exe. Please view the readme.txt for a compleate list of fixes.",
+        "tags": ["patch", "90s", "volume"],
+        "download": {
+            "archive": "",
+            "other": "http://sierrahelp.com/Files/Patches/YouDontKnowJack/YouDontKnowJack(101UPDATE).zip"
+        }
+      },
+      {
+        "title": "You Don't Know Jack Sports",
+        "subtitle": "(SPUPDATE)",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["fix", "patch", "90s", "subject"],
+        "download": {
+            "archive": "",
+            "pc": "https://www.patches-scrolls.com/dl.php?file=spupdate.zip",
+            "mac": "https://www.patches-scrolls.com/dl.php?file=sportsupdate.sea.hqx",
+            "own": "https://drive.google.com/file/d/1qBTfGqTjdc99B4jYK7iXTSHg4w9qynRb/view?usp=drive_link",
+            "other": "http://sierrahelp.com/Files/Patches/YouDontKnowJack/YouDontKnowJack(SPUPDATE).zip"
         }
       },
       {
@@ -1073,7 +1118,7 @@
         "date": "",
         "image": "",
         "description": "",
-        "tags": ["evolution", "10s", "video", "other", "demo", "lostmedia", "cross-platform"],
+        "tags": ["evolution", "10s", "video", "demo", "lostmedia", "cross-platform"],
         "download": {
           "archive": "",
           "video": "https://archive.org/details/GameSpot-6286300",
@@ -1146,7 +1191,7 @@
         "date": "",
         "image": "images/51B4XRR6FBL._AC_UF350,350_QL50_.jpg",
         "description": "",
-        "tags": ["other","book", "90s"],
+        "tags": ["book", "90s"],
         "download": {
             "amazon": "https://www.amazon.com/You-Dont-Know-Jack-Pb/dp/0762403748",
             "archive": "https://archive.org/details/youdontknowjackb0000unse",
@@ -1160,7 +1205,7 @@
         "date": "",
         "image": "images/51BPADT45ML._AC_UF1000,1000_QL80_.jpg",
         "description": "",
-        "tags": ["other","book", "90s"],
+        "tags": ["book", "90s"],
         "download": {
             "amazon": "https://www.amazon.com/You-Dont-Know-Jack-Tv/dp/0762403756",
             "archive": "",
@@ -1396,6 +1441,21 @@
         }
       },
       {
+        "title": "You Don't Know Jack",
+        "subtitle": "Manual",
+        "tagd": ["UK"],
+        "version": "",
+        "date": "",
+        "image": "images/YDKJ UK - Manual Front.png",
+        "description": "",
+        "tags": ["volume", "international", "book", "90s"],
+        "download": {
+            "archive": "https://archive.org/details/ydkj-uk/YDKJ%20UK%20-%20Manual%20Front.png",
+            "own": "",
+            "other": ""
+        }
+      },
+      {
         "title": "You Don't Know Jack Presented by 浜田雅功",
         "subtitle": "Users Manual",
         "tagd": ["日本語"],
@@ -1464,7 +1524,7 @@
         "date": "1997",
         "image": "images/tjps97.png",
         "description": "",
-        "tags": ["book", "other", "90s"],
+        "tags": ["book", "90s"],
         "download": {
           "archive": "",
           "own": "https://drive.google.com/file/d/1XBqguk4f7EEVKScNUBTYmLFHxOvZlLcg/view?usp=drive_link",
@@ -1479,7 +1539,7 @@
         "date": "2002",
         "image": "images/tjp00.png",
         "description": "",
-        "tags": ["book", "other", "00s"],
+        "tags": ["book", "00s"],
         "download": {
           "archive": "https://archive.org/details/the-jack-principles/mode/2up",
           "own": "",
@@ -1494,24 +1554,9 @@
         "date": "1997",
         "image": "images/tjpl.png",
         "description": "",
-        "tags": ["book", "other", "90s"],
+        "tags": ["book", "90s"],
         "download": {
           "archive": "https://drive.google.com/file/d/1zmpZ-HKfwgPZ3L_2UhwUVQwOllnKzlkv/view?usp=drive_link",
-          "own": "",
-          "other": ""
-        }
-      },
-      {
-        "title": "You Don't Know Jack",
-        "subtitle": "Sonderausgabe",
-        "tagd": ["Lost Media", "Deutsch"],
-        "version": "",
-        "date": "1998",
-        "image": "images/s-l500.jpg",
-        "description": "",
-        "tags": ["deutsch", "lostmedia", "other", "audio", "90s"],
-        "download": {
-          "ebay": "https://www.ebay.at/itm/334825593461",
           "own": "",
           "other": ""
         }
@@ -1652,6 +1697,32 @@
         "tags": ["deutsch", "volume", "bundle", "90s", "00s"],
         "download": {
           "amazon": "https://www.amazon.in/Dont-Know-Jack-Snack-Pack/dp/B00004Y2LK",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Dont Know Jack EDITORS CHOICE COLLECTION",
+        "subtitle": "",
+        "date": "",
+        "image": "images/CDROM1.png",
+        "description": "Vol.1 + Vol.2 Demo + Sports Demo",
+        "tags": ["volume", "demo", "subject", "bundle", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/ydkj-editors-choice-collection",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack",
+        "subtitle": "Lite Version",
+        "date": "",
+        "image": "images/LITE COVER BACK.jpg",
+        "description": "Vol.3 Demo + Television Demo + Movies Demo",
+        "tags": ["volume", "demo", "subject", "bundle", "90s"],
+        "download": {
+          "archive": "https://archive.org/details/ydkj-lite-disc/LITE%20COVER%20BACK.jpg",
           "own": "",
           "other": ""
         }
