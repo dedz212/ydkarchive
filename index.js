@@ -175,6 +175,7 @@ document.addEventListener('DOMContentLoaded', function () {
         displayQuizItems(data.content, function () {
           const loader = document.querySelector('.loader');
           loader.style.display = 'none';
+          document.getElementById('tagsContainer').style.display = 'block';
         });
       })
       .catch(error => console.error('Error fetching JSON:', error));
@@ -536,7 +537,7 @@ function displayMain() {
 }
 
   document.addEventListener("DOMContentLoaded", function() {
-    const version = "1692525660";
+    const version = "1695313455";
     if(sv){
       function siteversion() {
         sv.innerHTML = `<span id="ver">Version:</span> ${version}`;

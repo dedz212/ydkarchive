@@ -680,15 +680,15 @@
       },
       {
         "title": "You Don't Know Jack",
-        "subtitle": "",
+        "subtitle": "Genehmigte Sonderausgabe",
         "tagd": ["Deutsch"],
         "version": "",
-        "date": "",
-        "image": "images/s-l500.jpg",
+        "date": "1998",
+        "image": "images/ydkj_case_front.jpg",
         "description": "",
-        "tags": ["volume", "patch", "international", "deutsch", "iso", "90s"],
+        "tags": ["volume", "international", "deutsch", "iso", "90s"],
         "download": {
-            "archive": "",
+            "archive": "https://archive.org/details/ydkjde",
             "own": "",
             "other": "https://ogdb.eu/index.php?section=game&gameid=55863"
         }
