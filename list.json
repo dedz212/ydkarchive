@@ -149,7 +149,7 @@
         "tags": ["volume", "iso", "steam", "00s"],
         "download": {
           "archive": "https://archive.org/details/you-dont-know-jack-6-the-lost-gold",
-          "own": "",
+          "archive2": "https://archive.org/details/ydkj-vol-6-the-lost-gold",
           "other": "https://www.4shared.com/get/zIcGA87l/ydkj6.html"
         }
       },
@@ -492,7 +492,7 @@
         "download": {
             "archive": "https://archive.org/details/swizzle_demu_Ydkj",
             "own": "https://drive.google.com/file/d/19-4kVPm81vMZOQKCFBfQxbD-mF2xGHBe/view?usp=drive_link",
-            "other": ""
+            "berksys": "https://web.archive.org/web/19970625122936/http://www.berksys.com:80/ftp/demos/YDKJ/win95/YDKJDEMO.ZIP "
         }
       },
       {
@@ -689,8 +689,8 @@
         "tags": ["volume", "international", "deutsch", "iso", "90s"],
         "download": {
             "archive": "https://archive.org/details/ydkjde",
-            "own": "",
-            "other": "https://ogdb.eu/index.php?section=game&gameid=55863"
+            "other": "https://mega.nz/file/AexHTT6Y#QoRQXpLTashN8GlhDSEBRqDTmhE8wQAeEgglDwdKcwo",
+            "info": "https://ogdb.eu/index.php?section=game&gameid=55863"
         }
       },
       {
@@ -1008,6 +1008,20 @@
         "download": {
             "archive": "",
             "own": "https://drive.google.com/file/d/1gjjZfv2PusaCjvhBvrrHxOW50F_elNzz/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "jack.au",
+        "subtitle": "",
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "Volume 1 Demo instructional audio",
+        "tags": ["other", "demo", "90s"],
+        "download": {
+            "archive": "",
+            "berksys": "https://web.archive.org/web/19971113164326/http://www.berksys.com:80/ftp/demos/YDKJ/jack.au ",
             "other": ""
         }
       },
@@ -1396,6 +1410,21 @@
         }
       },
       {
+        "title": "You Don't Know Jack",
+        "subtitle": "Genehmigte Sonderausgabe Manual",
+        "tagd": ["Deutsch"],
+        "version": "",
+        "date": "",
+        "image": "images/ydkj_manual.jpg",
+        "description": "",
+        "tags": ["volume", "international", "deutsch", "book", "90s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": " https://mega.nz/file/VGJnzADR#1CMpuAPQxkIOVQ-89VerShxWPAxpJxkU3Bw1rlSGaeI"
+        }
+      },
+      {
         "title": "You Don't Know Jack Volume 2",
         "subtitle": "Manual",
         "tagd": ["Deutsch"],
@@ -1587,6 +1616,21 @@
           "bandcamp": "https://jackboxgames.bandcamp.com/album/you-dont-hear-jack-2",
           "own": "",
           "other": ""
+        }
+      },
+      {
+        "title": "You Don't Hear Jack",
+        "subtitle": "",
+        "tagd": ["Deutsch"],
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "Extracted from YDKJ German 3",
+        "tags": ["other", "deutsch", "audio", "90s"],
+        "download": {
+          "ebay": "",
+          "bandcamp": "",
+          "other": "https://mega.nz/file/1KRRHCCR#GYE1f5FuS231FSk_SovqE5dpNry_MIZYtk5KdS1QnXc"
         }
       },
       {

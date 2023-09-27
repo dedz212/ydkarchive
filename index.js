@@ -60,7 +60,16 @@ const langArr = {
     },
     "You Don't Know Jack P": {
       description: 'This will update You Don\'t Know Jack 1 to 1.01. Extract the 101update.zip file and run update.exe. Please view the readme.txt for a compleate list of fixes.',
-    }
+    },
+    "jackau": {
+      description: 'Volume 1 Demo instructional audio',
+    },
+    "You Don't Hear Jack": {
+      description: 'Extracted from YDKJ German 3',
+    },
+    altlink: "alternative link",
+    hab: "archive.org (fixes and bonuses)",
+    info: "information"
   },
   de: {
     lang: 'Deutsch',
@@ -123,7 +132,16 @@ const langArr = {
     },
     "You Don't Know Jack P": {
       description: 'Dadurch wird You Don\'t Know Jack 1 auf 1.01 aktualisiert. Entpacken Sie die Datei 101update.zip und führen Sie update.exe aus. Bitte lesen Sie die readme.txt für eine vollständige Liste der Fehlerbehebungen.',
-    }
+    },
+    "jackau": {
+      description: 'Volume 1 Demo Lehraudio',
+    },
+    "You Don't Hear Jack": {
+      description: 'Extrahiert aus YDKJ German 3',
+    },
+    altlink: "alternative link",
+    hab: "archive.org (Fehlerbehebungen und Bonus Inhalte)",
+    info: "Information"
   }
 };
 
@@ -220,6 +238,10 @@ document.addEventListener('DOMContentLoaded', function () {
             description.textContent = langArr[lang]["You Don't Know Jack 5"].description;
           } else if (item.title === "You Don't Know Jack" && item.subtitle === "Patch") {
             description.textContent = langArr[lang]["You Don't Know Jack P"].description;
+          } else if (item.title === "jack.au") {
+            description.textContent = langArr[lang]["jackau"].description;
+          } else if (item.title === "You Don't Hear Jack" && item.subtitle === "") {
+            description.textContent = langArr[lang]["You Don't Hear Jack"].description;
           } else {
             description.textContent = item.description;
           }
@@ -293,13 +315,17 @@ document.addEventListener('DOMContentLoaded', function () {
       { key: 'video', text: 'video' },
       { key: 'mac', text: 'mac' },
       { key: 'pc', text: 'pc' },
-      { key: 'other', text: 'alternative link' },
+      { key: 'berksys', text: 'berksys.com'},
+      { key: 'info', text: `${langArr[lang]['info']}`},
+      { key: 'archive2', text: `${langArr[lang]['hab']}` },
+      { key: 'other', text: `${langArr[lang]['altlink']}` },
     ];
   
     downloadTypes.forEach(type => {
       if (download[type.key]) {
         const link = createLink(type.text, download[type.key]);
         linkContainer.appendChild(link);
+        linkContainer.id = "linkss";
       }
     });
   
@@ -308,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function createLink(text, url) {
     const link = document.createElement('a');
-    link.textContent = `• ${text}`;
+    link.textContent = `${text}`;
     link.href = url;
     link.target = '_blank';
     return link;
@@ -424,12 +450,25 @@ function isElementPartiallyVisible(el) {
 function handleScrollAnimation() {
   var triggerElement = document.querySelector('.tdlrc');
   var animatedElement = document.querySelector('.ton');
+  var toup = document.querySelector('#toup');
   if (isElementPartiallyVisible(triggerElement)) {
     animatedElement.classList.remove('animate');
+    toup.classList.remove('animate');
   } else {
     animatedElement.classList.add('animate');
+    toup.classList.add('animate');
   }
 }
+
+document.querySelector("#toup").addEventListener("click", function(e) {
+  e.preventDefault();
+  const targetSection = document.querySelector("#info");
+  window.scrollTo({
+      top: targetSection.offsetTop,
+      behavior: "smooth"
+  });
+});
+
 
 window.addEventListener('scroll', handleScrollAnimation);
 handleScrollAnimation();
@@ -537,7 +576,7 @@ function displayMain() {
 }
 
   document.addEventListener("DOMContentLoaded", function() {
-    const version = "1695313455";
+    const version = "1695846487";
     if(sv){
       function siteversion() {
         sv.innerHTML = `<span id="ver">Version:</span> ${version}`;

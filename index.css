@@ -108,10 +108,30 @@ a:visited {
     color: var(--p1);
 }
 
-.quiz-item-content a,
-.quiz-item-content a:hover,
-.quiz-item-content a:visited {
+#linkss {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+    position: relative;
+}
+
+#linkss a,
+#linkss a:hover,
+#linkss a:visited {
+    background-color: var(--p2);
     color: var(--p1);
+    border: var(--p1) solid 0.2vh;
+    border-radius: 0.5vh;
+    padding: 0.5vh;
+    margin: 0.25vh;
+    font-size: 1.5vh;
+    font-weight: 450;
+    max-width: max-content;
+    cursor: pointer;
+    line-height: 1;
 }
 
 .ton.animate {
@@ -466,7 +486,6 @@ a.justyeah:visited {
     font-weight: 450;
     cursor: pointer;
     width: max-content;
-
     display: flex;
     align-items: center;
 }
@@ -474,10 +493,11 @@ a.justyeah:visited {
 .tag4 {
     background-color: var(--p12);
     border-radius: 0.5vh;
-    padding: 0.3vh;
+    padding: 0.5vh;
     margin-top: 0.5vh;
     font-weight: 600;
     line-height: 1;
+    color: var(--p1);
     cursor: pointer;
     width: max-content;
 }
@@ -502,6 +522,21 @@ a.justyeah:visited {
     animation-fill-mode: both;
 }
 
+#toup {
+    opacity: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transition: opacity 0.5s ease;
+}
+#toup.animate {
+    opacity: 1;
+    /*animation: fade-in 0.3s ease-in 1s forwards;*/
+    transition: opacity 0.5s ease;
+}
+#toup a {
+    color: var(--p10);
+}
 
 
 
