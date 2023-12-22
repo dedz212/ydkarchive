@@ -323,6 +323,20 @@
         }
       },
       {
+        "title": "You Don't Know Jack about MonsterFest: Radio Ready Trivia Questions",
+        "tagd": ["Lost Media"],
+        "version": "",
+        "date": "2001",
+        "image": "images/755.png",
+        "description": "",
+        "tags": ["event", "lostmedia", "00s", "other"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "other": ""
+        }
+      },
+      {
         "title": "You Don't Know Jack VMA Edition",
         "tagd": ["Lost Media"],
         "version": "",
@@ -365,6 +379,20 @@
         }
       },
       {
+        "title": "The Daily DisOrDat",
+        "subtitle": "Beta",
+        "version": "",
+        "date": "2006-11-20",
+        "image": "images/tddod.svg",
+        "description": "",
+        "tags": ["00s", "flash", "lostmedia", "demo"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "other": "https://mega.nz/file/pWwgxBAa#zOkPoCaj_fjO79oCJdtYkg40SHqbjFhEBgBAMtJwZmI"
+        }
+      },
+      {
         "title": "You Don't Know Jack",
         "platform": "iOS",
         "version": "1.0.4",
@@ -395,6 +423,38 @@
       },
       {
         "title": "You Don't Know Jack",
+        "subtitle": "Lite HD",
+        "platform": "iOS",
+        "tagd": ["Lost Media"],
+        "version": "",
+        "date": "2011",
+        "image": "images/YDKJLiteHD.png",
+        "description": "",
+        "tags": ["10s", "mobile", "lostmedia", "evolution"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack",
+        "subtitle": "HD",
+        "platform": "iOS",
+        "tagd": ["Lost Media"],
+        "version": "",
+        "date": "2011",
+        "image": "images/YDKJHD.png",
+        "description": "",
+        "tags": ["10s", "mobile", "lostmedia", "evolution"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack",
         "subtitle": "Facebook",
         "platform": "Facebook",
         "tagd": ["Lost Media"],
@@ -413,7 +473,7 @@
         "subtitle": "Facebook",
         "platform": "iOS",
         "version": "1.2.1",
-        "date": "2012-2015",
+        "date": "2013-01-18",
         "image": "images/754.png",
         "description": "",
         "tags": ["10s", "mobile", "evolution"],
@@ -421,6 +481,21 @@
             "archive": "",
             "own": "https://drive.google.com/file/d/1tDCbLc4WZX7deKQx8TTC5Z1iCn-piC7v/view?usp=drive_link",
             "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack",
+        "subtitle": "Facebook",
+        "platform": "iOS",
+        "version": "",
+        "date": "",
+        "image": "images/YIF.png",
+        "description": "",
+        "tags": ["10s", "mobile", "evolution"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "other": "https://web.archive.org/web/2if_/https://testflightapp.com/dashboard/ipa/eae77593d0053eb4d421aee464ef5573-MjI5MzgxNw/6280ca3ee10631fd6817100ffd1ee849-MTMzMzc3/"
         }
       },
       {
@@ -436,6 +511,21 @@
             "archive": "",
             "own": "https://drive.google.com/file/d/1a1ExzIA-YOIvTModCHcx2OoH_WmkiByh/view?usp=drive_link",
             "other": ""
+        }
+      },
+      {
+        "title": "Jack Attack",
+        "subtitle": "Attack",
+        "platform": "iOS",
+        "version": "0.1",
+        "date": "2013-04-22",
+        "image": "images/JAA.png",
+        "description": "",
+        "tags": ["10s", "mobile", "evolution"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "other": "https://web.archive.org/web/2if_/https://testflightapp.com/dashboard/ipa/0af97b95d7a8a1e0ff1f54617cd49177-NDMwNTk2Nw/6280ca3ee10631fd6817100ffd1ee849-MTMzMzc3/"
         }
       },
       {
@@ -691,7 +781,8 @@
             "archive": "https://archive.org/details/ydkjde",
             "other": "https://mega.nz/file/AexHTT6Y#QoRQXpLTashN8GlhDSEBRqDTmhE8wQAeEgglDwdKcwo",
             "info": "https://ogdb.eu/index.php?section=game&gameid=55863"
-        }
+        },
+        "seemore": true
       },
       {
         "title": "You Don't Know Jack",

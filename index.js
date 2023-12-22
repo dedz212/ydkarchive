@@ -71,7 +71,9 @@ const langArr = {
     hab: "archive.org (fixes and bonuses)",
     info: "information",
     search: "Search...",
-    noway: "No search results found"
+    noway: "No search results found",
+    seemore: "See more",
+    showall: "Show all"
   },
   de: {
     lang: 'Deutsch',
@@ -145,7 +147,9 @@ const langArr = {
     hab: "archive.org (Fehlerbehebungen und Bonus Inhalte)",
     info: "Information",
     search: "Such nach...",
-    noway: "Keine Ergebnisse gefunden"
+    noway: "Keine Ergebnisse gefunden",
+    seemore: "Mehr...",
+    showall: "Zeige alles"
   }
 };
 
@@ -195,11 +199,20 @@ const toogleLanguages = document.querySelector('#toogleLanguages')
       document.querySelector("#texty3").textContent = `${langArr[lang]['tinsp']}`;
     }
     toogleLanguages.textContent = `${langArr[lang]['lang2']}`;
-    document.querySelector("#made").textContent = `${langArr[lang]['made']}`;
-    document.querySelector("#specialthanks").textContent = `${langArr[lang]['specialthanks']}`;
-    document.querySelector("#togerman").textContent = `${langArr[lang]['togerman']}`;
-    document.getElementById("noResultMessage").textContent = `${langArr[lang]['noway']}`;
-    document.getElementById("searchInput").placeholder = `${langArr[lang]['search']}`;
+    const elementTextMappings = {
+      "made": "made",
+      "specialthanks": "specialthanks",
+      "togerman": "togerman"
+    };
+    
+    Object.keys(elementTextMappings).forEach((elementId) => {
+      const element = document.getElementById(elementTextMappings[elementId]);
+      if (element) {
+        element.innerHTML = `${langArr[lang][elementId]}`;
+      }
+    });
+    
+
   }
 var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang", lang)) || "en";
 setLang(lang);
@@ -213,48 +226,52 @@ toogleLanguages.addEventListener('click', () => {
   window.location.reload();
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    fetch('list.json')
-      .then(response => response.json())
-      .then(data => {
-        var idTotalTitles = document.getElementById('totalTitles');
-        idTotalTitles.textContent += `${langArr[lang]['total']} ${data.content.length}`;
-        filterByTag(activeTag.textContent);
-        displayQuizItems(data.content, function () {
-          const loader = document.querySelector('.loader');
-          loader.style.display = 'none';
-          document.getElementById('tagsContainer').style.display = 'block';
+if (document.getElementById("quizContainer")) {
+  document.addEventListener('DOMContentLoaded', function () {
+      fetch('/json/list.json')
+        .then(response => response.json())
+        .then(data => {
+          var idTotalTitles = document.getElementById('totalTitles');
+          idTotalTitles.textContent += `${langArr[lang]['total']} ${data.content.length}`;
+          filterByTag(activeTag.textContent);
+          displayQuizItems(data, function () {
+            const loader = document.querySelector('.loader');
+            loader.style.display = 'none';
+            document.getElementById('tagsContainer').style.display = 'block';
 
-          const searchInput = document.getElementById('searchInput');
-          const quizItems = document.querySelectorAll('.quiz-item-content');
-          const noResultMessage = document.getElementById('noResultMessage');
+            const searchInput = document.getElementById('searchInput');
+            searchInput.placeholder = langArr[lang]['search'];
+            const quizItems = document.querySelectorAll('.quiz-item-content');
+            const noResultMessage = document.getElementById('noResultMessage');
 
-          searchInput.addEventListener('input', function () {
-            showAll();
-            const searchText = searchInput.value.toLowerCase();
-            let found = false;
-            quizItems.forEach(quizItem => {
-              const title = quizItem.querySelector('h2').textContent.toLowerCase();
-              if (title.includes(searchText)) {
-                quizItem.parentElement.style.display ='flex';
-                found = true;
+            searchInput.addEventListener('input', function () {
+              showAll();
+              const searchText = searchInput.value.toLowerCase();
+              let found = false;
+              quizItems.forEach(quizItem => {
+                const title = quizItem.querySelector('h2').textContent.toLowerCase();
+                if (title.includes(searchText)) {
+                  quizItem.parentElement.style.display ='flex';
+                  found = true;
+                } else {
+                  quizItem.parentElement.style.display ='none';
+                }
+              });
+              if (!found && searchText !== '') {
+                noResultMessage.style.display = 'block';
+                noResultMessage.textContent = langArr[lang]['noway']
               } else {
-                quizItem.parentElement.style.display ='none';
+                noResultMessage.style.display = 'none';
               }
             });
-            if (!found && searchText !== '') {
-              noResultMessage.style.display = 'block';
-            } else {
-              noResultMessage.style.display = 'none';
-            }
           });
-        });
-      })
-      .catch(error => console.error('Error fetching JSON:', error));
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
   });
-  
-  function displayQuizItems(content, callback) {
+ 
+  function displayQuizItems(isa, callback) {
     const container = document.getElementById('quizContainer');
+    const content = isa.content;
   
     content.forEach((item, index) => {
       setTimeout(() => {
@@ -324,14 +341,23 @@ document.addEventListener('DOMContentLoaded', function () {
         if (item.tagd) {
           item.tagd.forEach(tag => {
             const tagd = document.createElement('p');
-            tagd.innerHTML = `<p class="tag4">${tag}</p>`;
+            tagd.className = 'tag4';
+            tagd.textContent = tag;
             itemContent.appendChild(tagd);
           });
         }
     
         const downloadLinks = createDownloadLinks(item.download);
         itemContent.appendChild(downloadLinks);
-    
+
+        if (item.seemore) {
+          const seemore = document.createElement('a');
+          seemore.href = `/titles/index.html#${index+1}`;
+          seemore.className = 'quiz-item-subtitle';
+          seemore.textContent = langArr[lang]['seemore'];
+          itemContent.appendChild(seemore);
+        }
+
         quizItem.appendChild(itemContent);
     
         container.appendChild(quizItem);
@@ -438,21 +464,21 @@ document.addEventListener('DOMContentLoaded', function () {
     tagsContainer.appendChild(tagElement);
   });
 
-tagsContainer.addEventListener('click', (event) => {
-  document.getElementById('searchInput').value = '';
-    if (event.target.classList.contains('tag')) {
-        const tag = event.target.id;
-        if (tag === 'showall') {
-            showAll();
-        } else {
-            filterByTag(tag);
-        }
-    }
-});
+  tagsContainer.addEventListener('click', (event) => {
+    document.getElementById('searchInput').value = '';
+      if (event.target.classList.contains('tag')) {
+          const tag = event.target.id;
+          if (tag === 'showall') {
+              showAll();
+          } else {
+              filterByTag(tag);
+          }
+      }
+  });
+}
+let activeTag = document.getElementById('showall');
 
-  let activeTag = document.getElementById('showall');
-
-  function filterByTag(tag) {
+function filterByTag(tag) {
     const items = document.querySelectorAll('.quiz-item');
     const tagElements = document.querySelectorAll('.tag');
     if (activeTag) {
@@ -473,9 +499,9 @@ tagsContainer.addEventListener('click', (event) => {
         activeTag = element;
       }
     });
-  }
-  
-  function showAll() {
+}
+
+function showAll() {
     const items = document.querySelectorAll('.quiz-item');
     const tagElements = document.querySelectorAll('.tag');
   
@@ -495,7 +521,7 @@ tagsContainer.addEventListener('click', (event) => {
         activeTag = element;
       }
     });
-  }
+}
 
 function isElementPartiallyVisible(el) {
   var rect = el.getBoundingClientRect();
@@ -610,6 +636,7 @@ tct.forEach(function(tct) {
 	}
 });
 
+if (document.getElementById("tagsContainer")) {
 const textElement = document.getElementById('book2');
 var book2texts = [`${langArr[lang]['manual']}`, `${langArr[lang]['book']}`, `${langArr[lang]['pdf']}`];
 let currentIndex = 0;
@@ -619,6 +646,7 @@ function changeText() {
   currentIndex = (currentIndex + 1) % book2texts.length;
 }
 setInterval(changeText, 12000);
+}
 
 function displayMain() {
   const container = document.querySelector(".container");
@@ -633,8 +661,133 @@ function displayMain() {
   }
 }
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const version = "1697818528";
+if (document.getElementById("titlescontent")) {
+  function filterDataByIds(jsonData, ids) {
+    if (!ids) {
+      delete jsonData["0"];
+      var rest = document.getElementById('rest');
+      if (rest) {
+        rest.style.display = "none";
+      }
+      return jsonData;
+
+    }
+
+    var idArray = ids.split(',');
+    var filteredData = {};
+
+    idArray.forEach(function (id) {
+        id = id.trim();
+        if (jsonData.hasOwnProperty(id)) {
+            filteredData[id] = jsonData[id];
+        }
+    });
+
+    document.querySelector("#toup").addEventListener("click", function(e) {
+      e.preventDefault();
+      const targetSection = document.querySelector("#info");
+      window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: "smooth"
+      });
+    });
+
+    return filteredData;
+  }
+
+  function displayContent() {
+    fetch('/json/titles.json')
+      .then(response => response.json())
+      .then(gtJsonData => {
+        const contentDiv = document.getElementById('titlescontent');
+        var urlFragment = window.location.hash.substr(1);
+        var jsonData = filterDataByIds(gtJsonData, urlFragment);
+        fetch('/json/list.json')
+          .then(response => response.json())
+          .then(listData => {
+
+          for (var key in jsonData) {
+              if (jsonData.hasOwnProperty(key)) {
+                  var item = jsonData[key];
+                  const listItem = listData.content[key-1];
+
+                  const divcr = document.createElement('div');
+                  divcr.id = key;
+                  divcr.className = 'boxfortc';
+                  contentDiv.appendChild(divcr);
+                  const divhpcr = document.createElement('div');
+                  divhpcr.className = 'divhpcr';
+
+                  const pcr = document.createElement('p');
+                  pcr.textContent = key;
+                  pcr.className = 'boxtcp';
+
+                  const h2cr = document.createElement('h2');
+                  h2cr.className = 'boxtch2';
+                  if(jsonData[0]) { var titlehisis = item.title } else {var titlehisis = listItem.title + (listItem.subtitle ? ` ` +  listItem.subtitle : ``)};
+                  h2cr.textContent = titlehisis
+                  divhpcr.appendChild(h2cr);
+                  divcr.appendChild(divhpcr);
+                  if(!jsonData[0]) { 
+                  const divcrpp = document.createElement('div');
+                  divcrpp.className = 'listofsvd';
+                  const dpcr = document.createElement('p');
+                  dpcr.textContent = listItem.date ? `${langArr[lang]['date']}` + listItem.date : ``;
+                  dpcr.className = 'boxtcp';
+
+                  const vpcr = document.createElement('p');
+                  vpcr.textContent = listItem.version ? `${langArr[lang]['version']}` + listItem.version : ``;
+                  vpcr.className = 'boxtcp';
+                  
+                  divhpcr.appendChild(pcr);
+                  divcrpp.appendChild(dpcr);
+                  divcrpp.appendChild(vpcr);
+                  divcr.appendChild(divcrpp);
+                  }
+                  for (var typeKey in item.types) {
+                      if (item.types.hasOwnProperty(typeKey)) {
+                          var type = item.types[typeKey];
+                          const h3cr = document.createElement('h3');
+                          h3cr.className = 'boxtch3';
+                          h3cr.textContent = type.type + ' - ' + type.language;
+                          const divfimgcr = document.createElement('div');
+                          divfimgcr.className = "divfimgcr"
+                          
+                          for (var imageKey in type.images) {
+                              if (type.images.hasOwnProperty(imageKey)) {
+                                  const imgt = document.createElement('img');
+                                  imgt.src = `../titles/${key}/${typeKey}/` + type.images[imageKey];
+                                  imgt.alt = imageKey;
+
+                                  divcr.appendChild(h3cr);
+                                  divcr.appendChild(divfimgcr);
+                                  divfimgcr.appendChild(imgt);
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+      })
+      .catch(error => console.error('Error fetching JSON:', error));
+  }
+
+  window.onload = displayContent;
+  var rest = document.getElementById('rest')
+  rest.textContent = langArr[lang]['showall']
+  function resetId() {
+    if (rest) {
+      rest.style.display = "none";
+    }
+    window.location.hash = '';
+    displayContent();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const version = "1703260404";
     if(sv){
       function siteversion() {
         sv.innerHTML = `<span id="ver">Version:</span> ${version}`;

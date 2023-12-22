@@ -1,0 +1,48 @@
+{
+    "0": {
+        "title": "Test",
+        "types": {
+            "1": {
+                "type": "Box",
+                "language": "German",
+                "images": {
+                    "box-front-cover": "./titles/1/type1/boxfrontcover.png",
+                    "box-back-cover": "./titles/1/type1/boxbackcover.png",
+                    "box-left": "./titles/1/type1/boxleft.png",
+                    "box-right": "./titles/1/type1/boxright.png",
+                    "box-up": "./titles/1/type1/boxup.png",
+                    "box-down": "./titles/1/type1/boxdown.png",
+                    
+                    "front-cover": "./titles/1/type1/frontcover.png",
+                    "back-cover": "./titles/1/type1/backcover.png",
+                    "cd1": "./titles/1/type1/cd1.jpg",
+                    "cd2": "./titles/1/type1/cd2.png",
+                    "inside-cover": "./titles/1/type1/insidecover.png"
+                }
+            },
+            "2": {
+                "type": "Jewel Case",
+                "language": "German",
+                "images": {
+                    "front-cover": "./titles/images/id1/type2/frontcover.png",
+                    "back-cover": "./titles/images/id1/type2/backcover.png",
+                    "cd1": "./titles/images/id1/type2/cd1.png",
+                    "inside-cover": "./titles/images/id1/type2/insidecover.png"
+                }
+            }
+        }
+    },
+    "55": {
+        "types": {
+            "1": {
+                "type": "Jewel Case",
+                "language": "German",
+                "images": {
+                    "front-cover": "frontcover.jpg",
+                    "inside-cover": "insidecover.jpg",
+                    "cd1": "cd1.jpg"
+                }
+            }
+        }
+    }
+}
