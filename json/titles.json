@@ -1,6 +1,15 @@
 {
     "0": {
         "title": "Test",
+        "info": {
+            "developer": [ "Jellyvision", "Berkeley Systems", "Take 2 Interactive", "Schneck & Deny" ],
+            "os": [ "Windows (3.1; 95)" ],
+            "data": "1/26/98",
+            "language": "German",
+            "ratings": {
+                "usk": "ohne Altersbeschränkung"
+            }
+        },
         "types": {
             "1": {
                 "type": "Box",
@@ -32,7 +41,16 @@
             }
         }
     },
-    "55": {
+    "57": {
+        "info": {
+            "developer": [ "Jellyvision", "Berkeley Systems", "Take 2 Interactive", "Schneck & Deny" ],
+            "os": [ "Windows (3.1; 95)" ],
+            "data": "1/26/98",
+            "language": "German",
+            "ratings": {
+                "usk": "ohne Altersbeschränkung"
+            }
+        },
         "types": {
             "1": {
                 "type": "Jewel Case",

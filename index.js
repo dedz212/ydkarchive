@@ -300,6 +300,7 @@ if (document.getElementById("quizContainer")) {
       
         if (item.description) {
           const description = document.createElement('p');
+          description.className = 'quiz-item-p';
           if (item.title === "plugdll.zip" && langArr[lang][item.title]) {
             description.textContent = langArr[lang][item.title].description;
           } else if (item.title === "5dstart.zip" && langArr[lang][item.title]) {
@@ -323,17 +324,20 @@ if (document.getElementById("quizContainer")) {
         if (item.platform) {
           const platform = document.createElement('p');
           platform.innerHTML = `<span class="quiz-item-subtitle">${langArr[lang]['platform']} ${item.platform}</span>`;
+          platform.className = 'quiz-item-p';
           itemContent.appendChild(platform);
         }
 
         if (item.version) {
           const version = document.createElement('p');
+          version.className = 'quiz-item-p';
           version.innerHTML = `<span class="quiz-item-subtitle">${langArr[lang]['version']}</span> ${item.version}`;
           itemContent.appendChild(version);
         }
   
         if (item.date) {
           const date = document.createElement('p');
+          date.className = 'quiz-item-p';
           date.innerHTML = `<span class="quiz-item-subtitle">${langArr[lang]['date']}</span> ${item.date}`;
           itemContent.appendChild(date);
         }
@@ -353,7 +357,7 @@ if (document.getElementById("quizContainer")) {
         if (item.seemore) {
           const seemore = document.createElement('a');
           seemore.href = `/titles/index.html#${index+1}`;
-          seemore.className = 'quiz-item-subtitle';
+          seemore.className = 'quiz-item-seemore';
           seemore.textContent = langArr[lang]['seemore'];
           itemContent.appendChild(seemore);
         }
@@ -399,6 +403,8 @@ if (document.getElementById("quizContainer")) {
       { key: 'berksys', text: 'berksys.com'},
       { key: 'info', text: `${langArr[lang]['info']}`},
       { key: 'archive2', text: `${langArr[lang]['hab']}` },
+      { key: 'disk1', text: 'Disk 1' },
+      { key: 'disk2', text: 'Disk 2' },
       { key: 'other', text: `${langArr[lang]['altlink']}` },
     ];
   
@@ -557,13 +563,18 @@ handleScrollAnimation();
 function popup() {
   let popupBg = document.querySelector('.modal');
   let popup = document.querySelector('.contentt');
+  let popup2 = document.querySelector('.contentt2');
   let openPopupButtons = document.querySelectorAll('.open-popup');
   let closePopupButton = document.querySelector('.actions');
   openPopupButtons.forEach((button)=>{
     button.addEventListener('click', (e)=>{
         e.preventDefault();
         popupBg.classList.add('active');
-        popup.classList.add('active');
+        if (popup) {
+          popup.classList.add('active');
+        } else if (popup2) {
+          popup2.classList.add('active');
+        }
 
         document.getElementById("info").style.color = "var(--p12)";
         document.getElementById("info").style.border = "var(--p12) solid 0.2vh";
@@ -580,7 +591,11 @@ function popup() {
   document.addEventListener('click', (e)=>{
       if (e.target === popupBg) {
           popupBg.classList.remove('active');
-          popup.classList.remove('active');
+          if (popup) {
+            popup.classList.remove('active');
+          } else if (popup2) {
+            popup2.classList.remove('active');
+          }
           displayMain();
       }
   }
@@ -650,14 +665,24 @@ setInterval(changeText, 12000);
 
 function displayMain() {
   const container = document.querySelector(".container");
+  const titlescontent = document.querySelector("#titlescontent");
   document.getElementById("info").style.color = "var(--p10)";
     document.getElementById("info").style.border = "var(--p10) solid 0.2vh";
   
-  if (container.style.display !== 'none') {
-    container.style.display = 'none';
-  } else {
-    container.style.display = 'flex';
-    showAll();
+  if (container) {
+    if (container.style.display !== 'none') {
+      container.style.display = 'none';
+    } else {
+      container.style.display = 'flex';
+      showAll();
+    }
+  } else if (titlescontent) {
+    if (titlescontent.style.display !== 'none') {
+      titlescontent.style.display = 'none';
+    } else {
+      titlescontent.style.display = 'flex';
+      showAll();
+    }
   }
 }
 
@@ -731,40 +756,75 @@ if (document.getElementById("titlescontent")) {
                   if(!jsonData[0]) { 
                   const divcrpp = document.createElement('div');
                   divcrpp.className = 'listofsvd';
+
+                  const ssd2 = document.createElement('div');
+                  ssd2.className = 'todown';
+
                   const dpcr = document.createElement('p');
-                  dpcr.textContent = listItem.date ? `${langArr[lang]['date']}` + listItem.date : ``;
+                  dpcr.textContent = listItem.date ? `${langArr[lang]['date']} ` + listItem.date : ``;
                   dpcr.className = 'boxtcp';
+                  ssd2.appendChild(dpcr);
+
+                  const osItem = document.createElement('p');
+                  item.info.os.forEach(os => {
+                    osItem.textContent = os;
+                    osItem.className = 'tag4';
+                  });
+                  ssd2.appendChild(osItem);
+
+                  for (var rating in item.info.ratings) {
+                    console.log(rating);
+                    const ratingItem = document.createElement('p');
+                    if (rating === 'usk') { var rate = 'USK' };
+                    ratingItem.textContent = `${rate}: ${item.info.ratings[rating]}`;
+                    ratingItem.className = 'boxtcp';
+                    ssd2.appendChild(ratingItem);
+                  }
+                  divcrpp.appendChild(ssd2);
+
+                  const ssd = document.createElement('div');
+                  ssd.className = 'todown';
+
+                    item.info.developer.forEach(developer => {
+                      const developerItem = document.createElement('p');
+                      developerItem.className = 'tag4';
+                      developerItem.textContent = developer;
+                      ssd.appendChild(developerItem);
+                    });
+                    divcrpp.appendChild(ssd);
 
                   const vpcr = document.createElement('p');
                   vpcr.textContent = listItem.version ? `${langArr[lang]['version']}` + listItem.version : ``;
                   vpcr.className = 'boxtcp';
                   
                   divhpcr.appendChild(pcr);
-                  divcrpp.appendChild(dpcr);
                   divcrpp.appendChild(vpcr);
                   divcr.appendChild(divcrpp);
                   }
                   for (var typeKey in item.types) {
-                      if (item.types.hasOwnProperty(typeKey)) {
-                          var type = item.types[typeKey];
-                          const h3cr = document.createElement('h3');
-                          h3cr.className = 'boxtch3';
-                          h3cr.textContent = type.type + ' - ' + type.language;
-                          const divfimgcr = document.createElement('div');
-                          divfimgcr.className = "divfimgcr"
+                    const divcr2 = document.createElement('div');
+                    divcr2.className = 'redwow';
+                    divcr.appendChild(divcr2);
+                    if (item.types.hasOwnProperty(typeKey)) {
+                      var type = item.types[typeKey];
+                      const h3cr = document.createElement('h3');
+                      h3cr.className = 'boxtch3';
+                      h3cr.textContent = type.type + ' - ' + type.language;
+                      divcr2.appendChild(h3cr);
+                      const divfimgcr = document.createElement('div');
+                      divfimgcr.className = "divfimgcr"
+                      divcr2.appendChild(divfimgcr);
                           
-                          for (var imageKey in type.images) {
-                              if (type.images.hasOwnProperty(imageKey)) {
-                                  const imgt = document.createElement('img');
-                                  imgt.src = `../titles/${key}/${typeKey}/` + type.images[imageKey];
-                                  imgt.alt = imageKey;
+                      for (var imageKey in type.images) {
+                        if (type.images.hasOwnProperty(imageKey)) {
+                          const imgt = document.createElement('img');
+                          imgt.src = `../titles/${key}/${typeKey}/` + type.images[imageKey];
+                          imgt.alt = imageKey;
 
-                                  divcr.appendChild(h3cr);
-                                  divcr.appendChild(divfimgcr);
-                                  divfimgcr.appendChild(imgt);
-                              }
-                          }
+                          divfimgcr.appendChild(imgt);
+                        }
                       }
+                    }
                   }
               }
           }
@@ -778,6 +838,7 @@ if (document.getElementById("titlescontent")) {
   var rest = document.getElementById('rest')
   rest.textContent = langArr[lang]['showall']
   function resetId() {
+    document.getElementById('titlescontent').innerHTML = "";
     if (rest) {
       rest.style.display = "none";
     }
@@ -787,7 +848,7 @@ if (document.getElementById("titlescontent")) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const version = "1703260404";
+    const version = "1708546007";
     if(sv){
       function siteversion() {
         sv.innerHTML = `<span id="ver">Version:</span> ${version}`;

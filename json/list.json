@@ -29,6 +29,20 @@
         }
       },
       {
+        "title": "You Don't Know Jack Volume 1",
+        "subtitle": "",
+        "version": "v.1.02",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "iso", "90s"],
+        "download": {
+          "archive": "",
+          "own": "",
+          "other": "https://archive.org/download/redump_pc_Y/You%20Don%27t%20Know%20Jack%20%28USA%29%20%28v1.02%29.7z"
+        }
+      },
+      {
         "title": "Question Pack",
         "subtitle": "",
         "version": "",
@@ -163,6 +177,21 @@
         "tags": ["subject", "iso", "steam", "90s"],
         "download": {
           "archive": "https://archive.org/details/You_Dont_Know_Jack_Sports_Berkeley_Sports_Berkeley_Systems_Jellyvision_1996",
+          "own": "",
+          "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack Sports",
+        "subtitle": "",
+        "tagd": ["Lost Media"],
+        "version": "v1.02",
+        "date": "1999",
+        "image": "",
+        "description": "",
+        "tags": ["subject", "iso", "lostmedia", "90s"],
+        "download": {
+          "archive": "",
           "own": "",
           "other": ""
         }
@@ -779,8 +808,7 @@
         "tags": ["volume", "international", "deutsch", "iso", "90s"],
         "download": {
             "archive": "https://archive.org/details/ydkjde",
-            "other": "https://mega.nz/file/AexHTT6Y#QoRQXpLTashN8GlhDSEBRqDTmhE8wQAeEgglDwdKcwo",
-            "info": "https://ogdb.eu/index.php?section=game&gameid=55863"
+            "other": "https://mega.nz/file/AexHTT6Y#QoRQXpLTashN8GlhDSEBRqDTmhE8wQAeEgglDwdKcwo"
         },
         "seemore": true
       },
@@ -810,7 +838,23 @@
         "download": {
             "archive": "https://archive.org/details/cover_bigboxydkj2-german",
             "own": "https://drive.google.com/file/d/102mKApMpZgXsW2BYuXX0rnPJGl9CkPLl/view?usp=drive_link",
-            "macintoshgarden": "https://macintoshgarden.org/games/you-dont-know-jack-2-german"
+            "macintoshgarden": "https://macintoshgarden.org/games/you-dont-know-jack-2-german",
+            "other": "https://mega.nz/file/4bZXzAKA#NMajY1jmulcDjRIvMN3WAYRSQsGR1QH61rMB7aAW5bA"
+        }
+      },
+      {
+        "title": "You Don't Know Jack 2",
+        "subtitle": "Demo",
+        "tagd": ["Deutsch"],
+        "version": "",
+        "date": "",
+        "image": "",
+        "description": "",
+        "tags": ["volume", "demo", "international", "deutsch", "iso", "90s"],
+        "download": {
+            "archive": "",
+            "own": "",
+            "jackde": "https://web.archive.org/web/*/http://www.jack.de:80/downloads/demos/YDKJ2_demo1.exe"
         }
       },
       {
@@ -823,6 +867,8 @@
         "tags": ["volume", "international", "deutsch", "iso", "90s"],
         "download": {
             "archive": "",
+            "disk1": "https://archive.org/download/redump_pc_Y/You%20Don%27t%20Know%20Jack%203%20-%20Abwaerts%20%28Germany%29%20%28Disc%201%29%20%28Install%20%2B%20You%20Don%27t%20Hear%20Jack%29.7z",
+            "disk2": "https://archive.org/download/redump_pc_Y/You%20Don%27t%20Know%20Jack%203%20-%20Abwaerts%20%28Germany%29%20%28Disc%202%29%20%28Spiel%29.7z",
             "macintoshgarden": "https://macintoshgarden.org/games/you-dont-know-jack-3-german",
             "own": "https://drive.google.com/file/d/19WmsGYuIbmH_GI_60HhuTnAjzUkSSy9Z/view?usp=drive_link"
         }
@@ -1533,7 +1579,7 @@
       {
         "title": "You Don't Know Jack 3: Abwärts",
         "subtitle": "Manual",
-        "tagd": ["German", "Lost Media"],
+        "tagd": ["German"],
         "version": "",
         "date": "",
         "image": "",
@@ -1542,7 +1588,7 @@
         "download": {
           "archive": "",
           "own": "",
-          "other": ""
+          "other": "https://mega.nz/file/RSpHGQjS#YWWhU8Af9RQKTfmqO9FSpfaAMqdAcZCVVAOo8Igwgok"
         }
       },
       {

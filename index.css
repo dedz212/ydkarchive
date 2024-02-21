@@ -327,7 +327,7 @@ a:visited {
 .quiz-item img {
     border-radius: 0.5vh;
     width: calc(100%);
-    padding-bottom: 1vh;
+    padding-bottom: 0.5vh;
 }
 
 .quiz-item-content,
@@ -343,11 +343,21 @@ a:visited {
 .quiz-item-content h2 {
     color: var(--p1);
     font-size: 2.15vh;
-    line-height: 0.8;
+    line-height: 1;
+    margin: 0.5vh;
 }
 
 .quiz-item-subtitle {
     font-weight: 500;
+    font-size: 1.75vh;
+}
+
+.quiz-item-p {
+    margin: 0 0.5vh 0 0.5vh;
+}
+
+.quiz-item-seemore {
+    margin: 0 0.5vh 0 0.5vh;
     font-size: 1.75vh;
 }
 
@@ -429,11 +439,13 @@ a:visited {
     transition: opacity .15s;
 }
 
-.contentt {
+.contentt,
+.contentt2 {
     text-align: left;
 }
 
-.contentt {
+.contentt,
+.contentt2 {
     position: absolute;
     top: 31vh;
     max-width: 60vh;
@@ -442,7 +454,8 @@ a:visited {
     z-index: 1;
 }
 
-.contentt.active {
+.contentt.active,
+.contentt2.active  {
     animation: fadeIn 1s ease-in-out;
     animation-fill-mode: both;
     opacity: 1;
@@ -460,7 +473,8 @@ a:visited {
     margin-top: 10px;
 }
 
-.contentt .inline {
+.contentt .inline,
+.contentt2 .inline {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -474,11 +488,19 @@ a:visited {
 }
 
 a.justyeah,
-a.justyeah,
 a.justyeah:hover,
 a.justyeah:visited {
     font-size: 3vh;
     font-weight: 800;
+    color: var(--p10);
+    line-height: 1;
+}
+
+a.justyeah2,
+a.justyeah2:hover,
+a.justyeah2:visited {
+    font-size: 2.5vh;
+    font-weight: 600;
     color: var(--p10);
     line-height: 1;
 }
@@ -510,7 +532,7 @@ a.justyeah:visited {
     background-color: var(--p12);
     border-radius: 0.5vh;
     padding: 0.5vh;
-    margin: 0.5vh 0 0.5vh 0;
+    margin: 0.5vh;
     font-weight: 600;
     line-height: 1;
     color: var(--p1);
@@ -558,7 +580,7 @@ a.justyeah:visited {
     text-align: center;
     font-weight: 700;
     padding: 1vh;
-    line-height: 0.8;
+    line-height: 1;
     font-size: 4vh;
     color: var(--p12);
     display: none;
@@ -623,16 +645,25 @@ a.justyeah:visited {
     align-items: center;
 }
 
+.boxtch3 {
+    font-size: 2.5vh;
+    font-weight: 500;
+    line-height: 1;
+    padding: 0.5vh;
+}
+
 .boxtch2 {
     font-size: 3vh;
-    line-height: 0.75;
+    line-height: 1;
+    padding: 0 0.5vh 0 0.5vh;
 }
 
 .boxtcp {
-    font-size: 1.5vh;
-    line-height: 0.75;
-    opacity: 0.75;
-    padding: 0 0.25vh 0 0;
+    color: var(--p5s);
+    font-size: 2vh;
+    font-weight: 500;
+    line-height: 1;
+    padding: 0 0.5vh 0 0.5vh;
 }
 
 .boxfortc {
@@ -674,11 +705,28 @@ a.justyeah:visited {
 }
 
 .divfimgcr img {
-    width: 30%;
+    width: 20vh;
     padding: 0.5vh;
 }
 
+.todown {
+    width: 50%;
+}
+.redwow {
+    background-color: var(--p2);
+    border-radius: 0.5vh;
+    padding: 1vh;
+    margin: 0.5vh;
+}
 
+.bttdw {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1vh;
+    color: var(--p10);
+    font-size: 2vh;
+}
 
 /* WEBKIT SCROLLBAR */
 
