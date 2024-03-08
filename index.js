@@ -67,6 +67,9 @@ const langArr = {
     "You Don't Hear Jack": {
       description: 'Extracted from YDKJ German 3',
     },
+    "You Don't Know Jack Sports": {
+      description: 'Courtesy of adidas',
+    },
     altlink: "alternative link",
     hab: "archive.org (fixes and bonuses)",
     info: "information",
@@ -142,6 +145,9 @@ const langArr = {
     },
     "You Don't Hear Jack": {
       description: 'Extrahiert aus YDKJ German 3',
+    },
+    "You Don't Know Jack Sports": {
+      description: 'Gesponsort von adidas',
     },
     altlink: "alternative link",
     hab: "archive.org (Fehlerbehebungen und Bonus Inhalte)",
@@ -315,6 +321,8 @@ if (document.getElementById("quizContainer")) {
             description.textContent = langArr[lang]["jackau"].description;
           } else if (item.title === "You Don't Hear Jack" && item.subtitle === "") {
             description.textContent = langArr[lang]["You Don't Hear Jack"].description;
+          } else if (item.title === "You Don't Know Jack Sports") {
+            description.textContent = langArr[lang]["You Don't Know Jack Sports"].description;
           } else {
             description.textContent = item.description;
           }
@@ -786,9 +794,10 @@ if (document.getElementById("titlescontent")) {
                   ssd.className = 'todown';
 
                     item.info.developer.forEach(developer => {
-                      const developerItem = document.createElement('p');
-                      developerItem.className = 'tag4';
+                      const developerItem = document.createElement('a');
+                      developerItem.className = 'tag5';
                       developerItem.textContent = developer;
+                      developerItem.href = `https://jackboxgames.fandom.com/wiki/${developer}`
                       ssd.appendChild(developerItem);
                     });
                     divcrpp.appendChild(ssd);
@@ -806,28 +815,51 @@ if (document.getElementById("titlescontent")) {
                     divcr2.className = 'redwow';
                     divcr.appendChild(divcr2);
                     if (item.types.hasOwnProperty(typeKey)) {
+                      const divcr3 = document.createElement('div');
+                      divcr3.className = 'torightaby';
                       var type = item.types[typeKey];
                       const h3cr = document.createElement('h3');
                       h3cr.className = 'boxtch3';
                       h3cr.textContent = type.type + ' - ' + type.language;
-                      divcr2.appendChild(h3cr);
+                      const abyd = document.createElement('h3');
+                      abyd.className = 'boxtaby';
+                      abyd.innerHTML = `Made by<br>${type.aby}`;
+                      divcr3.appendChild(h3cr);
+                      divcr3.appendChild(abyd);
+                      divcr2.appendChild(divcr3);
                       const divfimgcr = document.createElement('div');
                       divfimgcr.className = "divfimgcr"
                       divcr2.appendChild(divfimgcr);
                           
                       for (var imageKey in type.images) {
                         if (type.images.hasOwnProperty(imageKey)) {
+                          const divappp = document.createElement('div');
+                          divappp.className = 'divappp';
+
                           const imgt = document.createElement('img');
                           imgt.src = `../titles/${key}/${typeKey}/` + type.images[imageKey];
                           imgt.alt = imageKey;
 
-                          divfimgcr.appendChild(imgt);
+                          const pt = document.createElement('p');
+                          if (imageKey === "frontcover") {
+                            pt.textContent = "Front cover"
+                          } else if (imageKey === "insidecover") {
+                            pt.textContent = "Inside cover"
+                          } else if (imageKey === "cd1") {
+                            pt.textContent = "CD"
+                          }
+                          pt.className = 'pttt';
+
+                          divappp.appendChild(imgt);
+                          divappp.appendChild(pt);
+                          divfimgcr.appendChild(divappp);
                         }
                       }
                     }
                   }
               }
           }
+        
         })
         .catch(error => console.error('Error fetching JSON:', error));
       })
@@ -848,7 +880,7 @@ if (document.getElementById("titlescontent")) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const version = "1708546007";
+    const version = "1709933556";
     if(sv){
       function siteversion() {
         sv.innerHTML = `<span id="ver">Version:</span> ${version}`;

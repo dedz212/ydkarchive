@@ -184,14 +184,13 @@
       {
         "title": "You Don't Know Jack Sports",
         "subtitle": "",
-        "tagd": ["Lost Media"],
         "version": "v1.02",
         "date": "1999",
-        "image": "",
-        "description": "",
-        "tags": ["subject", "iso", "lostmedia", "90s"],
+        "image": "images/ydkj_case_front_a.jpg",
+        "description": "Courtesy of adidas",
+        "tags": ["subject", "iso", "90s"],
         "download": {
-          "archive": "",
+          "archive": "https://archive.org/details/ydkjs102",
           "own": "",
           "other": ""
         }
