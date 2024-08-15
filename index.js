@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const version = "1723704720";
+  const version = "1723712341";
   if(sv){
     function siteversion() {
       sv.innerHTML = `<span id="ver">Version:</span> ${version}`;

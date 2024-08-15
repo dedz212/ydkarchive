@@ -365,20 +365,6 @@
         }
       },
       {
-        "title": "You Don't Know Jack VMA Edition",
-        "tagd": ["Lost Media"],
-        "version": "",
-        "date": "",
-        "image": "images/ydkjvmaedition.png",
-        "description": "",
-        "tags": ["event", "lostmedia", "00s", "flash"],
-        "download": {
-            "archive": "",
-            "own": "https://drive.google.com/file/d/1PenPI6uifZtQb5U6zIABuue3idaEARnE/view?usp=drive_link",
-            "other": ""
-        }
-      },
-      {
         "title": "You Don't Know Color",
         "tagd": ["Lost Media"],
         "version": "",
@@ -389,6 +375,20 @@
         "download": {
             "archive": "",
             "own": "https://drive.google.com/file/d/1DcpQdQbiua4vc4XpbnJNru7IOWeIno4e/view?usp=drive_link",
+            "other": ""
+        }
+      },
+      {
+        "title": "You Don't Know Jack",
+        "subtitle": "MTV Video Music Awards Edition",
+        "version": "",
+        "date": "2007",
+        "image": "images/ydkjmtv.png",
+        "description": "",
+        "tags": ["event", "00s", "flash"],
+        "download": {
+            "archive": "",
+            "own": "https://test.dejelnieks.lv/get?file=ydkjmtv",
             "other": ""
         }
       },
