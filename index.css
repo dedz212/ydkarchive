@@ -125,12 +125,12 @@ a:visited {
     border: var(--p1) solid 0.2vh;
     border-radius: 0.5vh;
     padding: 0.5vh;
-    margin: 0.25vh;
     font-size: 1.5vh;
     font-weight: 450;
     max-width: max-content;
     cursor: pointer;
     line-height: 1;
+    margin: 0.25vh;
 }
 
 #linkss a:hover {
@@ -283,9 +283,10 @@ a:visited {
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 3vh 0vh 1vh 1vh;
-    width: 90%;
+    width: 85%;
+    transform: translateX(3%);
 }
 
 .quiz-item {
@@ -324,10 +325,39 @@ a:visited {
     }
 }
 
-.quiz-item img {
+#imgw {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0vh;
     border-radius: 0.5vh;
-    width: calc(100%);
-    padding-bottom: 0.5vh;
+    background-color: #1c273400;
+}
+
+.quiz-item img, .quiz-item .div {
+    position: absolute;
+    border-radius: 0.25vh;
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.quiz-item .div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c273400;
+    font-size: 10vh;
+    font-weight: 900;
 }
 
 .quiz-item-content,
@@ -338,13 +368,15 @@ a:visited {
     align-content: center;
     justify-content: flex-start;
     align-items: flex-start;
+    line-height: 1;
+    margin: 0.5vh;
 }
 
 .quiz-item-content h2 {
     color: var(--p1);
-    font-size: 2.15vh;
+    font-size: 2.5vh;
     line-height: 1;
-    margin: 0.25vh
+    margin: 0.25vh;
 }
 
 .quiz-item-subtitle {
@@ -353,11 +385,11 @@ a:visited {
 }
 
 .quiz-item-p {
-    margin: 0 0.5vh 0 0.25vh;
+    margin: 0.25vh;
 }
 
 .quiz-item-seemore {
-    margin: 0 0.5vh 0 0.5vh;
+    margin: 0.5vh;
     font-size: 1.75vh;
 }
 
@@ -599,7 +631,7 @@ a.justyeah2:visited {
 }
 
 #searchInput {
-    display: flex;
+    display: none;
     flex-wrap: nowrap;
     align-content: center;
     align-items: center;

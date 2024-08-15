@@ -1,3 +1,18 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const version = "1723704720";
+  if(sv){
+    function siteversion() {
+      sv.innerHTML = `<span id="ver">Version:</span> ${version}`;
+    }
+    siteversion();
+  }
+  console.log("Version: " + version);
+  popup();
+  setTimeout(function() {
+    showAll();
+}, 100);
+});
+
 const langArr = {
   en: {
     lang: 'English',
@@ -246,6 +261,7 @@ if (document.getElementById("quizContainer")) {
             document.getElementById('tagsContainer').style.display = 'block';
 
             const searchInput = document.getElementById('searchInput');
+            searchInput.style.display = "flex"
             searchInput.placeholder = langArr[lang]['search'];
             const quizItems = document.querySelectorAll('.quiz-item-content');
             const noResultMessage = document.getElementById('noResultMessage');
@@ -284,14 +300,24 @@ if (document.getElementById("quizContainer")) {
         const quizItem = document.createElement('div');
         quizItem.classList.add('quiz-item');
         quizItem.id = 'qi';
+
+        const imgc = document.createElement('div');
+        imgc.id = 'imgw';
   
         item.tags.forEach(tag => quizItem.classList.add(tag));
         
         if (item.image) {
           const image = document.createElement('img');
           image.src = item.image;
-          quizItem.appendChild(image);
-        }
+          imgc.appendChild(image);
+          quizItem.appendChild(imgc);
+        } else {
+          const div = document.createElement('div');
+          div.classList.add('div');
+          div.innerHTML = "✕"
+          imgc.appendChild(div);
+          quizItem.appendChild(imgc);
+      }
     
         const itemContent = document.createElement('div');
         itemContent.classList.add('quiz-item-content');
@@ -878,18 +904,3 @@ if (document.getElementById("titlescontent")) {
     displayContent();
   }
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    const version = "1709933556";
-    if(sv){
-      function siteversion() {
-        sv.innerHTML = `<span id="ver">Version:</span> ${version}`;
-      }
-      siteversion();
-    }
-    console.log("Version: " + version);
-    popup();
-    setTimeout(function() {
-      showAll();
-  }, 100);
-});
