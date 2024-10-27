@@ -23,6 +23,10 @@
     <link rel="stylesheet" type="text/css" href="../index.css">
 </head>
 <body>
+    <div class="lightbox" id="lightbox">
+        <span class="close" id="close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img" src="">
+    </div>
     <div class="ton">
         <p class="s11">YOU DON'T KNOW</p>
         <p id="texttwo" class="s21"></p>
@@ -32,10 +36,10 @@
         <p id="texttwo" class="s2"></p>
         <p class="s3" id="totalTitles"></p>
     </div>
-    <a class="butnyes" id="rest" onclick="resetId()"></a>
+    <a class="butnyes" id="rest"></a>
     <div id="titlescontent"></div>
     <div class="footer">
-        <p class="tag3 open-popup" id="info" onclick="displayMain()">info</p>
+        <p class="tag3 open-popup" id="info">info</p>
     </div>
     <p class="bttdw">alpha version - in progress</p>
     <a class="tag3" id="toup" href="#info">▲</a>
@@ -57,6 +61,6 @@
             </div>
         </div>
       </div>
-    <script src="../index.js"></script>
+    <script type="module" src="../new.js"></script>
 </body>
 </html>

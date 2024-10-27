@@ -1,0 +1,106 @@
+[
+    {
+        "key": "showall",
+        "id": "showall"
+    },
+    {
+        "key": "d90s",
+        "id": "90s"
+    },
+    {
+        "key": "d00s",
+        "id": "00s"
+    },
+    {
+        "key": "d10s",
+        "id": "10s"
+    },
+    {
+        "key": "volume",
+        "id": "volume"
+    },
+    {
+        "key": "subject",
+        "id": "subject"
+    },
+    {
+        "key": "iso",
+        "id": "iso"
+    },
+    {
+        "key": "DLC",
+        "id": "DLC"
+    },
+    {
+        "key": "steam",
+        "id": "steam"
+    },
+    {
+        "key": "online",
+        "id": "online"
+    },
+    {
+        "key": "offline",
+        "id": "offline"
+    },
+    {
+        "key": "playstation",
+        "id": "playstation"
+    },
+    {
+        "key": "event",
+        "id": "event"
+    },
+    {
+        "key": "lostmedia",
+        "id": "lostmedia"
+    },
+    {
+        "key": "flash",
+        "id": "flash"
+    },
+    {
+        "key": "evolution",
+        "id": "evolution"
+    },
+    {
+        "key": "mobile",
+        "id": "mobile"
+    },
+    {
+        "key": "demo",
+        "id": "demo"
+    },
+    {
+        "key": "international",
+        "id": "international"
+    },
+    {
+        "key": "patch",
+        "id": "patch"
+    },
+    {
+        "key": "deutsch",
+        "id": "deutsch"
+    },
+    {
+        "key": "manual",
+        "special": {
+            "e": "span",
+            "id": "book2"
+        },
+        "id": "book"
+    },
+    {
+        "key": "fix",
+        "id": "fix"
+    },
+    {
+        "key": "bundle",
+        "id": "bundle"
+    },
+    {
+        "key": "other",
+        "id": "other"
+    }
+]

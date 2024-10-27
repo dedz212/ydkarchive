@@ -176,7 +176,7 @@ const langArr = {
 
 const toogleLanguages = document.querySelector('#toogleLanguages')
 
-  function setLang(lang) {
+function setLang(lang) {
     if (!langArr.hasOwnProperty(lang)) return;
     if (window.hasOwnProperty("localStorage"))
       window.localStorage.setItem("lang", lang);
@@ -234,7 +234,7 @@ const toogleLanguages = document.querySelector('#toogleLanguages')
     });
     
 
-  }
+}
 var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang", lang)) || "en";
 setLang(lang);
 
@@ -254,6 +254,7 @@ if (document.getElementById("quizContainer")) {
         .then(data => {
           var idTotalTitles = document.getElementById('totalTitles');
           idTotalTitles.textContent += `${langArr[lang]['total']} ${data.content.length}`;
+          debugger
           filterByTag(activeTag.textContent);
           displayQuizItems(data, function () {
             const loader = document.querySelector('.loader');
@@ -384,9 +385,11 @@ if (document.getElementById("quizContainer")) {
             itemContent.appendChild(tagd);
           });
         }
-    
-        const downloadLinks = createDownloadLinks(item.download);
-        itemContent.appendChild(downloadLinks);
+        
+        if (item.download) {
+          const downloadLinks = createDownloadLinks(item.download);
+          itemContent.appendChild(downloadLinks);
+        }
 
         if (item.seemore) {
           const seemore = document.createElement('a');
@@ -408,54 +411,43 @@ if (document.getElementById("quizContainer")) {
   
   function createDownloadLinks(download) {
     const linkContainer = document.createElement('div');
-  
-    const downloadTypes = [
-      { key: 'archive', text: 'archive.org' },
-      { key: 'own', text: 'ydkjarchive.org' },
-      { key: 'imgur', text: 'imgur.org' },
-      { key: 'sierrachest', text: 'sierrachest.com' },
-      { key: 'vimm', text: 'vimm.net' },
-      { key: 'macintoshgarden', text: 'macintoshgarden.org' },
-      { key: 'jellyvision', text: 'jellyvision.com' },
-      { key: 'compiwareforum', text: 'compiware-forum.de' },
-      { key: 'jackde', text: 'jack.de' },
-      { key: 'setup', text: 'Setup' },
-      { key: 'cdrom', text: 'CD-ROM' },
-      { key: 'macintoshrepository', text: 'macintoshrepository.org' },
-      { key: 'amazon', text: 'amazon.com' },
-      { key: 'fandom', text: 'jackboxgames.fandom.com' },
-      { key: 'ebay', text: 'ebay.com' },
-      { key: 'bandcamp', text: 'bandcamp.com' },
-      { key: 'dlc1', text: '1 DLC' },
-      { key: 'dlc2', text: '2 DLC' },
-      { key: 'dlc3', text: '3 DLC' },
-      { key: 'dlc4', text: '4 DLC' },
-      { key: 'audio', text: 'audio' },
-      { key: 'video', text: 'video' },
-      { key: 'mac', text: 'mac' },
-      { key: 'pc', text: 'pc' },
-      { key: 'berksys', text: 'berksys.com'},
-      { key: 'info', text: `${langArr[lang]['info']}`},
-      { key: 'archive2', text: `${langArr[lang]['hab']}` },
-      { key: 'disk1', text: 'Disk 1' },
-      { key: 'disk2', text: 'Disk 2' },
-      { key: 'other', text: `${langArr[lang]['altlink']}` },
-    ];
-  
-    downloadTypes.forEach(type => {
-      if (download[type.key]) {
-        const link = createLink(type.text, download[type.key]);
-        linkContainer.appendChild(link);
-        linkContainer.id = "linkss";
+
+    download.forEach(item => {
+      if(item.hide) {
+        return
       }
+      const link = document.createElement('a');
+      if (item.id) {
+        if (item.key) {
+          link.setAttribute("key", item.key);
+        } else if (item.id === "archive") {
+          link.innerHTML = "Download (Archive)";
+          link.href = "https://archive.org/details/" + item.link;
+        } else if (item.id === "compiware") {
+          link.innerHTML = "Download (CompiWare)";
+          link.href = "https://www.compiware-forum.de/downloads/file/" + item.link;
+        } else if (item.id === "dejelnieks") {
+          link.innerHTML = `Download ${item.name}`;
+          link.href = "https://test.dejelnieks.lv/get?file=" + item.link;
+        }
+      } else {
+        link.innerHTML = item.name;
+        link.href = item.link;
+      }
+      if (item.format) {
+        link.setAttribute("format", item.format);
+      }
+      link.target = '_blank';
+      linkContainer.appendChild(link);
+      linkContainer.id = "linkss";
     });
-  
+
     return linkContainer;
-  }
+}
 
   function createLink(text, url) {
     const link = document.createElement('a');
-    link.textContent = `${text}`;
+    link.innerHTML = `${text}`;
     link.href = url;
     link.target = '_blank';
     return link;

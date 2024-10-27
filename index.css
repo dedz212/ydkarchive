@@ -116,6 +116,7 @@ a:visited {
     justify-content: flex-start;
     align-content: flex-start;
     position: relative;
+    margin: 0.5vh 0;
 }
 
 #linkss a,
@@ -360,8 +361,7 @@ a:visited {
     font-weight: 900;
 }
 
-.quiz-item-content,
-.quiz-item-content div {
+.quiz-item-content {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -564,7 +564,7 @@ a.justyeah2:visited {
     background-color: var(--p12);
     border-radius: 0.5vh;
     padding: 0.5vh;
-    margin: 0.5vh;
+    margin: 0.5vh 0.5vh 0.5vh 0;
     font-weight: 600;
     line-height: 1;
     color: var(--p1);
@@ -888,4 +888,48 @@ a.justyeah2:visited {
 
 .pttt {
     padding: 0 0.5vh 0.5vh 0.5vh;
+}
+
+.seemore {
+    position: absolute;
+    right: 1vh;
+    bottom: 1vh;
+    background-color: var(--p5);
+    color: var(--p1);
+    border-radius: 0.5vh;
+    padding: 0.5vh;
+}
+
+#imgw .thumbnail:hover {
+    border: 0.5vh solid var(--p2);
+}
+.thumbnail:hover {
+    background-color: var(--p2);
+    cursor: pointer;
+}
+.lightbox {
+    display: none; /* Скрываем блок при загрузке страницы */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.lightbox-img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
 }
