@@ -11,10 +11,11 @@ export async function loadJSON(url) {
     }
 }
 
-export let langArr, list, tags = {};
+export let langArr, list, tags, titles = {};
 export const activeTag = document.getElementById('showall');
 export async function loadLocalization() {
   langArr = await loadJSON('/json/localization.json');
   list = await loadJSON('/json/list.json');
   tags = await loadJSON('/json/tags.json');
+  titles = await loadJSON('/json/titles.json');
 }

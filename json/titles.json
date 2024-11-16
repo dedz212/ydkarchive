@@ -43,12 +43,75 @@
     },
     "ydkjgs": {
         "info": {
-            "developer": [ "Jellyvision", "Berkeley Systems", "Take 2 Interactive", "Schneck & Deny" ],
-            "os": [ "Windows (3.1; 95)" ],
-            "data": "1/26/98",
+            "a": {
+                "developer": [ "Jellyvision", "Berkeley Systems" ],
+                "localization": [ "Schneck & Deny" ],
+                "publisher": [ "Take 2 Interactive" ],
+                "distribition": [ "Tandem Verlag" ]
+            },
+            "date": {
+                "day": "25",
+                "month": "1",
+                "year": "1998"
+            },
             "language": "German",
             "ratings": {
                 "usk": "ohne Altersbeschränkung"
+            },
+            "resolution": {
+                "pbp": [ "640x480" ],
+                "sbs": [ "4:3" ],
+                "colors": [ "256bit" ]
+            },
+            "requirement": {
+                "windows": {
+                    "os": [ "95", "98", "Me", "XP" ],
+                    "proccessor": [
+                        {
+                            "is": "486/33",
+                            "help": "Intel i486 33MHz"
+                        },
+                        {
+                            "is": "486SX",
+                            "help": "Intel i486SX"
+                        }
+                    ],
+                    "ram": "8MB",
+                    "hd": "16MB",
+                    "drive": "CD-ROM",
+                    "sound": "Sound Blaster 16"
+                },
+                "macintosh": {
+                    "os": [ "7.1" ],
+                    "proccessor": [
+                        {
+                            "is": "68040",
+                            "help": "Motorola 68040"
+                        },
+                        {
+                            "is": "any PowerPC"
+                        }
+                    ],
+                    "ram": "6MB",
+                    "hd": "15MB",
+                    "drive": "CD-ROM",
+                    "sound": [
+                        {
+                            "is": "QuickTime 2.5"
+                        },
+                        {
+                            "is": "QuickTime PowerPlug 2.5",
+                            "details": "only for Power Macintosh"
+                        },
+                        {
+                            "is": "Sound control panel 8.0.5",
+                            "details": "all included"
+                        },
+                        {
+                            "is": "Sound Manager 3.2.1"
+                        }
+                    ]
+                }
             }
         },
         "types": {

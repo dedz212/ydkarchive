@@ -687,6 +687,8 @@ a.justyeah2:visited {
     justify-content: flex-start;
     flex-wrap: nowrap;
     align-items: center;
+    width: fit-content;
+    margin: 0 1vh;
 }
 
 .boxtch3 {
@@ -705,9 +707,8 @@ a.justyeah2:visited {
 .boxtcp {
     color: var(--p5s);
     font-size: 2vh;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1;
-    padding: 0 0.5vh 0 0.5vh;
 }
 
 .boxfortc {
@@ -736,7 +737,7 @@ a.justyeah2:visited {
     align-content: center;
     align-items: center;
     width: 100%;
-    padding: 0.5vh 0 0.5vh 0;
+    padding: 1.5vh 0 0.5vh 0;
 }
 
 .divfimgcr {
@@ -754,19 +755,19 @@ a.justyeah2:visited {
 }
 
 .todown {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
 }
 .redwow {
     background-color: var(--p2);
     border-radius: 0.5vh;
     padding: 1vh;
-    margin: 0.5vh;
+    margin: 1vh 0.5vh 0.5vh 0.5vh;
 }
 
 .bttdw {
@@ -932,4 +933,55 @@ a.justyeah2:visited {
     color: white;
     font-size: 30px;
     cursor: pointer;
+}
+
+.rtl {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+
+    & a {
+        background-color: var(--p9);
+        padding: 0.5vh;
+        margin: 0.25vh 0.25vh 0.25vh 1vh;
+        border-radius: 0.5vh;
+        line-height: 1;
+        font-size: 1.5vh;
+    }
+}
+
+.lil {
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.boxtcprr {
+    color: var(--p5s);
+    font-size: 2vh;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0.25vh 0.25vh 0.25vh 1vh;
+}
+
+#adiv {
+    border: solid 0.5vh var(--p2);
+    border-radius: 0.5vh;
+    padding: 1vh;
+    margin: 1vh 0;
+}
+.boxtcp2 {
+    margin-right: 1vh;
+}
+.rek {
+    font-size: 2.5vh;
+    font-weight: 700;
 }

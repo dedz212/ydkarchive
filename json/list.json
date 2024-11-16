@@ -381,8 +381,9 @@
         "tags": ["playstation", "iso", "90s"],
         "download": [
           {
-            "name": "Download (vimm.net)",
-            "link": "https://vimm.net/vault/6083"
+            "name": "",
+            "id": "vimm",
+            "link": "6083"
           },
           {
             "name": "",
@@ -401,8 +402,9 @@
         "tags": ["playstation", "iso", "00s"],
         "download": [
           {
-            "name": "Download (vimm.net)",
-            "link": "https://vimm.net/vault/6082"
+            "name": "",
+            "id": "vimm",
+            "link": "6082"
           },
           {
             "name": "",
@@ -494,8 +496,9 @@
         "tags": ["00s", "flash", "lostmedia", "demo"],
         "download": [
           {
-            "name": "Download (mega.nz)",
-            "link": "https://mega.nz/file/pWwgxBAa#zOkPoCaj_fjO79oCJdtYkg40SHqbjFhEBgBAMtJwZmI"
+            "name": "",
+            "id": "meganz",
+            "link": "pWwgxBAa#zOkPoCaj_fjO79oCJdtYkg40SHqbjFhEBgBAMtJwZmI"
           }
         ]
       },
@@ -880,8 +883,9 @@
         "tags": ["volume", "playstation", "iso", "demo","90s"],
         "download": [
           {
-            "name": "Download (vimm.net)",
-            "link": "https://vimm.net/vault/55791"
+            "name": "",
+            "id": "vimm",
+            "link": "55791"
           },
           {
             "name": "Download (wowroms.com)",
@@ -974,8 +978,9 @@
             "link": "ydkjde"
           },
           {
-            "name": "Download (mega.nz)",
-            "link": "https://mega.nz/file/AexHTT6Y#QoRQXpLTashN8GlhDSEBRqDTmhE8wQAeEgglDwdKcwo"
+            "name": "",
+            "id": "meganz",
+            "link": "AexHTT6Y#QoRQXpLTashN8GlhDSEBRqDTmhE8wQAeEgglDwdKcwo"
           }
         ],
         "seemore": "ydkjgs"
@@ -1027,8 +1032,9 @@
             "link": "ydkj2dezip"
           },
           {
-            "name": "Download (mega.nz)",
-            "link": "https://mega.nz/file/4bZXzAKA#NMajY1jmulcDjRIvMN3WAYRSQsGR1QH61rMB7aAW5bA"
+            "name": "",
+            "id": "meganz",
+            "link": "4bZXzAKA#NMajY1jmulcDjRIvMN3WAYRSQsGR1QH61rMB7aAW5bA"
           },
           {
             "name": "Download (Macintosh Garden)",
@@ -1150,8 +1156,9 @@
         "tags": ["playstation", "international", "deutsch", "90s"],
         "download": [
           {
-            "name": "Download (vimm.net)",
-            "link": "https://vimm.net/vault/53475"
+            "name": "",
+            "id": "vimm",
+            "link": "53475"
           }
         ]
       },
@@ -1457,8 +1464,9 @@
         "tags": ["evolution", "10s", "iso", "cross-platform"],
         "download": [
           {
-            "name": "Download (vimm.net)",
-            "link": "https://vimm.net/vault/18338"
+            "name": "",
+            "id": "vimm",
+            "link": "18338"
           }
         ]
       },
@@ -1472,8 +1480,9 @@
         "tags": ["evolution", "10s", "iso", "cross-platform"],
         "download": [
           {
-            "name": "Download (vimm.net)",
-            "link": "https://vimm.net/vault/20094"
+            "name": "",
+            "id": "vimm",
+            "link": "20094"
           }
         ]
       },
@@ -1486,8 +1495,9 @@
         "tags": ["evolution", "playstation", "10s", "iso", "cross-platform"],
         "download": [
           {
-            "name": "Download (vimm.net)",
-            "link": "https://vimm.net/vault/25732"
+            "name": "",
+            "id": "vimm",
+            "link": "25732"
           },
           {
             "name": "Download (Google Drive)",
@@ -1535,8 +1545,9 @@
         "tags": ["evolution", "10s", "iso", "cross-platform"],
         "download": [
           {
-            "name": "Download (vimm.net)",
-            "link": "https://vimm.net/vault/79581"
+            "name": "",
+            "id": "vimm",
+            "link": "79581"
           }
         ]
       },
@@ -1798,8 +1809,9 @@
         "tags": ["subject", "book", "90s"],
         "download": [
           {
-            "name": "Download (mega.nz)",
-            "link": "https://mega.nz/file/0CxUzKzB#-tAgBbWKHkch_8JddM4GLCq724L9gK0WqQftjT1wr48"
+            "name": "",
+            "id": "meganz",
+            "link": "0CxUzKzB#-tAgBbWKHkch_8JddM4GLCq724L9gK0WqQftjT1wr48"
           }
         ]
       },
@@ -1874,8 +1886,9 @@
         "tags": ["volume", "international", "deutsch", "book", "90s"],
         "download": [
           {
-            "name": "Download (mega.nz)",
-            "link": "https://mega.nz/file/xfZ3EJja#RbjfZzu_L5lmUlkXP58ScSUF_z_NoeF_vqlRAtDcPJc"
+            "name": "",
+            "id": "meganz",
+            "link": "xfZ3EJja#RbjfZzu_L5lmUlkXP58ScSUF_z_NoeF_vqlRAtDcPJc"
           }
         ]
       },
@@ -1907,8 +1920,9 @@
         "tags": ["volume", "international", "deutsch", "book", "90s"],
         "download": [
           {
-            "name": "Download (mega.nz)",
-            "link": "https://mega.nz/file/ha53WTYA#4vNgFfd2wPGd15OKHxQt51bSrAzAClUA75thqSNXZCk"
+            "name": "",
+            "id": "meganz",
+            "link": "ha53WTYA#4vNgFfd2wPGd15OKHxQt51bSrAzAClUA75thqSNXZCk"
           }
         ]
       },
@@ -1923,8 +1937,9 @@
         "tags": ["lostmedia", "volume", "international", "deutsch", "book", "90s"],
         "download": [
           {
-            "name": "Download (mega.nz)",
-            "link": "https://mega.nz/file/RSpHGQjS#YWWhU8Af9RQKTfmqO9FSpfaAMqdAcZCVVAOo8Igwgok"
+            "name": "",
+            "id": "meganz",
+            "link": "RSpHGQjS#YWWhU8Af9RQKTfmqO9FSpfaAMqdAcZCVVAOo8Igwgok"
           }
         ]
       },
@@ -1939,8 +1954,9 @@
         "tags": ["volume", "international", "deutsch", "book", "00s"],
         "download": [
           {
-            "name": "Download (mega.nz)",
-            "link": "https://mega.nz/file/xTRQVDQa#pgqEWp_ZI7w6Rjf_TJq8pP8GVIC6W_JSeTJcSCA5LOM"
+            "name": "",
+            "id": "meganz",
+            "link": "xTRQVDQa#pgqEWp_ZI7w6Rjf_TJq8pP8GVIC6W_JSeTJcSCA5LOM"
           }
         ]
       },
@@ -1972,8 +1988,9 @@
         "tags": ["volume", "international", "nihongo", "book", "90s"],
         "download": [
           {
-            "name": "Download (mega.nz)",
-            "link": "https://mega.nz/file/YGxynB4J#GgXCHsTshsnezBeE_rmxjwiGoHzYil2oNS9a_YQoYso"
+            "name": "",
+            "id": "meganz",
+            "link": "YGxynB4J#GgXCHsTshsnezBeE_rmxjwiGoHzYil2oNS9a_YQoYso"
           }
         ]
       },
@@ -1988,8 +2005,9 @@
         "tags": ["volume", "international", "francais", "book", "90s"],
         "download": [
           {
-            "name": "Download (mega.nz)",
-            "link": "https://mega.nz/file/xC5QCT5Q#aWRCKRNLFzzbdbWYwsT8992pq4Ub_fmeZFRX15NgfbQ"
+            "name": "",
+            "id": "meganz",
+            "link": "xC5QCT5Q#aWRCKRNLFzzbdbWYwsT8992pq4Ub_fmeZFRX15NgfbQ"
           }
         ]
       },
@@ -2004,8 +2022,9 @@
         "tags": ["evolution", "book", "90s"],
         "download": [
           {
-            "name": "Download (mega.nz)",
-            "link": "https://mega.nz/file/tGpDiQTK#XnhuDEyP4tQpiAz4wCxkCuDS0LF6FpfuJgym34AKasE"
+            "name": "",
+            "id": "meganz",
+            "link": "tGpDiQTK#XnhuDEyP4tQpiAz4wCxkCuDS0LF6FpfuJgym34AKasE"
           }
         ]
       },
@@ -2127,8 +2146,31 @@
         "tags": ["other", "deutsch", "audio", "90s"],
         "download": [
           {
-            "name": "Download (mega.nz)",
-            "link": "https://mega.nz/file/1KRRHCCR#GYE1f5FuS231FSk_SovqE5dpNry_MIZYtk5KdS1QnXc"
+            "name": "",
+            "id": "meganz",
+            "link": "1KRRHCCR#GYE1f5FuS231FSk_SovqE5dpNry_MIZYtk5KdS1QnXc"
+          }
+        ]
+      },
+      {
+        "title": "You Don't Know Jack",
+        "subtitle": "Hörbuch-Edition, №1",
+        "tagd": ["Deutsch"],
+        "version": "",
+        "date": "1995",
+        "image": "images/ydkjdeab.jpg",
+        "description": "",
+        "tags": ["other", "audio", "deutsch", "90s"],
+        "download": [
+          {
+            "name": "",
+            "id": "archive",
+            "link": "ydkj_horbuchedition"
+          },
+          {
+            "name": "",
+            "id": "dejelnieks",
+            "link": "ydkjdeaudiobook"
           }
         ]
       },

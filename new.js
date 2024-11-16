@@ -1,5 +1,5 @@
 import { setLang, lang } from './js/localization.js'
-import { loadLocalization, langArr, list, tags } from './js/init.js'
+import { loadLocalization, langArr, list, tags, titles } from './js/init.js'
 import { popup } from './js/popup.js'
 import { ladtheme } from './js/ladtheme.js'
 import { handleScrollAnimation } from './js/scroll.js'
@@ -7,7 +7,7 @@ import { handleScrollAnimation } from './js/scroll.js'
 let activeTag = document.getElementById('showall');
 
 async function initLang() {
-  console.log(`1729994561`)
+  console.log(`1731781926`)
   lad()
   await loadLocalization();
   await setLang(lang);
@@ -194,6 +194,12 @@ function createDownloadLinks(download) {
         } else if (item.id === "dejelnieks") {
           link.innerHTML = `Download ${item.name}`;
           link.href = "https://test.dejelnieks.lv/get?file=" + item.link;
+        } else if (item.id === "meganz") {
+          link.innerHTML = `Download (mega.nz)`;
+          link.href = "https://mega.nz/file/" + item.link;
+        } else if (item.id === "vimm") {
+          link.innerHTML = `Download (vimm.net)`;
+          link.href = "https://vimm.net/vault/" + item.link;
         }
       } else {
         link.innerHTML = item.name;
@@ -360,153 +366,297 @@ async function startTitle() {
     }
 
     function displayContent() {
-        fetch('/json/titles.json')
-        .then(response => response.json())
-        .then(gtJsonData => {
-            const contentDiv = document.getElementById('titlescontent');
-            var urlFragment = window.location.hash.substr(1);
-            var jsonData = filterDataByIds(gtJsonData, urlFragment);
-            fetch('/json/list.json')
-            .then(response => response.json())
-            .then(listData => {
+      var gtJsonData = titles
+      const contentDiv = document.getElementById('titlescontent');
+      var urlFragment = window.location.hash.substr(1);
+      var jsonData = filterDataByIds(gtJsonData, urlFragment);
+      var listData = list;
 
-            for (var key in jsonData) {
-                if (jsonData.hasOwnProperty(key)) {
-                    var item = jsonData[key];
-                    const listItem = listData.content.find(item => item.seemore === "ydkjgs");
+      for (var key in jsonData) {
+        if (jsonData.hasOwnProperty(key)) {
+          var item = jsonData[key];
+          const listItem = listData.content.find(item => item.seemore === "ydkjgs");
 
-                    const divcr = document.createElement('div');
-                    divcr.id = key;
-                    divcr.className = 'boxfortc';
-                    contentDiv.appendChild(divcr);
-                    const divhpcr = document.createElement('div');
-                    divhpcr.className = 'divhpcr';
+          const divcr = document.createElement('div');
+          divcr.id = key;
+          divcr.className = 'boxfortc';
+          contentDiv.appendChild(divcr);
+          const divhpcr = document.createElement('div');
+          divhpcr.className = 'divhpcr';
 
-                    const pcr = document.createElement('p');
-                    pcr.textContent = key;
-                    pcr.className = 'boxtcp';
+          const pcr = document.createElement('p');
+          pcr.textContent = key;
+          pcr.className = 'boxtcp2';
 
-                    const h2cr = document.createElement('h2');
-                    h2cr.className = 'boxtch2';
-                    if(jsonData[0]) {
-                      var titlehisis = item.title;
-                    } else {
-                      var titlehisis = listItem.title + (listItem.subtitle ? ` ` +  listItem.subtitle : ``)
-                    };
-                    h2cr.textContent = titlehisis
-                    divhpcr.appendChild(h2cr);
-                    divcr.appendChild(divhpcr);
-                    if(!jsonData[0]) { 
-                      const divcrpp = document.createElement('div');
-                      divcrpp.className = 'listofsvd';
+          const h2cr = document.createElement('h2');
+          h2cr.className = 'boxtch2';
+          if(jsonData[0]) {
+            var titlehisis = item.title;
+          } else {
+            var titlehisis = listItem.title + (listItem.subtitle ? ` ` +  listItem.subtitle : ``)
+          };
+          h2cr.textContent = titlehisis
+          divhpcr.appendChild(h2cr);
+          divcr.appendChild(divhpcr);
+          if(!jsonData[0]) { 
+            const divcrpp = document.createElement('div');
+            divcrpp.className = 'listofsvd';
 
-                      const ssd2 = document.createElement('div');
-                      ssd2.className = 'todown';
+            const ssd2 = document.createElement('div');
+            ssd2.className = 'todown';
 
-                      const dpcr = document.createElement('p');
-                      dpcr.textContent = listItem.date ? `${langArr[lang]['date']} ` + listItem.date : ``;
-                      dpcr.className = 'boxtcp';
-                      ssd2.appendChild(dpcr);
+            const datum = document.createElement('div');
+            datum.className = 'rtl';
+            const datuml = document.createElement('div');
+            datuml.textContent = item.info.date ? `${langArr[lang]['date']}` : ``;
+            datuml.className = 'boxtcp';
 
-                      const osItem = document.createElement('p');
-                      item.info.os.forEach(os => {
-                          osItem.textContent = os;
-                          osItem.className = 'boxtcp';
-                      });
-                      ssd2.appendChild(osItem);
+            const dpcr = document.createElement('p');
+            dpcr.textContent = item.info.date ? formatDate(item.info.date, lang) : ``;
+            dpcr.className = 'boxtcprr';
+            datum.appendChild(datuml);
+            datum.appendChild(dpcr);
+            ssd2.appendChild(datum);
+/*
+            const osItem = document.createElement('p');
+            item.info.os.forEach(os => {
+              osItem.textContent = os;
+              osItem.className = 'boxtcp';
+            });
+            ssd2.appendChild(osItem);
+*/
+            const rat = document.createElement('div');
+            rat.className = 'rtl';
 
-                      for (var rating in item.info.ratings) {
-                          console.log(rating);
-                          const ratingItem = document.createElement('p');
-                          if (rating === 'usk') { var rate = 'USK' };
-                          ratingItem.textContent = `${rate}: ${item.info.ratings[rating]}`;
-                          ratingItem.className = 'boxtcp';
-                          ssd2.appendChild(ratingItem);
-                      }
-                    divcrpp.appendChild(ssd2);
+            for (var rating in item.info.ratings) {
+              const ratl = document.createElement('div');
+              const ratingItem = document.createElement('p');
 
-                    const ssd = document.createElement('div');
-                    ssd.className = 'todown';
+              if (rating === 'usk') { var rate = 'USK' };
 
-                        item.info.developer.forEach(developer => {
-                        const developerItem = document.createElement('a');
-                        developerItem.className = 'tag5';
-                        developerItem.textContent = developer;
-                        developerItem.href = `https://jackboxgames.fandom.com/wiki/${developer}`
-                        ssd.appendChild(developerItem);
-                        });
-                        divcrpp.appendChild(ssd);
+              ratl.textContent = `${rate}: `;
+              ratl.className = 'boxtcp';
 
-                    const vpcr = document.createElement('p');
-                    vpcr.textContent = listItem.version ? `${langArr[lang]['version']}` + listItem.version : ``;
-                    vpcr.className = 'boxtcp';
-                    
-                    divhpcr.appendChild(pcr);
-                    divcrpp.appendChild(vpcr);
-                    divcr.appendChild(divcrpp);
-                    }
-                    for (var typeKey in item.types) {
-                        const divcr2 = document.createElement('div');
-                        divcr2.className = 'redwow';
-                        divcr.appendChild(divcr2);
-                        if (item.types.hasOwnProperty(typeKey)) {
-                        const divcr3 = document.createElement('div');
-                        divcr3.className = 'torightaby';
-                        var type = item.types[typeKey];
-                        const h3cr = document.createElement('h3');
-                        h3cr.className = 'boxtch3';
-                        h3cr.textContent = type.type + ' - ' + type.language;
-                        const abyd = document.createElement('h3');
-                        abyd.className = 'boxtaby';
-                        abyd.innerHTML = `Made by<br>${type.aby}`;
-                        divcr3.appendChild(h3cr);
-                        divcr3.appendChild(abyd);
-                        divcr2.appendChild(divcr3);
-                        const divfimgcr = document.createElement('div');
-                        divfimgcr.className = "divfimgcr"
-                        divcr2.appendChild(divfimgcr);
-                            
-                        for (var imageKey in type.images) {
-                          if (type.images.hasOwnProperty(imageKey)) {
-                            const divappp = document.createElement('div');
-                            divappp.className = 'divappp';
+              ratingItem.textContent = `${item.info.ratings[rating]}`;
+              ratingItem.className = 'boxtcprr';
 
-                            const imgt = document.createElement('img');
-                            imgt.src = `../titles/${key}/${typeKey}/` + type.images[imageKey];
-                            imgt.alt = imageKey;
-                            imgt.className = 'thumbnail';
-                            imgt.addEventListener('click', (() => {
-                              const currentImage = type.images[imageKey];
-                              return () => {
-                                  lightbox.style.display = 'flex';
-                                  lightboxImg.src = `../titles/${key}/${typeKey}/` + currentImage;
-                              };
-                          })());
-
-                            const pt = document.createElement('p');
-                            if (imageKey === "frontcover") {
-                                pt.textContent = "Front cover"
-                            } else if (imageKey === "insidecover") {
-                                pt.textContent = "Inside cover"
-                            } else if (imageKey === "cd1") {
-                                pt.textContent = "CD"
-                            }
-                            pt.className = 'pttt';
-
-                            divappp.appendChild(imgt);
-                            divappp.appendChild(pt);
-                            divfimgcr.appendChild(divappp);
-                          }
-                        }
-                      }
-                    }
-                }
+              rat.appendChild(ratl);
+              rat.appendChild(ratingItem);
             }
+            ssd2.appendChild(rat);
+            divcrpp.appendChild(ssd2);
+
+            createSection('Resolution:', item.info.resolution.pbp.concat(item.info.resolution.sbs, item.info.resolution.colors));
+            function createSection(header, items) {
+              const sectionDiv = document.createElement('div');
+              sectionDiv.className = 'boxtcp lil';
+              sectionDiv.textContent = header;
+          
+              const listDiv = document.createElement('div');
+              listDiv.className = 'rtl';
+          
+              items.forEach(item => {
+                const itemElement = document.createElement('p');
+                itemElement.className = 'boxtcprr';
+                itemElement.textContent = item + ' '; // Добавляем пробел между элементами
+                listDiv.appendChild(itemElement);
+              });
+          
+              sectionDiv.appendChild(listDiv);
+              ssd2.appendChild(sectionDiv);
+            }
+
+            const aDiv = document.createElement('div');
+            aDiv.id = "adiv"
+
+            const developerDiv = document.createElement('div');
+            developerDiv.className = 'boxtcp lil';
+            const developerl = document.createElement('div');
+            developerl.className = 'boxtcp';
+            developerl.textContent = "Developers: "
+            developerDiv.appendChild(developerl);
+            const developerr = document.createElement('div');
+            developerr.className = 'rtl';
+
+            item.info.a.developer.forEach(developer => {
+              const developerItem = document.createElement('a');
+              developerItem.textContent = developer;
+              developerItem.href = `https://jackboxgames.fandom.com/wiki/${developer}`
+              developerr.appendChild(developerItem);
+            });
+            developerDiv.appendChild(developerr);
+            aDiv.appendChild(developerDiv);
+
+            const localizationDiv = document.createElement('div');
+            localizationDiv.className = 'boxtcp lil';
+            localizationDiv.textContent = "Localization: "
+            const localizationl = document.createElement('div');
+            localizationl.className = 'rtl';
+            item.info.a.localization.forEach(localization => {
+              const localizationItem = document.createElement('a');
+              localizationItem.textContent = localization;
+              localizationItem.href = `https://jackboxgames.fandom.com/wiki/${localization}`
+              localizationl.appendChild(localizationItem);
+            });
+            localizationDiv.appendChild(localizationl);
+            aDiv.appendChild(localizationDiv);
+
+            const publisherDiv = document.createElement('div');
+            publisherDiv.className = 'boxtcp lil';
+            publisherDiv.textContent = "Publisher: "
+            const publisherl = document.createElement('div');
+            publisherl.className = 'rtl';
+            item.info.a.publisher.forEach(publisher => {
+              const publisherItem = document.createElement('a');
+              publisherItem.textContent = publisher;
+              publisherItem.href = `https://jackboxgames.fandom.com/wiki/${publisher}`
+              publisherl.appendChild(publisherItem);
+            });
+            publisherDiv.appendChild(publisherl);
+            aDiv.appendChild(publisherDiv);
+
+            const distribitionDiv = document.createElement('div');
+            distribitionDiv.className = 'boxtcp lil';
+            distribitionDiv.textContent = "Disitribition: "
+            const distribitionl = document.createElement('div');
+            distribitionl.className = 'rtl';
+            item.info.a.distribition.forEach(distribition => {
+              const distribitionItem = document.createElement('a');
+              distribitionItem.textContent = distribition;
+              distribitionItem.href = `https://jackboxgames.fandom.com/wiki/${distribition}`
+              distribitionl.appendChild(distribitionItem);
+            });
+            distribitionDiv.appendChild(distribitionl);
+            aDiv.appendChild(distribitionDiv);
+
+
+            const bDiv = document.createElement('div');
+            const WRek = document.createElement('div');
+            WRek.textContent = "Windows Requirements:";
+            WRek.className = 'rek';
+            bDiv.appendChild(WRek);
+
+            const wosDiv = document.createElement('div');
+            wosDiv.className = 'boxtcp lil';
+            const wosl = document.createElement('div');
+            wosl.className = 'boxtcp';
+            wosl.textContent = "OS: "
+            wosDiv.appendChild(wosl);
+            const wosr = document.createElement('div');
+            wosr.className = 'rtl';
+
+            item.info.requirement.windows.os.forEach(os => {
+              const wosItem = document.createElement('p');
+              wosItem.textContent = os;
+              wosItem.className = 'boxtcprr';
+              wosr.appendChild(wosItem);
+            });
+            wosDiv.appendChild(wosr);
+            bDiv.appendChild(wosDiv);
+
+            const wramDiv = document.createElement('div');
+            wramDiv.className = 'boxtcp lil';
+            const wraml = document.createElement('div');
+            wraml.className = 'boxtcp';
+            wraml.textContent = "RAM: "
+            wramDiv.appendChild(wraml);
+            const wramr = document.createElement('div');
+            wramr.className = 'rtl';
+
+            const wramItem = document.createElement('p');
+            wramItem.textContent = item.info.requirement.windows.ram;
+            wramItem.className = 'boxtcprr';
+            wramr.appendChild(wramItem);
+
+            wramDiv.appendChild(wramr);
+            bDiv.appendChild(wramDiv);
+
+            const whdDiv = document.createElement('div');
+            whdDiv.className = 'boxtcp lil';
+            const whdl = document.createElement('div');
+            whdl.className = 'boxtcp';
+            whdl.textContent = "HD: "
+            whdDiv.appendChild(whdl);
+            const whdr = document.createElement('div');
+            whdr.className = 'rtl';
+
+            const whdItem = document.createElement('p');
+            whdItem.textContent = item.info.requirement.windows.hd;
+            whdItem.className = 'boxtcprr';
+            whdr.appendChild(whdItem);
+
+            whdDiv.appendChild(whdr);
+            bDiv.appendChild(whdDiv);
+
+
+            ssd2.appendChild(aDiv);
+            ssd2.appendChild(bDiv);
+
+            const vpcr = document.createElement('p');
+            vpcr.textContent = listItem.version ? `${langArr[lang]['version']}` + listItem.version : ``;
+            vpcr.className = 'boxtcp';
             
-            })
-            .catch(error => console.error('Error fetching JSON:', error));
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
+            divhpcr.appendChild(pcr);
+            divcrpp.appendChild(vpcr);
+            divcr.appendChild(divcrpp);
+          }
+          for (var typeKey in item.types) {
+            const divcr2 = document.createElement('div');
+            divcr2.className = 'redwow';
+            divcr.appendChild(divcr2);
+            if (item.types.hasOwnProperty(typeKey)) {
+            const divcr3 = document.createElement('div');
+            divcr3.className = 'torightaby';
+            var type = item.types[typeKey];
+            const h3cr = document.createElement('h3');
+            h3cr.className = 'boxtch3';
+            h3cr.textContent = type.type + ' - ' + type.language;
+            const abyd = document.createElement('h3');
+            abyd.className = 'boxtaby';
+            abyd.innerHTML = `Made by<br>${type.aby}`;
+            divcr3.appendChild(h3cr);
+            divcr3.appendChild(abyd);
+            divcr2.appendChild(divcr3);
+            const divfimgcr = document.createElement('div');
+            divfimgcr.className = "divfimgcr"
+            divcr2.appendChild(divfimgcr);
+                
+            for (var imageKey in type.images) {
+              if (type.images.hasOwnProperty(imageKey)) {
+                const divappp = document.createElement('div');
+                divappp.className = 'divappp';
+
+                const imgt = document.createElement('img');
+                imgt.src = `../titles/${key}/${typeKey}/` + type.images[imageKey];
+                imgt.alt = imageKey;
+                imgt.className = 'thumbnail';
+                imgt.addEventListener('click', (() => {
+                  const currentImage = type.images[imageKey];
+                  return () => {
+                      lightbox.style.display = 'flex';
+                      lightboxImg.src = `../titles/${key}/${typeKey}/` + currentImage;
+                  };
+                })());
+
+                const pt = document.createElement('p');
+                if (imageKey === "frontcover") {
+                    pt.textContent = "Front cover"
+                } else if (imageKey === "insidecover") {
+                    pt.textContent = "Inside cover"
+                } else if (imageKey === "cd1") {
+                    pt.textContent = "CD"
+                }
+                pt.className = 'pttt';
+
+                divappp.appendChild(imgt);
+                divappp.appendChild(pt);
+                divfimgcr.appendChild(divappp);
+              }
+            }
+            }
+          }
+        }
+      }
     }
 
     window.onload = displayContent;
@@ -561,4 +711,17 @@ function book2() {
     currentIndex = (currentIndex + 1) % book2texts.length;
   }
   setInterval(changeText, 12000);
+}
+
+function formatDate(dateObj, lang) {
+  const day = dateObj.day;
+  const month = dateObj.month;
+  const year = dateObj.year;
+
+  if (lang === 'en') {
+    return `${month}/${day}/${year}`; // Формат: MM/DD/YYYY
+  } else if (lang === 'de') {
+    return `${day}.${month}.${year}`; // Формат: DD.MM.YYYY
+  }
+  return '';
 }
