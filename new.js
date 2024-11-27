@@ -193,7 +193,7 @@ function createDownloadLinks(download) {
           link.href = "https://www.compiware-forum.de/downloads/file/" + item.link;
         } else if (item.id === "dejelnieks") {
           link.innerHTML = `Download ${item.name}`;
-          link.href = "https://test.dejelnieks.lv/get?file=" + item.link;
+          link.href = "https://ftp.ydkjarchive.com/get?file=" + item.link;
         } else if (item.id === "meganz") {
           link.innerHTML = `Download (mega.nz)`;
           link.href = "https://mega.nz/file/" + item.link;

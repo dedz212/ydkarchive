@@ -1,4 +1,4 @@
-export const version = "1723712341";
+export let version;
 
 export async function loadJSON(url) {
     try {
@@ -14,8 +14,23 @@ export async function loadJSON(url) {
 export let langArr, list, tags, titles = {};
 export const activeTag = document.getElementById('showall');
 export async function loadLocalization() {
-  langArr = await loadJSON('/json/localization.json');
-  list = await loadJSON('/json/list.json');
+  langArr = await loadJSON('https://ftp.ydkjarchive.com/api?get=localization');
+  list = await loadJSON('https://ftp.ydkjarchive.com/api?get=list');
   tags = await loadJSON('/json/tags.json');
-  titles = await loadJSON('/json/titles.json');
+  titles = await loadJSON('https://ftp.ydkjarchive.com/api?get=titles');
+  await loadVersion();
+}
+
+export async function loadVersion() {
+  try {
+    let versionData = await loadJSON('https://test.dejelnieks.lv/v');
+  
+    if (versionData && versionData.ydkjarchive) {
+      version = versionData.ydkjarchive;
+    } else {
+      console.error('Failed to load version data or "ydkjarchive" not found.');
+    }
+  } catch (error) {
+    console.error('Error loading version:', error);
+  }
 }
