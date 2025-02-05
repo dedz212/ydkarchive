@@ -7,23 +7,28 @@ import { handleScrollAnimation } from './js/scroll.js'
 let activeTag = document.getElementById('showall');
 
 async function initLang() {
-  console.log(`1731781926`)
-  lad()
-  await loadLocalization();
-  await setLang(lang);
-  handleScrollAnimation();
-  if (document.getElementById("quizContainer")) {
-    await tagsContainer();
-    await start();
-  } else if (document.getElementById("titlescontent")) {
-    await startTitle();
+  try {
+    lad()
+    await loadLocalization();
+    await setLang(lang);
+    handleScrollAnimation();
+    if (document.getElementById("quizContainer")) {
+      await tagsContainer();
+      await start();
+    } else if (document.getElementById("titlescontent")) {
+      await startTitle();
+    }
+    if (document.getElementById("tagsContainer")) book2();
+    lightth();
+    popup();
+    setTimeout(() => {
+      showAll();
+    }, 100);
+  } catch (error) {
+    console.error("Error:", error);
+    alert(error);
+    window.location.href = "/error.html";
   }
-  if (document.getElementById("tagsContainer")) book2();
-  lightth();
-  popup();
-  setTimeout(() => {
-    showAll();
-  }, 100);
 }
 initLang();
 
@@ -94,7 +99,11 @@ function displayQuizItems(isa, callback) {
       } else {
         const div = document.createElement('div');
         div.classList.add('div');
-        div.innerHTML = "✕"
+        //div.innerHTML = "✕"
+        const ni = document.createElement('div');
+        ni.className = "ni"
+        ni.innerHTML = "<span>NO</span></br>IMAGE"
+        div.appendChild(ni);
         imgc.appendChild(div);
         quizItem.appendChild(imgc);
     }

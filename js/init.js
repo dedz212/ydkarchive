@@ -27,6 +27,7 @@ export async function loadVersion() {
   
     if (versionData && versionData.ydkjarchive) {
       version = versionData.ydkjarchive;
+      console.log(version)
     } else {
       console.error('Failed to load version data or "ydkjarchive" not found.');
     }

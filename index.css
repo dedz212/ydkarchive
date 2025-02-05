@@ -9,10 +9,10 @@
     -webkit-user-select: none;
     -ms-user-select: none;
 
-    transition: background-color 0.5s ease;
-    transition: background 0.5s ease;
-    -webkit-transition: background-color 0.5s ease;
-    -webkit-transition: background 0.5s ease;
+    transition: background-color 0.2s ease;
+    transition: background 0.2s ease;
+    -webkit-transition: background-color 0.2s ease;
+    -webkit-transition: background 0.2s ease;
 
     scroll-behavior: auto;
 }
@@ -550,14 +550,19 @@ a.justyeah2:visited {
 .tag2 {
     background-color: var(--p12);
     border-radius: 0.5vh;
-    padding: 0.3vh;
+    padding: 0.8vh 1.3vh;
     margin: 0.5vh 1vh 0vh 0vh;
     font-size: 2vh;
     font-weight: 450;
+    line-height: 0.8;
     cursor: pointer;
     width: max-content;
     display: flex;
     align-items: center;
+
+    &:hover {
+        background-color: var(--p11);
+    }
 }
 
 .tag4 {
@@ -984,4 +989,22 @@ a.justyeah2:visited {
 .rek {
     font-size: 2.5vh;
     font-weight: 700;
+}
+
+.ni {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    line-height: 0.5;
+    font-size: 6dvh;
+    font-weight: 100;
+
+    & span {
+        font-weight: 900;
+        font-size: 12dvh;
+    }
 }
