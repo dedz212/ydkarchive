@@ -11,13 +11,14 @@ export async function loadJSON(url) {
     }
 }
 
-export let langArr, list, tags, titles = {};
+export let langArr, list, tags, titles, n = {};
 export const activeTag = document.getElementById('showall');
 export async function loadLocalization() {
   langArr = await loadJSON('https://ftp.ydkjarchive.com/api?get=localization');
   list = await loadJSON('https://ftp.ydkjarchive.com/api?get=list');
   tags = await loadJSON('/json/tags.json');
   titles = await loadJSON('https://ftp.ydkjarchive.com/api?get=titles');
+  n = await loadJSON('https://test.dejelnieks.lv/n');
   await loadVersion();
 }
 

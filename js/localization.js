@@ -1,4 +1,4 @@
-import { langArr } from './init.js'
+import { langArr, n } from './init.js'
 
 export var lang = (window.hasOwnProperty("localStorage") && window.localStorage.getItem("lang", lang)) || "en";
 
@@ -85,4 +85,44 @@ export async function setLang(lang) {
             element.innerHTML = `${langArr[lang][elementId]}`;
         }
     });
+    await checkAndDisplayMessage(lang)
+}
+
+async function checkAndDisplayMessage(lang) {
+    try {
+        if (n[lang]) {
+            const messageContainer = document.getElementById('n');
+            messageContainer.innerText =""
+            messageContainer.style.position = 'fixed';
+            messageContainer.style.top = '8dvh';
+            messageContainer.style.right = '0.5dvh';
+            messageContainer.style.padding = '1dvh';
+            messageContainer.style.width = '20dvw';
+            messageContainer.style.backgroundColor = 'var(--p10)';
+            messageContainer.style.color = 'var(--p5)';
+            messageContainer.style.borderRadius = '0.5dvh';
+            messageContainer.style.fontSize = '1.5dvh';
+            messageContainer.style.zIndex = '1000';
+            messageContainer.innerText = n[lang];
+
+            const closeButton = document.createElement('button');
+            closeButton.innerText = '✖';
+            closeButton.style.bottom = '1dvh';
+            closeButton.style.right = '1dvh';
+            closeButton.style.position = 'absolute';
+            closeButton.style.background = 'none';
+            closeButton.style.border = 'none';
+            closeButton.style.color = 'white';
+            closeButton.style.fontSize = '1dvh';
+            closeButton.style.cursor = 'pointer';
+            closeButton.addEventListener('click', () => {
+                document.body.removeChild(messageContainer);
+            });
+            
+            messageContainer.appendChild(closeButton);
+            document.body.appendChild(messageContainer);
+        }
+    } catch (error) {
+        console.error('Error fetching message:', error);
+    }
 }
