@@ -52,16 +52,16 @@ export async function setLang(lang) {
     if (lang == "de") {
         console.log(langArr[lang]['lang']);
         window.addEventListener('resize', function() {
-        const s3Element = document.querySelector('.s3');
-        if (window.innerWidth <= 480) {
-            s3Element.style.left = '15.4vh';
-        } else if (window.innerWidth <= 590) {
-            s3Element.style.left = '17vh';
-        } else if (window.innerWidth <= 660) {
-            s3Element.style.left = '20.5vh';
-        } else {
-            s3Element.style.left = '23.75vh';
-        }
+            const s3Element = document.querySelector('.s3');
+            if (window.innerWidth <= 480) {
+                s3Element.style.left = '15.4vh';
+            } else if (window.innerWidth <= 590) {
+                s3Element.style.left = '17vh';
+            } else if (window.innerWidth <= 660) {
+                s3Element.style.left = '20.5vh';
+            } else {
+                s3Element.style.left = '23.75vh';
+            }
         });
         window.dispatchEvent(new Event('resize'));  
     }
@@ -94,10 +94,10 @@ async function checkAndDisplayMessage(lang) {
             const messageContainer = document.getElementById('n');
             messageContainer.innerText =""
             messageContainer.style.position = 'fixed';
-            messageContainer.style.top = '8dvh';
+            messageContainer.style.top = '3.5dvh';
             messageContainer.style.right = '0.5dvh';
             messageContainer.style.padding = '1dvh';
-            messageContainer.style.width = '20dvw';
+            messageContainer.style.width = '22em';
             messageContainer.style.backgroundColor = 'var(--p10)';
             messageContainer.style.color = 'var(--p5)';
             messageContainer.style.borderRadius = '0.5dvh';
@@ -112,7 +112,7 @@ async function checkAndDisplayMessage(lang) {
             closeButton.style.position = 'absolute';
             closeButton.style.background = 'none';
             closeButton.style.border = 'none';
-            closeButton.style.color = 'white';
+            closeButton.style.color = 'var(--p5)';
             closeButton.style.fontSize = '1dvh';
             closeButton.style.cursor = 'pointer';
             closeButton.addEventListener('click', () => {

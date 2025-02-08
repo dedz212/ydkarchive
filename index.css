@@ -263,11 +263,19 @@ a:visited {
     font-weight: 450;
     max-width: calc(92%);
     cursor: pointer;
+
+    & a {
+        color: var(--p10);
+    }
 }
 
 .tag3:hover {
     color: var(--p12);
-    border: var(--p12) solid 0.2vh; 
+    border: var(--p12) solid 0.2vh;
+
+    & a {
+        color: var(--p12);
+    }
 }
 
 #toup a:hover {
@@ -589,6 +597,18 @@ a.justyeah2:visited {
     width: max-content;
 }
 
+.tag6 {
+    background-color: var(--p12);
+    border-radius: 0.5vh;
+    border-radius: 0.5vh;
+    padding: 0.3vh;
+    margin: 0.5vh;
+    font-size: 1.5vh;
+    font-weight: 450;
+    max-width: calc(92%);
+    cursor: default;
+}
+
 #book2 {
     animation: changeText 12s infinite;
     opacity: 0;
@@ -810,6 +830,16 @@ a.justyeah2:visited {
     background: transparent;
 }
 
+#lp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
 @media screen and (max-width: 1250px) {
     .container, .noway {
         width: 78%;
@@ -817,8 +847,8 @@ a.justyeah2:visited {
 }
 @media screen and (max-width: 930px) {
     .container, .noway {
-        width: fit-content;
-        padding-left: 12vh;
+        width: 84%;
+        padding-left: 8vh;
         justify-content: center;
     }
     #lp {
@@ -828,7 +858,15 @@ a.justyeah2:visited {
         margin-left: 14vh;
     }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 786px) {
+    .container, .noway {
+        width: 82%;
+    }
+}
+@media screen and (max-width: 689px) {
+    .container, .noway {
+        width: min-content;
+    }
     .s1 {
         font-size: 6.5vh;
     }
