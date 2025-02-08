@@ -2,7 +2,33 @@
     {
         "title": "Take 2 Interactive",
         "id": "t2i",
-        "description": "Take 2 Interactive was responsible for distributing German editions in Germany, Austria, and Switzerland."
+        "description": "Take 2 Interactive was responsible for distributing German editions in Germany, Austria, and Switzerland.",
+        "games": [
+            {
+                "game": "You Don't Know Jack",
+                "id": "ydkjde"
+            },
+            {
+                "game": "You Don't Know Jack: Volume 2",
+                "id": "ydkj2de"
+            },
+            {
+                "game": "You Don't Know Jack 3: Abwärts",
+                "id": "ydkj3de"
+            },
+            {
+                "game": "You Don't Know Jack 4",
+                "id": "ydkj4de"
+            },
+            {
+                "game": "You Don't Know Jack 1+2: Jack Quiz Pack",
+                "id": "ydkjquizpack"
+            },
+            {
+                "game": "You Don't Know Jack Playstation",
+                "id": "ydkjps1de"
+            }
+        ]
     },
     {
         "title": "Schneck & Deny",
