@@ -131,7 +131,7 @@ a:visited {
     max-width: max-content;
     cursor: pointer;
     line-height: 1;
-    margin: 0.25vh;
+    margin: 0.25vh 0.25vh 0.25vh 0;
 }
 
 #linkss a:hover {
@@ -263,6 +263,8 @@ a:visited {
     font-weight: 450;
     max-width: calc(92%);
     cursor: pointer;
+    animation: fadeInIn 1s ease-in-out;
+    animation-fill-mode: both;
 
     & a {
         color: var(--p10);
@@ -397,7 +399,7 @@ a:visited {
 }
 
 .quiz-item-seemore {
-    margin: 0.5vh;
+    margin: 0.5vh 0;
     font-size: 1.75vh;
 }
 
@@ -669,6 +671,7 @@ a.justyeah2:visited {
     font-size: 2vh;
     font-weight: 600;
     outline: none;
+    margin: 0.5vh;
 }
 
 #searchInput:focus, #searchInput:after {
@@ -696,7 +699,7 @@ a.justyeah2:visited {
     opacity: 0;
 }
 
-#titlescontent {
+#titlescontent, #wikiacontent {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -752,6 +755,11 @@ a.justyeah2:visited {
     animation: fadeInIn 1s ease-in-out;
     animation-fill-mode: both;
     opacity: 0;
+
+    &.two {
+        min-width: 50%;
+        max-width: 50%;
+    }
 }
 
 .divhpcr {
@@ -763,6 +771,17 @@ a.justyeah2:visited {
     align-items: center;
     width: 100%;
     padding: 1.5vh 0 0.5vh 0;
+}
+
+.divhpcr2 {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: flex-start;
+    padding: 1.5vh 0 0.5vh 0;
+    width: 100%;
 }
 
 .divfimgcr {
@@ -831,7 +850,7 @@ a.justyeah2:visited {
 }
 
 #lp {
-    display: flex;
+    display: none;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
@@ -935,10 +954,7 @@ a.justyeah2:visited {
 }
 
 .seemore {
-    position: absolute;
-    right: 1vh;
-    bottom: 1vh;
-    background-color: var(--p5);
+    background-color: var(--p11);
     color: var(--p1);
     border-radius: 0.5vh;
     padding: 0.5vh;
@@ -1044,5 +1060,130 @@ a.justyeah2:visited {
     & span {
         font-weight: 900;
         font-size: 12dvh;
+    }
+}
+
+.box3p {
+    padding: 0 0.5vh 0 0.5vh;
+    margin: 0.5vh 0 0 0;
+    width: 90%;
+}
+
+table, td, th { 
+    border: 0.5dvh solid var(--p4);
+    text-align: left;
+    padding: 0.5vh;
+    position: relative;
+}
+th {
+    background-color: var(--p10);
+}
+table {
+    border-collapse: collapse;
+    width: fit-content;
+    margin: 0.5vh 0 0 0;
+}
+
+.box3img {
+    width: 8dvw;
+    background: var(--p5s);
+    padding: 1dvh;
+    margin: 0 0.5vh 0 0.5vh;
+    border-radius: 0.5vh;
+}
+
+.hm {
+    padding: 0.5vh;
+    background-color: var(--p9);
+
+    & a {
+        line-height: 1;
+        font-size: 1.5vh;
+        font-weight: 500;
+    }
+}
+
+.sm div {
+    font-weight: 500;
+}
+
+.ass {
+    padding: 0;
+}
+
+#popup2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--p12);
+    z-index: 4;
+}
+
+.idid_o {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5dvh;
+    background-color: var(--p10);
+}
+
+.seemore2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 0.5vh;
+    background-color: var(--p9);
+    width: 25%;
+    
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleif {
+    padding: 1vh 0.5vh 0 0.5vh;
+    font-size: 1.75vh;
+    line-height: 1;
+}
+
+.box3p2 {
+    padding: 0 0.5vh 0 0.5vh;
+    margin: 0.5vh 0 0 0;
+    font-size: 1.5vh;
+    font-weight: 400 !important;
+    line-height: 1;
+}
+
+.pd {
+    margin: 0.5vh;
+    padding: 0.5vh;
+    background-color: var(--p9);
+}
+
+.boxtch23 {
+    font-size: 3vh;
+    line-height: 1;
+    padding: 0 0.5vh 0 0.5vh;
+    margin: 1.5vh 0 0 0;
+}
+
+.localization-box {
+    border-radius: 0.5vh;
+    padding: 0.5vh;
+    margin: 0.5vh 0 0 0;
+    background-color: var(--p9);
+
+    width: 50%;
+
+    & li {
+        margin: 0 2vh;
     }
 }

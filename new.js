@@ -17,6 +17,8 @@ async function initLang() {
       await start();
     } else if (document.getElementById("titlescontent")) {
       await startTitle();
+    } else if (document.getElementById("wikiacontent")) {
+      await startWikia();
     }
     if (document.getElementById("tagsContainer")) book2();
     lightth();
@@ -43,7 +45,9 @@ async function start() {
 
     await setLang(lang);
     const searchInput = document.getElementById('searchInput');
+    const lp = document.getElementById('lp');
     searchInput.style.display = "flex"
+    lp.style.display = "flex"
     searchInput.placeholder = langArr[lang]['search'];
     const quizItems = document.querySelectorAll('.quiz-item-content');
     const noResultMessage = document.getElementById('noResultMessage');
@@ -308,6 +312,7 @@ export function showAll() {
 export function displayMain() {
     const container = document.querySelector(".container");
     const titlescontent = document.querySelector("#titlescontent");
+    const wikiacontent = document.querySelector("#wikiacontent");
     document.getElementById("info").style.color = "var(--p10)";
       document.getElementById("info").style.border = "var(--p10) solid 0.2vh";
     
@@ -324,6 +329,12 @@ export function displayMain() {
       } else {
         titlescontent.style.display = 'flex';
         showAll();
+      }
+    } else if (wikiacontent) {
+      if (wikiacontent.style.display !== 'none') {
+        wikiacontent.style.display = 'none';
+      } else {
+        wikiacontent.style.display = 'flex';
       }
     }
 }
@@ -490,7 +501,7 @@ async function startTitle() {
             item.info.a.developer.forEach(developer => {
               const developerItem = document.createElement('a');
               developerItem.textContent = developer;
-              developerItem.href = `https://jackboxgames.fandom.com/wiki/${developer}`
+              developerItem.href = `../wikia/#${developer}`
               developerr.appendChild(developerItem);
             });
             developerDiv.appendChild(developerr);
@@ -504,7 +515,7 @@ async function startTitle() {
             item.info.a.localization.forEach(localization => {
               const localizationItem = document.createElement('a');
               localizationItem.textContent = localization;
-              localizationItem.href = `https://jackboxgames.fandom.com/wiki/${localization}`
+              localizationItem.href = `../wikia/#${localization}`
               localizationl.appendChild(localizationItem);
             });
             localizationDiv.appendChild(localizationl);
@@ -518,7 +529,7 @@ async function startTitle() {
             item.info.a.publisher.forEach(publisher => {
               const publisherItem = document.createElement('a');
               publisherItem.textContent = publisher;
-              publisherItem.href = `https://jackboxgames.fandom.com/wiki/${publisher}`
+              publisherItem.href = `../wikia/#${publisher}`
               publisherl.appendChild(publisherItem);
             });
             publisherDiv.appendChild(publisherl);
@@ -532,7 +543,7 @@ async function startTitle() {
             item.info.a.distribition.forEach(distribition => {
               const distribitionItem = document.createElement('a');
               distribitionItem.textContent = distribition;
-              distribitionItem.href = `https://jackboxgames.fandom.com/wiki/${distribition}`
+              distribitionItem.href = `../wikia/#${distribition}`
               distribitionl.appendChild(distribitionItem);
             });
             distribitionDiv.appendChild(distribitionl);
@@ -674,12 +685,14 @@ async function startTitle() {
     function resetId() {
         document.getElementById('titlescontent').innerHTML = "";
         if (rest) {
-        rest.style.display = "none";
+          rest.style.display = "none";
         }
         window.location.hash = '';
         displayContent();
     }
     rest.addEventListener('click', resetId)
+    const lp = document.getElementById('lp');
+    lp.style.display = "flex"
     displayContent();
 }
 
@@ -733,4 +746,207 @@ function formatDate(dateObj, lang) {
     return `${day}.${month}.${year}`; // Формат: DD.MM.YYYY
   }
   return '';
+}
+
+async function startWikia() {
+  fetch('../json/wikia.json')
+  .then(response => response.json())
+  .then(data => {
+      const container = document.getElementById('wikiacontent');
+
+      data.forEach(entry => {
+          const box = document.createElement('div');
+          box.className = 'boxfortc two';
+          box.id = entry.id;
+
+          const dt = document.createElement('div');
+          dt.classList.add('divhpcr2');
+
+          const kd = document.createElement('div');
+
+          const title = document.createElement('h2');
+          title.textContent = entry.title;
+          title.classList.add('boxtch2');
+          
+          const description = document.createElement('p');
+          description.textContent = entry.description;
+          description.classList.add('box3p');
+
+          kd.appendChild(title);
+          kd.appendChild(description);
+
+          const logo = document.createElement('img');
+          logo.src = entry.logo;
+          logo.classList.add('box3img');
+
+          dt.appendChild(kd);
+          dt.appendChild(logo);
+
+          box.appendChild(dt);
+          
+          if (entry.publisher) {
+            const dh = document.createElement('div');
+            dh.classList.add('boxtch23');
+            dh.textContent = "Published";
+            kd.appendChild(dh);
+
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            const tbody = document.createElement('tbody');
+            
+            const headerRow = document.createElement('tr');
+            ['Name', 'Platform', 'Release', 'Type'].forEach(text => {
+                const th = document.createElement('th');
+                th.textContent = text;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+            
+            entry.publisher.forEach(game => {
+              const row = document.createElement('tr');
+              
+              const cell1 = document.createElement('td');
+              cell1.className = 'ass';
+
+              const special = document.createElement('div');
+              cell1.appendChild(special);
+
+              const localizationItem = document.createElement('a');
+              localizationItem.textContent = game.game;
+              special.appendChild(localizationItem);
+
+              const popup = document.createElement('div');
+              popup.id = 'popup2';
+              popup.className = 'sm';
+
+              special.appendChild(popup);
+              special.className = 'hm';
+              special.addEventListener('mouseenter', () => {
+                popup.innerHTML = "";
+                const title = document.createElement('div');
+                title.textContent = game.game;
+                title.style.width = "70%";
+
+                const idid_o = document.createElement('div');
+                idid_o.className = 'idid_o';
+
+                const idid = document.createElement('a');
+                idid.href = `/titles/index.html#${game.id}`;
+                idid.className = 'seemore2';
+                idid.textContent = langArr[lang]['seemore'];
+
+                idid_o.appendChild(title);
+                idid_o.appendChild(idid);
+                popup.appendChild(idid_o);
+
+                if (game.info) {
+                  const titleif = document.createElement('div');
+                  titleif.className = 'box3p2';
+                  titleif.textContent = game.info;
+                  popup.appendChild(titleif);
+                }
+
+                if (game.seealso) {
+                  const titleif = document.createElement('div');
+                  titleif.className = 'titleif';
+                  titleif.textContent = "See also";
+                  popup.appendChild(titleif);
+
+                  game.seealso.forEach(s => {
+                    const platformDiv = document.createElement('div');
+                    platformDiv.className = 'pd';
+
+                    const platformA = document.createElement('a');
+                    const listItem = list.content.find(item => item.seemore === s);
+                    if (listItem) {
+                      platformA.textContent = listItem.title + (listItem.subtitle ? ` ` +  listItem.subtitle : ``);
+                    } else {
+                      platformA.textContent = s;
+                    }
+                    platformA.href = `/titles/index.html#${s}`;
+                    platformDiv.appendChild(platformA);
+                    popup.appendChild(platformDiv);
+                  });
+                }
+
+                popup.style.display = 'block';
+              });
+              special.addEventListener('mouseleave', () => {
+                popup.style.display = 'none';
+              });
+              row.appendChild(cell1);
+              
+              const cell2 = document.createElement('td');
+              cell2.textContent = game.platform.length ? game.platform.join(', ') : '-';
+              row.appendChild(cell2);
+              
+              const cell3 = document.createElement('td');
+              cell3.textContent = game.release;
+              row.appendChild(cell3);
+              
+              const cell4 = document.createElement('td');
+              cell4.textContent = game.type;
+              row.appendChild(cell4);
+              
+              tbody.appendChild(row);
+            });
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+            kd.appendChild(table);
+          }
+/*
+          if (entry.localization) {
+            entry.localization.forEach(loc => {
+                const locBox = document.createElement('div');
+                locBox.classList.add('localization-box');
+                
+                const locTitle = document.createElement('h3');
+                locTitle.textContent = loc.game;
+                locBox.appendChild(locTitle);
+                
+                const locInfo = document.createElement('p');
+                locInfo.innerHTML = `<strong>ID:</strong> ${loc.id} | <strong>Release:</strong> ${loc.release}`;
+                locBox.appendChild(locInfo);
+                
+                if (loc.info) {
+                    if (loc.info.writer) {
+                        const writers = document.createElement('p');
+                        writers.innerHTML = `<strong>Writers:</strong> ${loc.info.writer.join(', ')}`;
+                        locBox.appendChild(writers);
+                    }
+                    if (loc.info.director) {
+                        const directors = document.createElement('p');
+                        directors.innerHTML = `<strong>Directors:</strong> ${loc.info.director.join(', ')}`;
+                        locBox.appendChild(directors);
+                    }
+                    if (loc.info.voices) {
+                        const voiceList = document.createElement('ul');
+                        loc.info.voices.forEach(voice => {
+                            const li = document.createElement('li');
+                            li.textContent = `${voice.r}: ${voice.a}`;
+                            voiceList.appendChild(li);
+                        });
+                        const voicesHeader = document.createElement('p');
+                        voicesHeader.innerHTML = '<strong>Voices:</strong>';
+                        locBox.appendChild(voicesHeader);
+                        locBox.appendChild(voiceList);
+                    }
+                    if (loc.info.cast) {
+                        const cast = document.createElement('p');
+                        cast.innerHTML = `<strong>Cast:</strong> ${loc.info.cast.join(', ')}`;
+                        locBox.appendChild(cast);
+                    }
+                }
+                box.appendChild(locBox);
+            });
+        }
+*/          
+          container.appendChild(box);
+      });
+    const lp = document.getElementById('lp');
+    lp.style.display = "flex"
+  })
+  .catch(error => console.error('Error loading JSON:', error));
+
 }

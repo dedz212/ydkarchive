@@ -2,37 +2,203 @@
     {
         "title": "Take 2 Interactive",
         "id": "t2i",
-        "description": "Take 2 Interactive was responsible for distributing German editions in Germany, Austria, and Switzerland.",
-        "games": [
+        "description": "Take 2 Interactive was responsible for distributing German editions in Germany, Austria, and Switzerland, and also France edition.",
+        "logo": "./img/Take-Two_Interactive_logo_1999–2005.svg",
+        "publisher": [
             {
                 "game": "You Don't Know Jack",
-                "id": "ydkjde"
+                "id": "ydkjfr",
+                "platform": ["Windows", "Macintosh"],
+                "release": "1998",
+                "type": "Game"
             },
             {
                 "game": "You Don't Know Jack: Volume 2",
-                "id": "ydkj2de"
+                "id": "ydkj2de",
+                "platform": ["Windows", "Macintosh"],
+                "release": "1999",
+                "type": "Game"
             },
             {
-                "game": "You Don't Know Jack 3: Abwärts",
-                "id": "ydkj3de"
-            },
-            {
-                "game": "You Don't Know Jack 4",
-                "id": "ydkj4de"
+                "game": "You Don't Know Jack",
+                "info": "Released in 1998 as BMG Interactive Entertainment",
+                "id": "ydkjde",
+                "seealso": ["ydkjgs"],
+                "platform": ["Windows", "Macintosh"],
+                "release": "2000",
+                "type": "Game"
             },
             {
                 "game": "You Don't Know Jack 1+2: Jack Quiz Pack",
-                "id": "ydkjquizpack"
+                "id": "ydkjquizpack",
+                "seealso": ["ydkjde", "ydkj2de"],
+                "platform": [],
+                "release": "2000",
+                "type": "Bundle"
+            },
+            {
+                "game": "You Don't Know Jack 3: Abwärts",
+                "id": "ydkj3de",
+                "platform": ["Windows", "Macintosh"],
+                "release": "2000",
+                "type": "Game"
             },
             {
                 "game": "You Don't Know Jack Playstation",
-                "id": "ydkjps1de"
+                "id": "ydkjps1de",
+                "platform": ["Playstation"],
+                "release": "2001",
+                "type": "Game"
+            },
+            {
+                "game": "You Don't Know Jack 4",
+                "id": "ydkj4de",
+                "platform": ["Windows"],
+                "release": "2003",
+                "type": "Game"
             }
         ]
     },
     {
         "title": "Schneck & Deny",
         "id": "sd",
-        "description": "Schneck & Deny is responsible for the complete localization of the German editions."
+        "description": "Schneck & Deny, officially SD – Schneck & Deny mediasolutions, was a Munich-based company specializing in the localization of video games into German. The company was founded in 1997 by Johannes Deny and Hans Schneckand was responsible for writing, directing, and overseeing the adaptation of several games, particularly within the You Don't Know Jack series. In 2000, Schneck & Deny Mediasolutions evolved into Coda Entertainment.",
+        "logo": "./img/imageview.jpg",
+        "localization": [
+            {
+                "game": "You Don't Know Jack",
+                "id": "ydkjde",
+                "seealso": ["ydkjgs"],
+                "release": "1998"
+            },
+            {
+                "game": "You Don't Know Jack: Volume 2",
+                "id": "ydkj2de",
+                "release": "1999"
+            },
+            {
+                "game": "You Don't Know Jack 3: Abwärts",
+                "id": "ydkj3de",
+                "release": "2000",
+                "info": {
+                    "writer": ["Johannes Deny", "Hans Schneck"],
+                    "director": ["Johannes Deny"],
+                    "voices": [
+                        {
+                            "r": "Jack",
+                            "a": "Kai Taschner"
+                        },
+                        {
+                            "r": "Lift-Girl",
+                            "a": "Michelle Tichawsky"
+                        },
+                        {
+                            "r": "Deep Voice Guy",
+                            "a": "Carsten Arnhold"
+                        },
+                        {
+                            "r": "User Manuel",
+                            "a": "Hans Schneck"
+                        }
+                    ]
+                }
+            },
+            {
+                "game": "You Don't Hear Jack (Advertising Spots)",
+                "id": "ydhjde",
+                "release": "2000",
+                "info": {
+                    "writer": ["Johannes Deny", "Hans Schneck"],
+                    "director": ["Johannes Deny"],
+                    "cast": [
+                        "Carsten Arnold",
+                        "Markus Busjan",
+                        "Sandra Buthmann",
+                        "Johannes \"Oinky\" Deny",
+                        "Julia Dorn",
+                        "Alexandra Engelhard",
+                        "Elke Krieg",
+                        "Christian Lepold",
+                        "Andreas Mokros",
+                        "Peter Oberstein",
+                        "Julian Sattich",
+                        "Hans Schneck",
+                        "Carla Tobisch"
+                    ]
+                }
+            },
+            {
+                "game": "You Don't Know Jack Playstation",
+                "id": "ydkjps1de",
+                "release": "2001",
+                "info": {
+                    "voices": [
+                        {
+                            "r": "Jack",
+                            "a": "Kai Taschner"
+                        },
+                        {
+                            "r": "Kuki (Cookie)",
+                            "a": "Oliver Böttcher"
+                        },
+                        {
+                            "r": "?",
+                            "a": "Claudia Lössl"
+                        }
+                    ]
+                }
+            },
+            {
+                "game": "You Don't Know Jack 4",
+                "id": "ydkj4de",
+                "release": "2003",
+                "info": {
+                    "writer": ["Johannes Deny", "Hans Schneck"],
+                    "director": ["Johannes Deny", "Hans Schneck"],
+                    "sound_enginer": ["Carsten Arnold"],
+                    "voices": [
+                        {
+                            "r": "Jack",
+                            "a": "Kai Taschner"
+                        },
+                        {
+                            "r": "Kuki (Cookie)",
+                            "a": "Oliver Böttcher"
+                        },
+                        {
+                            "r": "?",
+                            "a": "Claudia Lössl"
+                        }
+                    ],
+                    "cast": [
+                        "Carsten Arnold",
+                        "Johannes Deny",
+                        "Dörte Langwald",
+                        "Nina Liebs",
+                        "Andreas Mokros",
+                        "Astrid M. Müller",
+                        "Jakob Riedl",
+                        "Hans Schneck",
+                        "Andreas Wilde"
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "title": "BMG Interactive Entertainment",
+        "info": "Released in 2000 as Take 2 Interactive",
+        "id": "bmg",
+        "description": "BMG Interactive Entertainment is publisher of the You Don't Know Jack German.",
+        "logo": "./img/Bertelsmann_Music_Group_Logo.svg",
+        "publisher": [
+            {
+                "game": "You Don't Know Jack",
+                "id": "ydkjde",
+                "platform": ["Windows", "Macintosh"],
+                "release": "1998",
+                "type": "Game"
+            }
+        ]
     }
 ]
