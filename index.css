@@ -115,7 +115,6 @@ a:visited {
     align-items: flex-start;
     justify-content: flex-start;
     align-content: flex-start;
-    position: relative;
     margin: 0.5vh 0;
 }
 
@@ -319,6 +318,7 @@ a:visited {
     animation: fadeInIn 1s ease-in-out;
     animation-fill-mode: both;
     opacity: 0;
+    z-index: 3;
 }
 
 @keyframes fadeInIn {
@@ -1109,6 +1109,8 @@ table {
 
 .ass {
     padding: 0;
+    width: 50%;
+    background-color: var(--p9);
 }
 
 #popup2 {
@@ -1118,6 +1120,26 @@ table {
     left: 0;
     width: 100%;
     background-color: var(--p12);
+    z-index: 4;
+}
+
+#popup3 {
+    background-color: var(--p12);
+    color: var(--p1);
+    border: var(--p1) solid 0.2vh;
+    border-radius: 0.5vh;
+    padding: 0.5vh;
+    margin: 0.5vh;
+
+    font-size: 1.5vh;
+    font-weight: 450;
+    max-width: 100%;
+    cursor: pointer;
+    line-height: 1;
+    
+    display: none;
+    position: relative;
+    
     z-index: 4;
 }
 
@@ -1178,12 +1200,207 @@ table {
 .localization-box {
     border-radius: 0.5vh;
     padding: 0.5vh;
-    margin: 0.5vh 0 0 0;
-    background-color: var(--p9);
+    margin: 0.5vh;
+    background-color: var(--p11);
 
-    width: 50%;
+    width: 80%;
+    position: relative;
 
     & li {
         margin: 0 2vh;
     }
+}
+
+.loc_t {
+    padding: 1vh 1vh 0.1vh 1vh;
+    width: 85%;
+    font-size: 2.5vh;
+    line-height: 1;
+}
+
+.loc_r {
+    padding: 0 0.5vh 0 0.5vh;
+    padding: 0.1vh 1vh 1vh 1vh;
+}
+
+.loc_d {
+    background-color: var(--p9);
+    border: 0.2vh solid var(--p5s);
+    border-radius: 0.5vh;
+    margin: 0.5vh;
+    padding: 1vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+.loc_d2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+
+    &.r {
+        width: 50%;
+    }
+}
+
+.loc_d3 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    & .l1 {
+        background-color: var(--p12);
+        color: var(--p1);
+        border: var(--p1) solid 0.2vh;
+        border-radius: 0.5vh;
+        padding: 0.5vh;
+        font-size: 1.5vh;
+        font-weight: 450;
+        max-width: max-content;
+        line-height: 1;
+        margin: 0.25vh 0.25vh 0.25vh 0;
+        margin-right: 1vh;
+    }
+    & .l2 {
+        background-color: var(--p2);
+        color: var(--p1);
+        border: var(--p1) solid 0.2vh;
+        border-radius: 0.5vh;
+        padding: 0.5vh;
+        font-size: 1.5vh;
+        font-weight: 450;
+        max-width: max-content;
+        line-height: 1;
+        margin: 0.25vh 0.25vh 0.25vh 0;
+    }
+
+    &.r {
+        align-items: flex-end;
+    }
+}
+
+.t_b {
+    line-height: 1.5;
+    font-size: 2vh;
+    padding: 0 0.25vh;
+}
+.t_all {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.t_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+
+    & div {
+        padding: 0.25vh;
+    }
+}
+
+.dwes {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-right: 1vh;
+
+    & span {
+        background-color: var(--p12);
+        color: var(--p1);
+        border: var(--p1) solid 0.2vh;
+        border-radius: 0.5vh;
+        padding: 0.5vh;
+        font-size: 1.5vh;
+        font-weight: 450;
+        max-width: max-content;
+        line-height: 1;
+        margin: 0.25vh 0.25vh 0.25vh 0;
+    }
+}
+
+.cast {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+
+    & span {
+        background-color: var(--p2);
+        color: var(--p1);
+        border: var(--p1) solid 0.2vh;
+        border-radius: 0.5vh;
+        padding: 0.5vh;
+        font-size: 1.5vh;
+        font-weight: 450;
+        max-width: max-content;
+        line-height: 1;
+        margin: 0.25vh 0.25vh 0.25vh 0;
+    }
+}
+
+.voices {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.sp_p {
+    line-height: 1.5;
+    font-size: 2vh;
+    padding: 0 0.25vh;
+    margin-right: 0.5vh;
+}
+.sp_p2 {
+    line-height: 1.5;
+    font-size: 2vh;
+    padding: 0 0.25vh;
+    margin-right: 1vh;
+}
+
+.loc_spd {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.seemore3 {
+    background-color: var(--p9);
+    color: var(--p1);
+    border-radius: 0.5vh;
+    padding: 0.5vh;
+
+    top: 0;
+    right: 0;
+    position: absolute;
+    margin: 1.5vh;
 }

@@ -110,7 +110,10 @@ function displayQuizItems(isa, callback) {
         div.appendChild(ni);
         imgc.appendChild(div);
         quizItem.appendChild(imgc);
-    }
+      }
+
+      const popup3 = document.createElement('div');
+      popup3.id = 'popup3';
   
       const itemContent = document.createElement('div');
       itemContent.classList.add('quiz-item-content');
@@ -165,7 +168,7 @@ function displayQuizItems(isa, callback) {
       }
       
       if (item.download) {
-        const downloadLinks = createDownloadLinks(item.download);
+        const downloadLinks = createDownloadLinks(item.download, popup3);
         itemContent.appendChild(downloadLinks);
       }
 
@@ -178,6 +181,7 @@ function displayQuizItems(isa, callback) {
       }
 
       quizItem.appendChild(itemContent);
+      quizItem.appendChild(popup3);
   
       container.appendChild(quizItem);
       if (index === content.length - 1) {
@@ -187,7 +191,7 @@ function displayQuizItems(isa, callback) {
   });
 }
 
-function createDownloadLinks(download) {
+function createDownloadLinks(download, popup) {
     const linkContainer = document.createElement('div');
 
     download.forEach(item => {
@@ -224,6 +228,141 @@ function createDownloadLinks(download) {
       link.target = '_blank';
       linkContainer.appendChild(link);
       linkContainer.id = "linkss";
+      
+      link.addEventListener('mouseenter', () => {
+        popup.innerHTML = "";
+        if (item.os || item.date || item.bait || item.format) {
+          if (item.os) {
+            const os = item.os;
+            const div = document.createElement('div');
+
+            const block = document.createElement('div');
+            block.className = "t_b";
+            block.innerHTML = 'OS';
+
+            const all = document.createElement('div');
+            all.className = "t_all";
+
+            if(os.confirmed) {
+              const list = document.createElement('div');
+              list.className = "t_list";
+              const l1 = document.createElement('div');
+              l1.innerHTML = "✅";
+              list.appendChild(l1);
+
+              os.confirmed.forEach(item => {
+                const l2 = document.createElement('div');
+                l2.innerHTML = item;
+
+                list.appendChild(l2);
+                all.appendChild(list);
+              });
+            }
+
+            if(os.probably) {
+              const list = document.createElement('div');
+              list.className = "t_list";
+              const l1 = document.createElement('div');
+              l1.innerHTML = "🤔";
+              list.appendChild(l1);
+
+              os.probably.forEach(item => {
+                const l2 = document.createElement('div');
+                l2.innerHTML = item;
+
+                list.appendChild(l2);
+                all.appendChild(list);
+              });
+            }
+
+            if(os.unsupported) {
+              const list = document.createElement('div');
+              list.className = "t_list";
+              const l1 = document.createElement('div');
+              l1.innerHTML = "🚫";
+              list.appendChild(l1);
+
+              os.unsupported.forEach(item => {
+                const l2 = document.createElement('div');
+                l2.innerHTML = item;
+
+                list.appendChild(l2);
+                all.appendChild(list);
+              });
+            }
+
+            div.appendChild(block);
+            div.appendChild(all);
+            popup.appendChild(div);
+          }
+
+          if (item.date) {
+            const div = document.createElement('div');
+
+            const list = document.createElement('div');
+            list.className = "t_list";
+
+            const l1 = document.createElement('div');
+            l1.innerHTML = langArr[lang]['date'];
+            list.appendChild(l1);
+
+            const time = item.date.time ?? "";
+
+            const l2 = document.createElement('div');
+            l2.innerHTML = `${formatDateDetail(item.date, lang)} ${time}`;
+            list.appendChild(l2);
+
+            div.appendChild(list);
+            popup.appendChild(div);
+          }
+
+          if (item.byte) {
+            const div = document.createElement('div');
+
+            const list = document.createElement('div');
+            list.className = "t_list";
+
+            const l1 = document.createElement('div');
+            l1.innerHTML = `Byte:`;
+            list.appendChild(l1);
+
+            const l2 = document.createElement('div');
+            l2.innerHTML = `${item.byte} KB`;
+            list.appendChild(l2);
+
+            div.appendChild(list);
+            popup.appendChild(div);
+          }
+
+          if (item.format) {
+            const div = document.createElement('div');
+
+            const list = document.createElement('div');
+            list.className = "t_list";
+            const l1 = document.createElement('div');
+            l1.innerHTML = "Format:";
+            list.appendChild(l1);
+
+            item.format.forEach(item => {
+              const l2 = document.createElement('div');
+              l2.innerHTML = item;
+
+              list.appendChild(l2);
+              div.appendChild(list);
+            });
+            popup.appendChild(div);
+          }
+
+          popup.style.display = 'block';
+        }
+      });
+      
+      link.addEventListener('mouseleave', () => {
+        popup.style.display = 'none';
+      });
+
+      linkContainer.appendChild(popup);
+      linkContainer.appendChild(link);
     });
 
     return linkContainer;
@@ -853,19 +992,20 @@ async function startWikia() {
                   popup.appendChild(titleif);
 
                   game.seealso.forEach(s => {
+                    const platformA = document.createElement('a');
+                    platformA.href = `/titles/index.html#${s}`;
+                    
                     const platformDiv = document.createElement('div');
                     platformDiv.className = 'pd';
-
-                    const platformA = document.createElement('a');
                     const listItem = list.content.find(item => item.seemore === s);
                     if (listItem) {
-                      platformA.textContent = listItem.title + (listItem.subtitle ? ` ` +  listItem.subtitle : ``);
+                      platformDiv.textContent = listItem.title + (listItem.subtitle ? ` ` +  listItem.subtitle : ``);
                     } else {
-                      platformA.textContent = s;
+                      platformDiv.textContent = s;
                     }
-                    platformA.href = `/titles/index.html#${s}`;
-                    platformDiv.appendChild(platformA);
-                    popup.appendChild(platformDiv);
+                    
+                    platformA.appendChild(platformDiv);
+                    popup.appendChild(platformA);
                   });
                 }
 
@@ -877,6 +1017,7 @@ async function startWikia() {
               row.appendChild(cell1);
               
               const cell2 = document.createElement('td');
+              cell2.style.width = '30%';
               cell2.textContent = game.platform.length ? game.platform.join(', ') : '-';
               row.appendChild(cell2);
               
@@ -895,53 +1036,141 @@ async function startWikia() {
             table.appendChild(tbody);
             kd.appendChild(table);
           }
-/*
+
           if (entry.localization) {
             entry.localization.forEach(loc => {
-                const locBox = document.createElement('div');
-                locBox.classList.add('localization-box');
-                
-                const locTitle = document.createElement('h3');
-                locTitle.textContent = loc.game;
-                locBox.appendChild(locTitle);
-                
-                const locInfo = document.createElement('p');
-                locInfo.innerHTML = `<strong>ID:</strong> ${loc.id} | <strong>Release:</strong> ${loc.release}`;
-                locBox.appendChild(locInfo);
-                
-                if (loc.info) {
-                    if (loc.info.writer) {
-                        const writers = document.createElement('p');
-                        writers.innerHTML = `<strong>Writers:</strong> ${loc.info.writer.join(', ')}`;
-                        locBox.appendChild(writers);
-                    }
-                    if (loc.info.director) {
-                        const directors = document.createElement('p');
-                        directors.innerHTML = `<strong>Directors:</strong> ${loc.info.director.join(', ')}`;
-                        locBox.appendChild(directors);
-                    }
-                    if (loc.info.voices) {
-                        const voiceList = document.createElement('ul');
-                        loc.info.voices.forEach(voice => {
-                            const li = document.createElement('li');
-                            li.textContent = `${voice.r}: ${voice.a}`;
-                            voiceList.appendChild(li);
-                        });
-                        const voicesHeader = document.createElement('p');
-                        voicesHeader.innerHTML = '<strong>Voices:</strong>';
-                        locBox.appendChild(voicesHeader);
-                        locBox.appendChild(voiceList);
-                    }
-                    if (loc.info.cast) {
-                        const cast = document.createElement('p');
-                        cast.innerHTML = `<strong>Cast:</strong> ${loc.info.cast.join(', ')}`;
-                        locBox.appendChild(cast);
-                    }
+              const locBox = document.createElement('div');
+              locBox.classList.add('localization-box');
+              
+              const locTitle = document.createElement('h3');
+              locTitle.className = "loc_t"; 
+              locTitle.textContent = loc.game;
+              locBox.appendChild(locTitle);
+              
+              const locInfo = document.createElement('p');
+              locInfo.className = "loc_r"; 
+              locInfo.innerHTML = `Release ${loc.release}`;
+              locBox.appendChild(locInfo);
+
+              const idid = document.createElement('a');
+              idid.href = `/titles/index.html#${loc.id}`;
+              idid.className = 'seemore3';
+              idid.textContent = langArr[lang]['seemore'];
+              locBox.appendChild(idid);
+
+              const SpD = document.createElement('div');
+              SpD.className = "loc_spd"; 
+
+              if (loc.info) {
+                const locD = document.createElement('div');
+                locD.classList.add('loc_d');
+
+                const locD2 = document.createElement('div');
+                locD2.className = "loc_d2 r"; 
+
+                const locD3 = document.createElement('div');
+                locD3.classList.add('loc_d2');
+
+                if (loc.info.writer) {
+                  const Header = document.createElement('p');
+                  Header.className = "sp_p2"
+                  Header.innerHTML = 'Writer';
+                  
+                  const List = document.createElement('div');
+                  List.className = "dwes"
+                  List.appendChild(Header);
+                  loc.info.writer.forEach(writer => {
+                    const li = document.createElement('span');
+                    li.textContent = writer;
+                    List.appendChild(li);
+                  });
+                  
+                  SpD.appendChild(List);
                 }
-                box.appendChild(locBox);
+                if (loc.info.director) {
+                  const Header = document.createElement('p');
+                  Header.className = "sp_p2"
+                  Header.innerHTML = 'Director';
+                  
+                  const List = document.createElement('div');
+                  List.className = "dwes"
+                  List.appendChild(Header);
+                  loc.info.director.forEach(director => {
+                    const li = document.createElement('span');
+                    li.textContent = director;
+                    List.appendChild(li);
+                  });
+                  
+                  SpD.appendChild(List);
+                }
+                if (loc.info.sound_enginer) {
+                  const Header = document.createElement('p');
+                  Header.className = "sp_p2"
+                  Header.innerHTML = 'Sound Enginer';
+                  
+                  const List = document.createElement('div');
+                  List.className = "dwes"
+                  List.appendChild(Header);
+                  loc.info.sound_enginer.forEach(se => {
+                    const li = document.createElement('span');
+                    li.textContent = se;
+                    List.appendChild(li);
+                  });
+                  
+                  SpD.appendChild(List);
+                }
+                
+                locD2.appendChild(SpD);
+                if (loc.info.voices) {
+                    const voiceList = document.createElement('div');
+                    voiceList.className = "voices"
+                    const d = document.createElement('div');
+                    d.className = "loc_d3 r"; 
+                    const d2 = document.createElement('div');
+                    d2.classList.add('loc_d3');
+                    loc.info.voices.forEach(voice => {
+
+                      const lo = document.createElement('div');
+                      lo.className = "l1"
+                      lo.innerHTML = voice.r;
+
+                      const l2 = document.createElement('div');
+                      l2.className = "l2"
+                      l2.innerHTML = voice.a;
+
+                      d.appendChild(lo);
+                      d2.appendChild(l2);
+                    });
+                    voiceList.appendChild(d);
+                    voiceList.appendChild(d2);
+                    const voicesHeader = document.createElement('p');
+                    voicesHeader.className = "sp_p"
+                    voicesHeader.innerHTML = 'Voices';
+                    locD2.appendChild(voicesHeader);
+                    locD2.appendChild(voiceList);
+                }
+                locD.appendChild(locD2);
+                if (loc.info.cast) {
+                  const castList = document.createElement('div');
+                  castList.className = "cast"
+                  loc.info.cast.forEach(cast => {
+                    const li = document.createElement('span');
+                    li.textContent = cast;
+                    castList.appendChild(li);
+                  });
+                  const castHeader = document.createElement('p');
+                  castHeader.className = "sp_p"
+                  castHeader.innerHTML = 'Cast';
+                  locD3.appendChild(castHeader);
+                  locD3.appendChild(castList);
+                }
+                locD.appendChild(locD3);
+                locBox.appendChild(locD);
+              }
+              box.appendChild(locBox);
             });
         }
-*/          
+        
           container.appendChild(box);
       });
     const lp = document.getElementById('lp');
@@ -949,4 +1178,29 @@ async function startWikia() {
   })
   .catch(error => console.error('Error loading JSON:', error));
 
+}
+
+function formatDateDetail(is, lang) {
+  const day = is.day;
+  const month = is.month;
+  const year = is.year;
+
+  if(!day) {
+    console.log(`nh day`)
+    if (lang === 'en') {
+      return `${month}/${year}`;
+    } else if (lang === 'de') {
+      return `${month}.${year}`;
+    }
+  } else if (!month) {
+    console.log(`nh month`)
+    return year; 
+  } else {
+    console.log(`all h`)
+    if (lang === 'en') {
+      return `${month}/${day}/${year}`; // Формат: MM/DD/YYYY
+    } else if (lang === 'de') {
+      return `${day}.${month}.${year}`; // Формат: DD.MM.YYYY
+    }
+  }
 }
